@@ -17,6 +17,7 @@ export default function PageHero({
   cta,
   image,
   backLink,
+  badge,
 }: {
   eyebrow: string;
   title: React.ReactNode;
@@ -24,6 +25,7 @@ export default function PageHero({
   cta?: { label: string; href: string };
   image?: { src: string; alt: string };
   backLink?: { label: string; href: string };
+  badge?: string;
 }) {
   return (
     <section className="relative overflow-hidden pb-14 pt-32 sm:pb-20 sm:pt-40">
@@ -52,6 +54,15 @@ export default function PageHero({
             {eyebrow}
             <span className="inline-block h-px w-8 bg-fx-orange/70" aria-hidden="true" />
           </span>
+          {badge && (
+            <span className="inline-flex items-center gap-2.5 rounded-full border border-fx-orange/40 bg-fx-orange/10 px-5 py-2 text-xs font-bold uppercase tracking-[0.16em] text-fx-orange shadow-glow sm:text-[13px]">
+              <span className="relative flex h-2 w-2" aria-hidden="true">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-fx-orange opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-fx-orange" />
+              </span>
+              {badge}
+            </span>
+          )}
           <h1 className="display text-4xl leading-[1.06] sm:text-5xl lg:text-6xl">{title}</h1>
           <p className="max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg">
             {description}

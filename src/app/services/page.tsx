@@ -30,6 +30,31 @@ export default function ServicesPage() {
         cta={{ label: "Discuss your project", href: "/contact" }}
       />
 
+      {/* Products cross-link */}
+      <section className="!pt-2">
+        <div className="container-x">
+          <FadeIn>
+            <Link
+              href="/products"
+              className="glass card-hover group flex flex-col items-start gap-4 rounded-[22px] p-6 sm:flex-row sm:items-center sm:justify-between sm:p-7"
+            >
+              <div>
+                <span className="eyebrow">BridgingFX products</span>
+                <p className="display mt-2 text-lg sm:text-xl">
+                  Services are how we work — <span className="gradient-text">products are the technology.</span>
+                </p>
+                <p className="mt-1.5 max-w-xl text-sm text-slate-400">
+                  13 brokerage products we deploy and manage: Trading CRM, platforms, copy trading, risk, liquidity, payments, mobile apps, and more.
+                </p>
+              </div>
+              <span className="inline-flex min-h-[44px] shrink-0 items-center gap-1.5 rounded-full bg-fx-orange/15 px-6 py-3 text-sm font-semibold text-fx-orange">
+                Explore products <span aria-hidden="true">→</span>
+              </span>
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
+
       {SERVICES_BY_CATEGORY.map((group, gi) => (
         <section key={group.category} className={`${gi % 2 === 1 ? "hairline bg-ink-900/40" : ""} py-12 sm:py-16 ${gi === 0 ? "!pt-2 sm:!pt-6" : ""}`}>
           <div className="container-x">

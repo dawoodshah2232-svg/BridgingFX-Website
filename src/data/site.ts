@@ -33,6 +33,7 @@ export const NAV_LINKS = [
   { label: "Company Formation", href: "/company-formation" },
   { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
+  { label: "Client Portal", href: "/portal" },
 ] as const;
 
 export const FOOTER_SERVICES = [

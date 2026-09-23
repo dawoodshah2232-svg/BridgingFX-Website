@@ -12,6 +12,7 @@ import Testimonials from "@/components/Testimonials";
 import CTABand from "@/components/CTABand";
 import { PLATFORMS } from "@/data/platforms";
 import { SERVICES } from "@/data/services";
+import { PRODUCTS } from "@/data/products";
 import { PACKAGES, UPGRADE_PATH_NOTE } from "@/data/packages";
 import { FAQS } from "@/data/faqs";
 import { mailtoFor } from "@/data/site";
@@ -407,10 +408,19 @@ function ServicesPreview() {
           ))}
         </Stagger>
         <FadeIn className="mt-10 text-center">
-          <Link href="/services" className="btn-ghost !px-8 !py-4">
-            View all {SERVICES.length} services
-            <span aria-hidden="true">→</span>
-          </Link>
+          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link href="/services" className="btn-ghost !px-8 !py-4">
+              View all {SERVICES.length} services
+              <span aria-hidden="true">→</span>
+            </Link>
+            <Link href="/products" className="btn-ghost !px-8 !py-4">
+              Explore {PRODUCTS.length} products
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+          <p className="mx-auto mt-5 max-w-xl text-sm text-slate-500">
+            Services are how we work with you — products are the brokerage technology we deploy, from CRM and copy trading to payments and mobile apps.
+          </p>
         </FadeIn>
       </div>
     </section>

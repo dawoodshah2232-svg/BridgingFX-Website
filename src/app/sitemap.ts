@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SERVICES } from "@/data/services";
+import { PRODUCTS } from "@/data/products";
 import { POSTS } from "@/data/posts";
 import { SITE } from "@/data/site";
 
@@ -7,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
     "/services",
+    "/products",
     "/platforms",
     "/crm",
     "/prop-firms",
@@ -27,6 +29,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...SERVICES.map((s) => ({
       url: `${SITE.url}/services/${s.slug}`,
+      lastModified: new Date("2026-09-23"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+    ...PRODUCTS.map((p) => ({
+      url: `${SITE.url}/products/${p.slug}`,
       lastModified: new Date("2026-09-23"),
       changeFrequency: "monthly" as const,
       priority: 0.7,

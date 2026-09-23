@@ -9,13 +9,13 @@ import { FadeIn, Stagger, StaggerItem } from "@/components/Reveal";
 import { SITE, mailtoFor } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Forex CRM Solution — BridgeX CRM",
+  title: "Forex CRM Solution — Live in 15 Minutes | BridgeX CRM",
   description:
-    "BridgeX CRM: a fully customized Forex CRM — cloud or self-hosted — with lead, fund & account management, IB/affiliate system, and documents & compliance.",
+    "BridgeX CRM: a fully customized Forex CRM — live in as little as 15 minutes if you already have a company. No developers needed, no extra fees. Lead, fund & account management, IB/affiliate system, documents & compliance.",
   openGraph: {
-    title: "Forex CRM Solution — BridgeX CRM | BridgingFX",
+    title: "Forex CRM Solution — Live in 15 Minutes | BridgingFX",
     description:
-      "Fully customized Forex CRM, cloud or self-hosted. Lead, fund & account management, IB/affiliate system, compliance.",
+      "Fully customized Forex CRM, live in 15 minutes. No developers, no extra fees. Lead, fund & account management, IB/affiliate system, compliance.",
   },
 };
 
@@ -61,7 +61,7 @@ const FAQS = [
   },
   {
     q: "How long does implementation take?",
-    a: "A standard deployment with your branding, platforms, and PSPs connects in 2–3 weeks. Heavily customized enterprise builds are scoped individually.",
+    a: "If you already have a company, the standard BridgeX deployment is live in as little as 15 minutes — our team configures your branding, platforms, and PSPs with you, no developers needed and no extra developer fees. Heavily customized enterprise builds are scoped individually.",
   },
 ];
 
@@ -80,11 +80,59 @@ export default function CrmPage() {
 
       <PageHero
         eyebrow="Forex CRM solution"
+        badge="Live in 15 minutes — no developers needed"
         title={<>One command center. <span className="gradient-text">Your entire brokerage.</span></>}
-        description="BridgeX CRM — fully customized to your operation, cloud-hosted or self-hosted. Leads, funds, accounts, IBs, and compliance, finally in one place."
-        cta={{ label: "Request a live demo", href: "/contact" }}
+        description="BridgeX CRM — fully customized to your operation, cloud-hosted or self-hosted. If you already have a company, you're up and running in as little as 15 minutes: no programmers, no developers, no extra cost — we do everything for you, in minutes."
+        cta={{ label: "Get my CRM in 15 minutes", href: "/contact" }}
         image={{ src: "/images/pages/crm.webp", alt: "BridgeX Forex CRM command center illustration" }}
       />
+
+      {/* 15-minute setup */}
+      <section className="section-pad !pt-4">
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="Ultra-fast setup"
+            title={<>From sign-up to live in <span className="gradient-text">15 minutes.</span></>}
+            description="Already have a company? Then there's nothing standing between you and a running CRM. No developers to hire, no code to touch, no extra fees — our team does the entire setup with you, in minutes."
+          />
+          <Stagger className="mx-auto mt-12 grid max-w-5xl gap-4 sm:mt-14 sm:gap-5 md:grid-cols-3">
+            {[
+              {
+                time: "Minutes 0–5",
+                t: "Tell us about your operation",
+                d: "Company details, trading platforms, and payment providers — a short guided form. Zero technical knowledge required.",
+              },
+              {
+                time: "Minutes 5–10",
+                t: "We configure everything",
+                d: "Our specialists wire up your platforms, liquidity, branding, and user roles while you watch. You don't lift a finger.",
+              },
+              {
+                time: "Minutes 10–15",
+                t: "You log in and run",
+                d: "A live walkthrough of your command center — leads, funds, IBs, compliance — and your team is operational the same day.",
+              },
+            ].map((s, i) => (
+              <StaggerItem key={s.t}>
+                <div className="glass card-hover relative h-full overflow-hidden rounded-[22px] p-6 sm:p-7">
+                  <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-fx-ember via-fx-orange to-amber-400" aria-hidden="true" />
+                  <span className="inline-flex items-center rounded-full bg-fx-orange/15 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-fx-orange">
+                    {s.time}
+                  </span>
+                  <h3 className="display mt-4 text-lg">{s.t}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-400">{s.d}</p>
+                </div>
+              </StaggerItem>
+            ))}
+          </Stagger>
+          <FadeIn className="mx-auto mt-10 max-w-2xl text-center">
+            <p className="text-sm leading-relaxed text-slate-400">
+              Heavily customized enterprise builds are scoped individually — but the standard
+              BridgeX deployment needs <strong className="text-white">no programmers, no developers, and no extra developer fees.</strong> Ever.
+            </p>
+          </FadeIn>
+        </div>
+      </section>
 
       <section className="section-pad !pt-4">
         <div className="container-x">
@@ -177,9 +225,9 @@ export default function CrmPage() {
 
       <CTABand
         eyebrow="BridgeX CRM"
-        title="See your brokerage run from one screen."
-        description="A personalized demo on your use case — your platforms, your workflows, your questions answered live."
-        primaryLabel="Request a demo"
+        title="Your CRM, live in 15 minutes."
+        description="No developers. No extra fees. Just tell us about your operation and our team handles the entire setup with you — in minutes, not weeks."
+        primaryLabel="Get started now"
       />
     </>
   );

@@ -7,13 +7,13 @@ import { FadeIn, Stagger, StaggerItem } from "@/components/Reveal";
 import { mailtoFor } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Prop Firm Technology — Challenges, Evaluation & Payouts",
+  title: "Prop Firm Technology — Launch in 30 Minutes",
   description:
-    "Complete technology for prop firms: challenge & evaluation engines, real-time risk monitoring, trader dashboards, scaling plans, and automated payouts.",
+    "Complete technology for prop firms, live in as little as 30 minutes: challenge & evaluation engines, real-time risk monitoring, trader dashboards, scaling plans, and automated payouts.",
   openGraph: {
-    title: "Prop Firm Technology | BridgingFX",
+    title: "Prop Firm Technology — Live in 30 Minutes | BridgingFX",
     description:
-      "Challenge engines, real-time risk monitoring, trader dashboards, and payout automation for modern prop firms.",
+      "Challenge engines, real-time risk monitoring, trader dashboards, and payout automation for modern prop firms — deployed in 30 minutes.",
   },
 };
 
@@ -49,11 +49,58 @@ export default function PropFirmsPage() {
     <>
       <PageHero
         eyebrow="Prop firms"
+        badge="Launch in as little as 30 minutes"
         title={<>The tech stack behind <span className="gradient-text">prop firms that scale.</span></>}
-        description="Evaluation engines, real-time risk monitoring, trader dashboards, and payout automation — the infrastructure trust that turns challenges into a waiting list."
-        cta={{ label: "Build my prop firm", href: "/contact" }}
+        description="Evaluation engines, real-time risk monitoring, trader dashboards, and payout automation — live in as little as 30 minutes. The infrastructure trust that turns challenges into a waiting list."
+        cta={{ label: "Launch my prop firm in 30 minutes", href: "/contact" }}
         image={{ src: "/images/pages/prop-firms.webp", alt: "Prop firm evaluation technology illustration" }}
       />
+
+      {/* 30-minute launch */}
+      <section className="section-pad !pt-4">
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="30-minute launch"
+            title={<>Your prop firm, live in <span className="gradient-text">half an hour.</span></>}
+            description="While others quote you months of development, we deploy the complete prop stack with you in a single session. Here's how the 30 minutes break down."
+          />
+          <Stagger className="mx-auto mt-12 grid max-w-5xl gap-4 sm:mt-14 sm:gap-5 md:grid-cols-3">
+            {[
+              {
+                time: "Minutes 0–10",
+                t: "Challenges configured",
+                d: "Your evaluation models — 1-step, 2-step, or instant funding — with profit targets, drawdown rules, and consistency checks wired to tick-level precision.",
+              },
+              {
+                time: "Minutes 10–20",
+                t: "Risk & payouts wired",
+                d: "Real-time risk monitoring, anti-cheat detection, and automated payout scheduling connected to your platforms and PSPs.",
+              },
+              {
+                time: "Minutes 20–30",
+                t: "Traders onboard",
+                d: "Branded trader dashboards, challenge checkout, and your website funnel go live. You start selling challenges the same day.",
+              },
+            ].map((s) => (
+              <StaggerItem key={s.t}>
+                <div className="glass card-hover relative h-full overflow-hidden rounded-[22px] p-6 sm:p-7">
+                  <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-fx-ember via-fx-orange to-amber-400" aria-hidden="true" />
+                  <span className="inline-flex items-center rounded-full bg-fx-orange/15 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-fx-orange">
+                    {s.time}
+                  </span>
+                  <h3 className="display mt-4 text-lg">{s.t}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-400">{s.d}</p>
+                </div>
+              </StaggerItem>
+            ))}
+          </Stagger>
+          <FadeIn className="mt-10 text-center">
+            <Link href="/contact" className="btn-primary !px-8 !py-4">
+              Start my 30-minute launch <span aria-hidden="true">→</span>
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
 
       <section className="section-pad !pt-4">
         <div className="container-x">
@@ -139,9 +186,9 @@ export default function PropFirmsPage() {
 
       <CTABand
         eyebrow="Prop firms"
-        title="Launch the prop firm traders trust."
-        description="From challenge engine to payout automation — one partner, one data model, zero duct tape."
-        primaryLabel="Start my prop firm"
+        title="Your prop firm could be live in 30 minutes."
+        description="Challenge engine, risk monitoring, trader dashboards, payout automation — deployed with you in a single session."
+        primaryLabel="Start my 30-minute launch"
       />
     </>
   );

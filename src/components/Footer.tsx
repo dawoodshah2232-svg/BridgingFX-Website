@@ -10,6 +10,8 @@ const COMPANY_LINKS = [
   { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
+  { label: "Client Portal", href: "/portal" },
+  { label: "Products", href: "/products" },
   { label: "All Services", href: "/services" },
 ];
 

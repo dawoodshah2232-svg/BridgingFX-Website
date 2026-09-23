@@ -88,7 +88,7 @@ export default function Navbar() {
                   <Link
                     href={l.href}
                     aria-current={isActive ? "page" : undefined}
-                    className={`rounded-full px-3.5 py-2.5 text-[13.5px] font-medium transition-all duration-200 ${
+                    className={`whitespace-nowrap rounded-full px-3 py-2.5 text-[13px] font-medium transition-all duration-200 ${
                       isActive
                         ? "bg-white/10 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"
                         : "text-slate-400 hover:bg-white/5 hover:text-white"
