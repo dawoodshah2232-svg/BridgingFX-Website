@@ -52,6 +52,7 @@ export default function CompanyFormationPage() {
         title={<>From founder to brokerage <span className="gradient-text">in four steps.</span></>}
         description="Using the experience of our clients, we guide you through the entire forex company-creation journey. Our professional team assists at every step — you bring the ambition."
         cta={{ label: "Start step one", href: "/contact" }}
+        image={{ src: "/images/pages/company-formation.webp", alt: "Forex company formation illustration" }}
       />
 
       <section className="section-pad !pt-4">

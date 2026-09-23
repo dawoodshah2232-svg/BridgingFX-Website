@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FadeIn, Stagger, StaggerItem } from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
@@ -98,6 +99,33 @@ function Hero() {
                   </span>
                 ))}
               </div>
+            </div>
+          </motion.div>
+          {/* hero visual */}
+          <motion.div
+            initial={{ opacity: 0, y: 36 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.7, ease: EASE }}
+            className="relative mt-12 w-full sm:mt-14"
+          >
+            <div
+              className="pointer-events-none absolute -inset-px rounded-[28px] bg-gradient-to-b from-fx-orange/40 via-white/10 to-transparent"
+              aria-hidden="true"
+            />
+            <div className="relative overflow-hidden rounded-[28px] shadow-card">
+              <Image
+                src="/images/home/hero-trading-command.webp"
+                alt="Abstract visualization of the BridgingFX trading technology platform"
+                width={1600}
+                height={900}
+                priority
+                sizes="(max-width: 640px) 100vw, (max-width: 1100px) 92vw, 1152px"
+                className="h-auto w-full object-cover"
+              />
+              <div
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/55 via-transparent to-transparent"
+                aria-hidden="true"
+              />
             </div>
           </motion.div>
         </div>
@@ -206,6 +234,22 @@ function PlatformsShowcase() {
           title={<>Enter the world&apos;s most liquid market <span className="gradient-text">in two weeks.</span></>}
           description="Five proven platform solutions — fully branded, liquidity-connected, and CRM-integrated, delivered by a team that launches brokerages for a living."
         />
+        <FadeIn className="mt-12 sm:mt-14">
+          <div className="relative overflow-hidden rounded-[24px] shadow-card sm:rounded-[28px]">
+            <Image
+              src="/images/home/section-platforms.webp"
+              alt="White-label trading platforms visualization — BridgingFX"
+              width={1200}
+              height={675}
+              sizes="(max-width: 640px) 100vw, (max-width: 1100px) 92vw, 1152px"
+              className="h-auto w-full object-cover"
+            />
+            <div
+              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/45 via-transparent to-transparent"
+              aria-hidden="true"
+            />
+          </div>
+        </FadeIn>
         <Stagger className="mt-12 grid gap-4 sm:mt-14 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
           {PLATFORMS.map((p) => (
             <StaggerItem key={p.slug} className={p.slug === "hybrid" ? "md:col-span-2 lg:col-span-1" : ""}>
@@ -310,57 +354,20 @@ function CrmSection() {
             </div>
           </FadeIn>
 
-          {/* stylized CRM dashboard mock — pure CSS, mobile-safe */}
           <FadeIn delay={0.15}>
-            <div className="glass relative overflow-hidden rounded-[24px] p-5 shadow-card sm:rounded-[28px] sm:p-6">
-              <div className="orb -right-16 -top-16 h-48 w-48 bg-fx-orange/15" aria-hidden="true" />
-              <div className="relative">
-                <div className="mb-5 flex items-center justify-between">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.2em] text-slate-500">BridgeX CRM</p>
-                    <p className="display mt-1 text-lg">Operations overview</p>
-                  </div>
-                  <span className="flex items-center gap-1.5 rounded-full bg-mint/10 px-3 py-1.5 text-xs font-semibold text-mint">
-                    <span className="h-1.5 w-1.5 rounded-full bg-mint" aria-hidden="true" /> Live
-                  </span>
-                </div>
-                <div className="grid grid-cols-3 gap-3">
-                  {[
-                    { k: "Active clients", v: "12,480" },
-                    { k: "FTDs today", v: "86" },
-                    { k: "Volume (lots)", v: "48.2K" },
-                  ].map((s) => (
-                    <div key={s.k} className="rounded-2xl border border-white/10 bg-white/[0.03] p-3 sm:p-4">
-                      <p className="display text-base sm:text-xl">{s.v}</p>
-                      <p className="mt-1 text-[10px] uppercase tracking-wider text-slate-500 sm:text-xs">{s.k}</p>
-                    </div>
-                  ))}
-                </div>
-                {/* bar chart */}
-                <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-                  <p className="mb-3 text-xs uppercase tracking-wider text-slate-500">Deposits — last 12 weeks</p>
-                  <div className="flex h-24 items-end gap-1.5 sm:h-28" aria-hidden="true">
-                    {[35, 52, 44, 68, 58, 76, 62, 84, 72, 92, 80, 98].map((h, i) => (
-                      <motion.div
-                        key={i}
-                        initial={{ height: 0 }}
-                        whileInView={{ height: `${h}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.7, delay: i * 0.05, ease: EASE }}
-                        className={`flex-1 rounded-t-md ${i === 11 ? "bg-gradient-to-t from-fx-ember to-amber-400" : "bg-white/10"}`}
-                      />
-                    ))}
-                  </div>
-                </div>
-                <div className="mt-4 grid grid-cols-2 gap-3">
-                  {["IB commissions", "KYC queue"].map((k) => (
-                    <div key={k} className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3">
-                      <span className="text-xs font-medium text-slate-300 sm:text-sm">{k}</span>
-                      <span className="text-fx-orange" aria-hidden="true">→</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            <div className="relative overflow-hidden rounded-[24px] shadow-card sm:rounded-[28px]">
+              <Image
+                src="/images/home/section-crm.webp"
+                alt="BridgeX Forex CRM command center visualization"
+                width={1200}
+                height={675}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="h-auto w-full object-cover"
+              />
+              <div
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/45 via-transparent to-transparent"
+                aria-hidden="true"
+              />
             </div>
           </FadeIn>
         </div>
@@ -410,6 +417,67 @@ function ServicesPreview() {
   );
 }
 
+/* ---------------- PROP FIRMS BAND ---------------- */
+function PropBand() {
+  return (
+    <section className="section-pad relative overflow-hidden">
+      <div className="orb right-[-10%] top-[10%] h-72 w-72 bg-fx-orange/10 sm:h-96 sm:w-96" aria-hidden="true" />
+      <div className="container-x relative">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <FadeIn>
+            <div className="relative overflow-hidden rounded-[24px] shadow-card sm:rounded-[28px]">
+              <Image
+                src="/images/home/section-prop.webp"
+                alt="Prop firm challenge and evaluation technology illustration"
+                width={1200}
+                height={675}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="h-auto w-full object-cover"
+              />
+              <div
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/45 via-transparent to-transparent"
+                aria-hidden="true"
+              />
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.12}>
+            <span className="eyebrow">Prop firm technology</span>
+            <h2 className="display mt-4 text-3xl leading-[1.08] sm:text-4xl lg:text-5xl">
+              The infrastructure behind <span className="gradient-text">prop firms that scale.</span>
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-slate-400 sm:text-lg">
+              Evaluation engines with tick-level precision, real-time risk
+              monitoring, trader dashboards worth screenshotting, and payout
+              workflows that never slip — the tech stack the winning prop
+              firms run on.
+            </p>
+            <ul className="mt-7 space-y-3.5">
+              {[
+                "1-step, 2-step & instant-funding challenge engines",
+                "Automated drawdown, consistency & breach enforcement",
+                "Funded-trader dashboards, scaling plans & payouts",
+              ].map((c) => (
+                <li key={c} className="flex items-start gap-3 text-[15px] text-slate-300 sm:text-base">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-mint/15 text-xs font-bold text-mint" aria-hidden="true">✓</span>
+                  {c}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link href="/prop-firms" className="btn-primary w-full !py-4 sm:w-auto">
+                Explore prop tech
+              </Link>
+              <Link href="/services/propfirm-tech" className="btn-ghost w-full !py-4 sm:w-auto">
+                Prop firm service
+              </Link>
+            </div>
+          </FadeIn>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------------- COMPANY FORMATION STEPS ---------------- */
 const STEPS = [
   {
@@ -443,6 +511,22 @@ function CompanySteps() {
           title={<>From idea to live brokerage <span className="gradient-text">in four steps.</span></>}
           description="We've guided founders through this exact journey. Our team runs the entire company-creation process with you — you focus on the vision."
         />
+        <FadeIn className="mt-12 sm:mt-16">
+          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[24px] shadow-card sm:rounded-[28px]">
+            <Image
+              src="/images/home/section-company.webp"
+              alt="Forex company formation journey illustration"
+              width={1200}
+              height={675}
+              sizes="(max-width: 640px) 100vw, (max-width: 1100px) 92vw, 896px"
+              className="h-auto w-full object-cover"
+            />
+            <div
+              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/45 via-transparent to-transparent"
+              aria-hidden="true"
+            />
+          </div>
+        </FadeIn>
         <div className="relative mt-12 sm:mt-16">
           {/* connector line — desktop only */}
           <div className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-transparent via-fx-orange/40 to-transparent lg:block" aria-hidden="true" />
@@ -501,16 +585,34 @@ function WhyUs() {
           title={<>The partner you can <span className="gradient-text">rely on.</span></>}
           description="We combine innovation, technology, and hard-won brokerage expertise to help firms scale faster, smarter, and more efficiently."
         />
-        <div className="mx-auto mt-12 grid max-w-4xl gap-4 sm:mt-14 sm:grid-cols-3 sm:gap-5">
-          {WHY_POINTS.map((b, i) => (
-            <FadeIn key={b.label} delay={i * 0.08}>
-              <div className="glass h-full rounded-[20px] p-6 text-left">
-                <div className="h-1 w-10 rounded-full bg-gradient-to-r from-fx-ember via-fx-orange to-amber-400" />
-                <h3 className="display mt-4 text-base sm:text-lg">{b.label}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-400">{b.text}</p>
-              </div>
-            </FadeIn>
-          ))}
+        <div className="mt-12 grid items-center gap-10 sm:mt-14 lg:grid-cols-2 lg:gap-14">
+          <FadeIn>
+            <div className="relative overflow-hidden rounded-[24px] shadow-card sm:rounded-[28px]">
+              <Image
+                src="/images/home/section-why.webp"
+                alt="Why brokerages choose BridgingFX — partnership illustration"
+                width={1200}
+                height={675}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="h-auto w-full object-cover"
+              />
+              <div
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/45 via-transparent to-transparent"
+                aria-hidden="true"
+              />
+            </div>
+          </FadeIn>
+          <div className="grid gap-4 sm:gap-5">
+            {WHY_POINTS.map((b, i) => (
+              <FadeIn key={b.label} delay={i * 0.08}>
+                <div className="glass h-full rounded-[20px] p-6 text-left">
+                  <div className="h-1 w-10 rounded-full bg-gradient-to-r from-fx-ember via-fx-orange to-amber-400" />
+                  <h3 className="display mt-4 text-base sm:text-lg">{b.label}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-400">{b.text}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
         </div>
         <FadeIn className="mx-auto mt-12 grid max-w-4xl gap-4 text-center sm:grid-cols-3 sm:gap-5">
           {[
@@ -644,6 +746,7 @@ export default function Home() {
       <PlatformsShowcase />
       <CrmSection />
       <ServicesPreview />
+      <PropBand />
       <CompanySteps />
       <WhyUs />
       <Packages />

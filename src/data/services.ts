@@ -21,6 +21,8 @@ export type IconName =
 export type Service = {
   slug: string;
   title: string;
+  image: string;
+  imageAlt: string;
   category: "Technology" | "Growth" | "Operations" | "Compliance" | "Creative";
   tagline: string;
   description: string[];
@@ -32,6 +34,8 @@ export type Service = {
 export const SERVICES: Service[] = [
   {
     slug: "software-development",
+    image: "/images/services/software-development.webp",
+    imageAlt: "Software Development — BridgingFX service illustration",
     title: "Software Development",
     category: "Technology",
     tagline: "Custom-built trading technology, engineered for the FX industry.",
@@ -65,6 +69,8 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "risk-management",
+    image: "/images/services/risk-management.webp",
+    imageAlt: "Risk Management — BridgingFX service illustration",
     title: "Risk Management",
     category: "Operations",
     tagline: "Protect your book. Price with confidence. Sleep at night.",
@@ -98,6 +104,8 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "ui-ux-design",
+    image: "/images/services/ui-ux-design.webp",
+    imageAlt: "UI/UX Design — BridgingFX service illustration",
     title: "UI/UX Design",
     category: "Creative",
     tagline: "Interfaces traders love. Conversion flows that pay for themselves.",
@@ -131,6 +139,8 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "digital-marketing",
+    image: "/images/services/digital-marketing.webp",
+    imageAlt: "Digital Marketing — BridgingFX service illustration",
     title: "Digital Marketing",
     category: "Growth",
     tagline: "Acquisition engines built for regulated FX realities.",
@@ -164,6 +174,8 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "cloud-provider",
+    image: "/images/services/cloud-provider.webp",
+    imageAlt: "Cloud Provider — BridgingFX service illustration",
     title: "Cloud Provider",
     category: "Technology",
     tagline: "Trading-grade infrastructure with 99.99% uptime DNA.",
@@ -197,6 +209,8 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "data-analytics",
+    image: "/images/services/data-analytics.webp",
+    imageAlt: "Data Analytics — BridgingFX service illustration",
     title: "Data Analytics",
     category: "Technology",
     tagline: "Turn platform exhaust into decisions.",
@@ -230,6 +244,8 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "web-development",
+    image: "/images/services/web-development.webp",
+    imageAlt: "Web Development — BridgingFX service illustration",
     title: "Web Development",
     category: "Technology",
     tagline: "Broker websites engineered to convert — and to rank.",
@@ -263,6 +279,8 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "business-analysis",
+    image: "/images/services/business-analysis.webp",
+    imageAlt: "Business Analysis — BridgingFX service illustration",
     title: "Business Analysis",
     category: "Operations",
     tagline: "Clarity before capital. Strategy before spend.",
@@ -296,6 +314,8 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "product-design",
+    image: "/images/services/product-design.webp",
+    imageAlt: "Product Design — BridgingFX service illustration",
     title: "Product Design",
     category: "Creative",
     tagline: "From idea to a product traders can't put down.",
@@ -329,6 +349,8 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "logo-design",
+    image: "/images/services/logo-design.webp",
+    imageAlt: "Logo Design — BridgingFX service illustration",
     title: "Logo Design",
     category: "Creative",
     tagline: "A mark worthy of the brokerage you're building.",
@@ -362,6 +384,8 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "fx-leads",
+    image: "/images/services/fx-leads.webp",
+    imageAlt: "FX Leads — BridgingFX service illustration",
     title: "FX Leads",
     category: "Growth",
     tagline: "Premium, verified, high-intent trading leads.",
@@ -401,6 +425,8 @@ export const SERVICES: Service[] = [
 SERVICES.push(
   {
     slug: "tech-support",
+    image: "/images/services/tech-support.webp",
+    imageAlt: "24/7 Tech Support — BridgingFX service illustration",
     title: "24/7 Tech Support",
     category: "Operations",
     tagline: "Global uptime. Financial-grade support, around the clock.",
@@ -438,6 +464,8 @@ SERVICES.push(
   },
   {
     slug: "compliance-kyc",
+    image: "/images/services/compliance-kyc.webp",
+    imageAlt: "Compliance & KYC — BridgingFX service illustration",
     title: "Compliance & KYC",
     category: "Compliance",
     tagline: "Faster onboarding. Regulatory adherence, guaranteed.",
@@ -475,6 +503,8 @@ SERVICES.push(
   },
   {
     slug: "migration",
+    image: "/images/services/migration.webp",
+    imageAlt: "Migration — BridgingFX service illustration",
     title: "Migration",
     category: "Operations",
     tagline: "Move platforms, providers, or stacks — with zero drama.",
@@ -508,6 +538,8 @@ SERVICES.push(
   },
   {
     slug: "mobile-app-development",
+    image: "/images/services/mobile-app-development.webp",
+    imageAlt: "Mobile App Development — BridgingFX service illustration",
     title: "Mobile App Development",
     category: "Technology",
     tagline: "Native-quality trading apps for iOS and Android.",
@@ -541,6 +573,8 @@ SERVICES.push(
   },
   {
     slug: "platform-integrations",
+    image: "/images/services/platform-integrations.webp",
+    imageAlt: "Platform Integrations — BridgingFX service illustration",
     title: "Platform Integrations",
     category: "Technology",
     tagline: "Every system you run, speaking the same language.",
@@ -574,6 +608,8 @@ SERVICES.push(
   },
   {
     slug: "podcast-studio",
+    image: "/images/services/podcast-studio.webp",
+    imageAlt: "Podcast Studio Rental — BridgingFX service illustration",
     title: "Podcast Studio Rental",
     category: "Growth",
     tagline: "A broadcast-grade studio for your market voice.",
@@ -607,6 +643,8 @@ SERVICES.push(
   },
   {
     slug: "fx-broker-management",
+    image: "/images/services/fx-broker-management.webp",
+    imageAlt: "FX Broker Management — BridgingFX service illustration",
     title: "FX Broker Management",
     category: "Operations",
     tagline: "Senior operators running your brokerage, end to end.",
@@ -640,6 +678,8 @@ SERVICES.push(
   },
   {
     slug: "trading-platform-management",
+    image: "/images/services/trading-platform-management.webp",
+    imageAlt: "Trading Platform Management — BridgingFX service illustration",
     title: "Trading Platform Management",
     category: "Operations",
     tagline: "Your servers, symbols, and feeds — expertly run.",
@@ -673,6 +713,8 @@ SERVICES.push(
   },
   {
     slug: "outsourcing-customer-support",
+    image: "/images/services/outsourcing-customer-support.webp",
+    imageAlt: "Outsourcing Customer Support — BridgingFX service illustration",
     title: "Outsourcing Customer Support",
     category: "Operations",
     tagline: "A support team your traders will actually thank you for.",
@@ -706,6 +748,8 @@ SERVICES.push(
   },
   {
     slug: "propfirm-tech",
+    image: "/images/services/propfirm-tech.webp",
+    imageAlt: "PropFirm Challenge & Evaluation Tech — BridgingFX service illustration",
     title: "PropFirm Challenge & Evaluation Tech",
     category: "Technology",
     tagline: "The complete technology stack for modern prop firms.",
@@ -739,6 +783,8 @@ SERVICES.push(
   },
   {
     slug: "mt4-mt5-white-label",
+    image: "/images/services/mt4-mt5-white-label.webp",
+    imageAlt: "MT4/MT5 White Label — BridgingFX service illustration",
     title: "MT4/MT5 White Label",
     category: "Technology",
     tagline: "The world's most recognized platforms, under your brand.",
@@ -774,6 +820,8 @@ SERVICES.push(
 SERVICES.push(
   {
     slug: "liquidity-aggregation",
+    image: "/images/services/liquidity-aggregation.webp",
+    imageAlt: "Liquidity Aggregation & Price Feeds — BridgingFX service illustration",
     title: "Liquidity Aggregation & Price Feeds",
     category: "Technology",
     tagline: "Deep, stable liquidity with institutional-grade execution.",
@@ -807,6 +855,8 @@ SERVICES.push(
   },
   {
     slug: "mam-pamm-copy-trading",
+    image: "/images/services/mam-pamm-copy-trading.webp",
+    imageAlt: "MAM/PAMM & Copy Trading — BridgingFX service illustration",
     title: "MAM/PAMM & Copy Trading",
     category: "Technology",
     tagline: "Let your best traders become your best acquisition channel.",
@@ -840,6 +890,8 @@ SERVICES.push(
   },
   {
     slug: "ib-affiliate-portals",
+    image: "/images/services/ib-affiliate-portals.webp",
+    imageAlt: "IB & Affiliate Portals — BridgingFX service illustration",
     title: "IB & Affiliate Portals",
     category: "Growth",
     tagline: "Give your partners a reason to send you everyone.",
@@ -873,6 +925,8 @@ SERVICES.push(
   },
   {
     slug: "psp-payment-orchestration",
+    image: "/images/services/psp-payment-orchestration.webp",
+    imageAlt: "PSP & Payment Orchestration — BridgingFX service illustration",
     title: "PSP & Payment Orchestration",
     category: "Operations",
     tagline: "Deposits that succeed. Payouts that arrive. Everywhere.",
@@ -906,6 +960,8 @@ SERVICES.push(
   },
   {
     slug: "licensing-compliance",
+    image: "/images/services/licensing-compliance.webp",
+    imageAlt: "Licensing & Compliance Consultancy — BridgingFX service illustration",
     title: "Licensing & Compliance Consultancy",
     category: "Compliance",
     tagline: "The right license, the right jurisdiction — no expensive detours.",
@@ -939,6 +995,8 @@ SERVICES.push(
   },
   {
     slug: "kyc-automation",
+    image: "/images/services/kyc-automation.webp",
+    imageAlt: "KYC Automation — BridgingFX service illustration",
     title: "KYC Automation",
     category: "Compliance",
     tagline: "Onboarding in minutes, not days — fully audit-trailed.",
@@ -972,6 +1030,8 @@ SERVICES.push(
   },
   {
     slug: "ai-analytics-bi",
+    image: "/images/services/ai-analytics-bi.webp",
+    imageAlt: "AI Analytics & BI Dashboards — BridgingFX service illustration",
     title: "AI Analytics & BI Dashboards",
     category: "Technology",
     tagline: "Your brokerage's data, thinking ahead of you.",
@@ -1005,6 +1065,8 @@ SERVICES.push(
   },
   {
     slug: "forex-vps-hosting",
+    image: "/images/services/forex-vps-hosting.webp",
+    imageAlt: "Forex VPS Hosting — BridgingFX service illustration",
     title: "Forex VPS Hosting",
     category: "Technology",
     tagline: "Milliseconds matter. Host where they count.",
@@ -1038,6 +1100,8 @@ SERVICES.push(
   },
   {
     slug: "growth-marketing",
+    image: "/images/services/growth-marketing.webp",
+    imageAlt: "Broker Growth Marketing Suite — BridgingFX service illustration",
     title: "Broker Growth Marketing Suite",
     category: "Growth",
     tagline: "A full-funnel growth system, not random acts of marketing.",
@@ -1071,6 +1135,8 @@ SERVICES.push(
   },
   {
     slug: "mobile-trading-apps",
+    image: "/images/services/mobile-trading-apps.webp",
+    imageAlt: "Mobile Trading Apps — BridgingFX service illustration",
     title: "Mobile Trading Apps",
     category: "Technology",
     tagline: "Your brand in every trader's pocket.",
@@ -1104,6 +1170,8 @@ SERVICES.push(
   },
   {
     slug: "traders-room",
+    image: "/images/services/traders-room.webp",
+    imageAlt: "Trader's Room / Client Cabinet — BridgingFX service illustration",
     title: "Trader's Room / Client Cabinet",
     category: "Technology",
     tagline: "The client portal your traders deserve.",

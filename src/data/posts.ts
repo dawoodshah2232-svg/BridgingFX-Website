@@ -1,6 +1,8 @@
 export type Post = {
   slug: string;
   title: string;
+  cover: string;
+  coverAlt: string;
   excerpt: string;
   category: string;
   readTime: string;
@@ -14,6 +16,8 @@ export type Post = {
 export const POSTS: Post[] = [
   {
     slug: "launch-forex-brokerage-2026-checklist",
+    cover: "/images/blog/launch-forex-brokerage-2026-checklist.webp",
+    coverAlt: "Launching a forex brokerage — rocket launch illustration",
     title: "How to Launch a Forex Brokerage in 2026: The Complete Technology Checklist",
     excerpt:
       "Company formation, platforms, liquidity, CRM, PSPs, KYC — the exact sequence experienced operators follow to go from idea to live trading in weeks.",
@@ -72,6 +76,8 @@ export const POSTS: Post[] = [
   },
   {
     slug: "ctrader-vs-mt5-vs-wintrado-white-label",
+    cover: "/images/blog/ctrader-vs-mt5-vs-wintrado-white-label.webp",
+    coverAlt: "Three trading platforms compared illustration",
     title: "cTrader vs MT5 vs Wintrado: Choosing the Right White-Label Platform",
     excerpt:
       "An honest, vendor-neutral comparison of the three platforms brokers ask us about most — who each one is for, and the trade-offs nobody puts in the brochure.",
@@ -120,6 +126,8 @@ export const POSTS: Post[] = [
   },
   {
     slug: "why-prop-firms-winning-2026-tech-stack",
+    cover: "/images/blog/why-prop-firms-winning-2026-tech-stack.webp",
+    coverAlt: "Prop firm technology stack illustration",
     title: "Why Prop Firms Are Winning 2026: The Tech Stack Behind the Boom",
     excerpt:
       "Evaluation engines, risk monitoring, and payout workflows — the infrastructure decisions separating prop firms that scale from those that stall.",

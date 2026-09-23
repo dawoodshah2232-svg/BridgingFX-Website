@@ -83,6 +83,7 @@ export default function CrmPage() {
         title={<>One command center. <span className="gradient-text">Your entire brokerage.</span></>}
         description="BridgeX CRM — fully customized to your operation, cloud-hosted or self-hosted. Leads, funds, accounts, IBs, and compliance, finally in one place."
         cta={{ label: "Request a live demo", href: "/contact" }}
+        image={{ src: "/images/pages/crm.webp", alt: "BridgeX Forex CRM command center illustration" }}
       />
 
       <section className="section-pad !pt-4">

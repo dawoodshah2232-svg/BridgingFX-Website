@@ -1,23 +1,27 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { mailtoFor } from "@/data/site";
 
 /**
  * Compact cinematic page hero — mobile-first.
  * Big but never overflowing: fluid clamp scale, one-screen presence.
+ * Optional `image` renders a cinematic banner below the copy.
  */
 export default function PageHero({
   eyebrow,
   title,
   description,
   cta,
+  image,
 }: {
   eyebrow: string;
   title: React.ReactNode;
   description: string;
   cta?: { label: string; href: string };
+  image?: { src: string; alt: string };
 }) {
   return (
     <section className="relative overflow-hidden pb-14 pt-32 sm:pb-20 sm:pt-40">
@@ -55,6 +59,34 @@ export default function PageHero({
             </div>
           )}
         </motion.div>
+
+        {image && (
+          <motion.div
+            initial={{ opacity: 0, y: 32 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            className="relative mx-auto mt-12 max-w-5xl sm:mt-16"
+          >
+            <div
+              className="pointer-events-none absolute -inset-px rounded-[28px] bg-gradient-to-b from-fx-orange/40 via-white/10 to-transparent"
+              aria-hidden="true"
+            />
+            <div className="relative overflow-hidden rounded-[28px] shadow-card">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={1400}
+                height={788}
+                sizes="(max-width: 640px) 100vw, (max-width: 1100px) 90vw, 1024px"
+                className="h-auto w-full object-cover"
+              />
+              <div
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/50 via-transparent to-transparent"
+                aria-hidden="true"
+              />
+            </div>
+          </motion.div>
+        )}
       </div>
     </section>
   );

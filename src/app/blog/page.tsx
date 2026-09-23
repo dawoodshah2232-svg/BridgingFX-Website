@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import CTABand from "@/components/CTABand";
 import { Stagger, StaggerItem } from "@/components/Reveal";
@@ -34,13 +35,20 @@ export default function BlogPage() {
                   href={`/blog/${p.slug}`}
                   className="glass card-hover group flex h-full flex-col overflow-hidden rounded-[24px]"
                 >
-                  {/* editorial cover — pure CSS, mobile-safe */}
-                  <div className="relative flex h-44 items-end overflow-hidden bg-gradient-to-br from-ink-700 via-ink-800 to-ink-950 p-6 sm:h-48">
-                    <div className="orb -right-10 -top-10 h-36 w-36 bg-fx-orange/20" aria-hidden="true" />
-                    <div className="hero-grid absolute inset-0 opacity-70" aria-hidden="true" />
-                    <span className="gradient-text display relative text-5xl font-bold opacity-90" aria-hidden="true">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
+                  {/* article cover */}
+                  <div className="relative h-44 overflow-hidden sm:h-48">
+                    <Image
+                      src={p.cover}
+                      alt={p.coverAlt}
+                      width={800}
+                      height={450}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div
+                      className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/50 via-transparent to-transparent"
+                      aria-hidden="true"
+                    />
                   </div>
                   <div className="flex flex-1 flex-col p-6 sm:p-7">
                     <div className="flex flex-wrap items-center gap-2 text-xs">

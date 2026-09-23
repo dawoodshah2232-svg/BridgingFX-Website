@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import CTABand from "@/components/CTABand";
 import JsonLd from "@/components/JsonLd";
@@ -46,6 +47,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           headline: post.title,
           description: post.excerpt,
           url,
+          image: `${SITE.url}${post.cover}`,
           datePublished: post.date,
           author: { "@type": "Organization", name: "BridgingFX", url: SITE.url },
           publisher: { "@type": "Organization", name: "BridgingFX", url: SITE.url },
@@ -81,6 +83,18 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       </article>
 
       <div className="container-x max-w-3xl">
+        <FadeIn>
+          <div className="relative mb-10 overflow-hidden rounded-[24px] shadow-card">
+            <Image
+              src={post.cover}
+              alt={post.coverAlt}
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="h-auto w-full object-cover"
+            />
+          </div>
+        </FadeIn>
         <FadeIn>
           <div className="prose-dark">
             <p className="!text-slate-200 text-lg">{post.intro}</p>

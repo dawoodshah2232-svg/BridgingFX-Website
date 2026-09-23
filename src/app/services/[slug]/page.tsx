@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import PageHero from "@/components/PageHero";
 import ServiceIcon from "@/components/ServiceIcon";
@@ -56,6 +57,28 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
         description={service.tagline}
         cta={{ label: `Enquire about ${service.title}`, href: "/contact" }}
       />
+
+      {/* Service visual */}
+      <section className="!pt-2">
+        <div className="container-x">
+          <FadeIn>
+            <div className="relative overflow-hidden rounded-[24px] shadow-card sm:rounded-[28px]">
+              <Image
+                src={service.image}
+                alt={service.imageAlt}
+                width={1200}
+                height={675}
+                sizes="(max-width: 640px) 100vw, (max-width: 1100px) 90vw, 1024px"
+                className="h-auto w-full object-cover"
+              />
+              <div
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/45 via-transparent to-transparent"
+                aria-hidden="true"
+              />
+            </div>
+          </FadeIn>
+        </div>
+      </section>
 
       {/* Overview */}
       <section className="section-pad !pt-4">
@@ -132,16 +155,25 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
                 <StaggerItem key={r.slug}>
                   <Link
                     href={`/services/${r.slug}`}
-                    className="glass card-hover group flex h-full flex-col rounded-[22px] p-6"
+                    className="glass card-hover group flex h-full flex-col overflow-hidden rounded-[22px]"
                   >
-                    <span className="mb-4 inline-flex w-fit items-center justify-center rounded-xl bg-white/5 p-2.5 text-slate-300 transition-colors group-hover:bg-fx-orange/15 group-hover:text-fx-orange">
-                      <ServiceIcon name={r.icon} className="h-5 w-5" />
-                    </span>
-                    <h3 className="display text-base">{r.title}</h3>
-                    <p className="mt-1.5 flex-1 text-sm text-slate-400">{r.tagline}</p>
-                    <span className="mt-3 inline-flex min-h-[40px] items-center text-sm font-semibold text-fx-orange">
-                      Learn more <span aria-hidden="true">→</span>
-                    </span>
+                    <div className="relative h-36 overflow-hidden">
+                      <Image
+                        src={r.image}
+                        alt={r.imageAlt}
+                        width={600}
+                        height={338}
+                        sizes="(max-width: 640px) 100vw, 33vw"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col p-6">
+                      <h3 className="display text-base">{r.title}</h3>
+                      <p className="mt-1.5 flex-1 text-sm text-slate-400">{r.tagline}</p>
+                      <span className="mt-3 inline-flex min-h-[40px] items-center text-sm font-semibold text-fx-orange">
+                        Learn more <span aria-hidden="true">→</span>
+                      </span>
+                    </div>
                   </Link>
                 </StaggerItem>
               ))}
