@@ -204,7 +204,7 @@ function PlatformsShowcase() {
         <SectionHeading
           eyebrow="White-label platforms"
           title={<>Enter the world&apos;s most liquid market <span className="gradient-text">in two weeks.</span></>}
-          description="Five proven platform solutions — fully branded, liquidity-connected, CRM-integrated, and launched by people who've done it hundreds of times."
+          description="Five proven platform solutions — fully branded, liquidity-connected, and CRM-integrated, delivered by a team that launches brokerages for a living."
         />
         <Stagger className="mt-12 grid gap-4 sm:mt-14 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
           {PLATFORMS.map((p) => (
@@ -441,7 +441,7 @@ function CompanySteps() {
         <SectionHeading
           eyebrow="Create your company"
           title={<>From idea to live brokerage <span className="gradient-text">in four steps.</span></>}
-          description="We've guided countless founders through this exact journey. Our team runs the entire company-creation process with you — you focus on the vision."
+          description="We've guided founders through this exact journey. Our team runs the entire company-creation process with you — you focus on the vision."
         />
         <div className="relative mt-12 sm:mt-16">
           {/* connector line — desktop only */}
@@ -476,10 +476,19 @@ function CompanySteps() {
 }
 
 /* ---------------- WHY ---------------- */
-const WHY_BARS = [
-  { label: "Client success & growth", value: 92 },
-  { label: "Technology reliability", value: 88 },
-  { label: "Innovation & customization", value: 96 },
+const WHY_POINTS = [
+  {
+    label: "Client success & growth",
+    text: "Dedicated onboarding, training, and 24/7 support — plus the marketing and IB tooling you need to grow volume.",
+  },
+  {
+    label: "Technology reliability",
+    text: "Battle-tested infrastructure with proactive monitoring and a support team that responds around the clock.",
+  },
+  {
+    label: "Innovation & customization",
+    text: "Every deployment tailored to your brand, workflows, and market — nothing off-the-shelf feeling.",
+  },
 ];
 
 function WhyUs() {
@@ -492,21 +501,13 @@ function WhyUs() {
           title={<>The partner you can <span className="gradient-text">rely on.</span></>}
           description="We combine innovation, technology, and hard-won brokerage expertise to help firms scale faster, smarter, and more efficiently."
         />
-        <div className="mx-auto mt-12 max-w-3xl space-y-7 sm:mt-14">
-          {WHY_BARS.map((b, i) => (
+        <div className="mx-auto mt-12 grid max-w-4xl gap-4 sm:mt-14 sm:grid-cols-3 sm:gap-5">
+          {WHY_POINTS.map((b, i) => (
             <FadeIn key={b.label} delay={i * 0.08}>
-              <div className="flex items-end justify-between gap-4">
-                <h3 className="display text-base sm:text-lg">{b.label}</h3>
-                <span className="gradient-text display text-2xl sm:text-3xl">{b.value}%</span>
-              </div>
-              <div className="mt-2.5 h-2.5 overflow-hidden rounded-full bg-white/10" role="img" aria-label={`${b.label}: ${b.value} percent`}>
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${b.value}%` }}
-                  viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 1.4, delay: 0.15 + i * 0.12, ease: EASE }}
-                  className="h-full rounded-full bg-gradient-to-r from-fx-ember via-fx-orange to-amber-400"
-                />
+              <div className="glass h-full rounded-[20px] p-6 text-left">
+                <div className="h-1 w-10 rounded-full bg-gradient-to-r from-fx-ember via-fx-orange to-amber-400" />
+                <h3 className="display mt-4 text-base sm:text-lg">{b.label}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-400">{b.text}</p>
               </div>
             </FadeIn>
           ))}

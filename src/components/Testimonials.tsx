@@ -39,13 +39,6 @@ export default function Testimonials() {
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <div className="mb-5 flex gap-1" aria-label="5 out of 5 stars">
-              {Array.from({ length: 5 }).map((_, s) => (
-                <svg key={s} viewBox="0 0 20 20" className="h-4 w-4 fill-amber-400" aria-hidden="true">
-                  <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.9L10 14.9 4.8 17.7l1-5.9L1.5 7.7l5.9-.9L10 1.5z" />
-                </svg>
-              ))}
-            </div>
             <blockquote className="text-lg font-medium leading-relaxed tracking-tight text-white sm:text-xl">
               “{t.quote}”
             </blockquote>
