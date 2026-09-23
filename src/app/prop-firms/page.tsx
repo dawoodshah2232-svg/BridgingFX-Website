@@ -61,7 +61,7 @@ export default function PropFirmsPage() {
         <div className="container-x">
           <SectionHeading
             eyebrow="30-minute launch"
-            title={<>Your prop firm, live in <span className="gradient-text">half an hour.</span></>}
+            title={<>Your prop firm, live in <span className="gradient-text">30 minutes.</span></>}
             description="While others quote you months of development, we deploy the complete prop stack with you in a single session. Here's how the 30 minutes break down."
           />
           <Stagger className="mx-auto mt-12 grid max-w-5xl gap-4 sm:mt-14 sm:gap-5 md:grid-cols-3">

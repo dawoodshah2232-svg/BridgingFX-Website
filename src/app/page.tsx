@@ -134,7 +134,7 @@ function Hero() {
 
       {/* scroll cue */}
       <motion.a
-        href="#pillars"
+        href="#strengths"
         aria-label="Scroll to content"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -166,8 +166,8 @@ function StatsStrip() {
   );
 }
 
-/* ---------------- PILLARS ---------------- */
-const PILLARS = [
+/* ---------------- STRENGTHS ---------------- */
+const STRENGTHS = [
   {
     title: "Company Formation",
     text: "Build your regulated brokerage entity with expert guidance — jurisdiction strategy, registration, and licensing pathways handled end to end.",
@@ -191,17 +191,17 @@ const PILLARS = [
   },
 ];
 
-function Pillars() {
+function Strengths() {
   return (
-    <section id="pillars" className="section-pad">
+    <section id="strengths" className="section-pad">
       <div className="container-x">
         <SectionHeading
           eyebrow="What we do"
-          title={<>Three pillars. One unfair advantage.</>}
+          title={<>Three strengths. One unfair advantage.</>}
           description="Everything a brokerage needs to launch, operate, and scale — designed as one system, not a patchwork of vendors."
         />
         <Stagger className="mt-12 grid gap-4 sm:mt-14 sm:gap-5 lg:grid-cols-3">
-          {PILLARS.map((p) => (
+          {STRENGTHS.map((p) => (
             <StaggerItem key={p.title}>
               <Link
                 href={p.href}
@@ -752,7 +752,7 @@ export default function Home() {
     <>
       <Hero />
       <StatsStrip />
-      <Pillars />
+      <Strengths />
       <PlatformsShowcase />
       <CrmSection />
       <ServicesPreview />
