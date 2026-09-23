@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "./Logo";
+import ThemeToggle from "./ThemeToggle";
 import { NAV_LINKS, mailtoFor } from "@/data/site";
 
 /** Animated hamburger → X. 48px touch target. */
@@ -95,7 +96,8 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <div className="hidden lg:block">
+          <div className="hidden items-center gap-3 lg:flex">
+            <ThemeToggle />
             <Link
               href="/contact"
               className="btn-primary !px-6 !py-2.5 !text-[13.5px]"
@@ -104,8 +106,9 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile hamburger */}
-          <div className="lg:hidden">
+          {/* Mobile: theme toggle + hamburger */}
+          <div className="flex items-center gap-2.5 lg:hidden">
+            <ThemeToggle />
             <Hamburger open={open} onClick={() => setOpen((v) => !v)} />
           </div>
         </nav>
@@ -119,7 +122,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-40 bg-ink-950/95 backdrop-blur-2xl lg:hidden"
+            className="fixed inset-0 z-40 bg-ink-950 lg:hidden"
           >
             <motion.nav
               aria-label="Mobile"
@@ -168,6 +171,15 @@ export default function Navbar() {
                 >
                   Request a Callback
                 </a>
+              </motion.div>
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 16 },
+                  show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+                }}
+                className="flex justify-center pt-6"
+              >
+                <ThemeToggle label />
               </motion.div>
             </motion.nav>
           </motion.div>

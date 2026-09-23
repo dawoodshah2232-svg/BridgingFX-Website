@@ -4,6 +4,50 @@
 
 :root {
   --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* ---- dark theme (default) ---- */
+  color-scheme: dark;
+  --c-white: 255 255 255;
+  --c-ink-950: 4 7 12; /* page */
+  --c-ink-900: 6 11 20; /* alt section */
+  --c-ink-800: 10 18 32; /* card */
+  --c-ink-700: 16 27 48; /* deep accent */
+  --c-slate-200: 226 232 240;
+  --c-slate-300: 203 213 225;
+  --c-slate-400: 148 163 184;
+  --c-slate-500: 100 116 139;
+  --shadow-strong: rgba(0, 0, 0, 0.7);
+  --glass-hi: rgba(255, 255, 255, 0.07);
+  --glass-lo: rgba(255, 255, 255, 0.015);
+  --glass-border: rgba(255, 255, 255, 0.09);
+  --hairline: rgba(255, 255, 255, 0.07);
+  --grid-line: rgba(148, 163, 184, 0.06);
+  --scroll-track: #04070c;
+  --scroll-thumb: #1e293b;
+  --scroll-thumb-hover: #334155;
+}
+
+/* ---- light theme: Apple-style light fintech ---- */
+[data-theme="light"] {
+  color-scheme: light;
+  --c-white: 13 20 36; /* ink for text; subtle ink tints for glass */
+  --c-ink-950: 255 255 255; /* page */
+  --c-ink-900: 248 250 252; /* alt section */
+  --c-ink-800: 255 255 255; /* card */
+  --c-ink-700: 226 232 240; /* deep accent */
+  --c-slate-200: 30 41 59;
+  --c-slate-300: 51 65 85;
+  --c-slate-400: 100 116 139;
+  --c-slate-500: 148 163 184;
+  --shadow-strong: rgba(15, 23, 42, 0.14);
+  --glass-hi: rgba(255, 255, 255, 0.88);
+  --glass-lo: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(15, 23, 42, 0.1);
+  --hairline: rgba(15, 23, 42, 0.08);
+  --grid-line: rgba(15, 23, 42, 0.055);
+  --scroll-track: #f1f5f9;
+  --scroll-thumb: #cbd5e1;
+  --scroll-thumb-hover: #94a3b8;
 }
 
 html {
@@ -32,6 +76,10 @@ body {
   .eyebrow {
     @apply inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-fx-orange;
   }
+  /* Light theme: deeper orange keeps eyebrow text readable on white */
+  [data-theme="light"] .eyebrow {
+    color: #ea580c;
+  }
 
   .display {
     @apply font-semibold tracking-tightest text-white;
@@ -42,10 +90,14 @@ body {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(100deg, #fdba74 0%, #f97316 38%, #fbbf24 78%, #fef3c7 100%);
   }
+  /* Light theme: deeper gradient stays legible on white */
+  [data-theme="light"] .gradient-text {
+    background-image: linear-gradient(100deg, #ea580c 0%, #f97316 42%, #d97706 75%, #b45309 100%);
+  }
 
   .glass {
-    background: linear-gradient(160deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.015));
-    border: 1px solid rgba(255, 255, 255, 0.09);
+    background: linear-gradient(160deg, var(--glass-hi), var(--glass-lo));
+    border: 1px solid var(--glass-border);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
   }
@@ -60,7 +112,7 @@ body {
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-fx-orange px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-fx-orange px-7 py-3.5 text-sm font-semibold text-paper transition-all duration-300;
     box-shadow: 0 12px 40px -10px rgba(249, 115, 22, 0.7);
   }
   .btn-primary:hover {
@@ -82,13 +134,13 @@ body {
   }
 
   .hairline {
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    border-top: 1px solid var(--hairline);
   }
 
   /* hero cinematic backdrop */
   .hero-grid {
-    background-image: linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+    background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
     background-size: 56px 56px;
     mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, black 30%, transparent 75%);
     -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, black 30%, transparent 75%);
@@ -128,17 +180,17 @@ body {
   }
 }
 
-/* thin custom scrollbar */
+/* thin custom scrollbar — theme aware */
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #04070c;
+  background: var(--scroll-track);
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: var(--scroll-thumb);
   border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: var(--scroll-thumb-hover);
 }

@@ -60,7 +60,7 @@ export default function PackagesPage() {
                   }`}
                 >
                   {p.recommended && (
-                    <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-fx-orange px-4 py-1.5 text-[11px] font-bold uppercase tracking-widest text-white shadow-glow">
+                    <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-fx-orange px-4 py-1.5 text-[11px] font-bold uppercase tracking-widest text-paper shadow-glow">
                       Recommended
                     </span>
                   )}

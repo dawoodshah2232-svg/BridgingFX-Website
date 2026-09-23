@@ -59,9 +59,18 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
+/**
+ * Runs before first paint: applies the saved theme (localStorage),
+ * else the OS preference, else dark. Prevents a flash of the wrong theme.
+ */
+const themeBootstrap = `(function(){try{var t=localStorage.getItem('bfx-theme');if(t!=='dark'&&t!=='light'){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.dataset.theme=t;var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',t==='light'?'#ffffff':'#04070c');}catch(e){document.documentElement.dataset.theme='dark';}})();`;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={inter.variable} data-theme="dark" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
+      </head>
       <body className="font-sans">
         <JsonLd data={organizationJsonLd(SITE.url)} />
         <MotionConfig reducedMotion="user">

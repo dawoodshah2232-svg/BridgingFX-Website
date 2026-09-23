@@ -1,8 +1,8 @@
 /**
  * Site-wide constants.
  *
- * ⚠️ CONTACT DETAILS ARE PLACEHOLDERS — real phone/email/address are NOT verified.
- * See CONTACT_TODO.md at repo root for exactly what the owner must confirm.
+ * Contact details confirmed by the owner 2026-09-23 (phone, WhatsApp, address).
+ * Email + socials still pending — see CONTACT_TODO.md.
  */
 
 export const SITE = {
@@ -11,9 +11,9 @@ export const SITE = {
   url: "https://bridgingfx.net",
   founded: 2020,
   email: "info@bridgingfx.net", // TODO: confirm real inbox
-  phone: "+000 000 0000", // TODO: confirm real phone
-  whatsapp: "+000 000 0000", // TODO: confirm WhatsApp number
-  address: "Address to be confirmed", // TODO: confirm office address
+  phone: "+971 58 543 1107", // confirmed by owner 2026-09-23
+  whatsapp: "+971 58 543 1107", // confirmed by owner 2026-09-23
+  address: "Office 111, Al Moosa Business Centre, Oud Metha, Dubai, UAE", // confirmed by owner 2026-09-23
   socials: {
     x: "#", // TODO
     linkedin: "#", // TODO

@@ -7,7 +7,8 @@ liquidity, and launch-to-scale services for brokers, prop firms, and financial i
 ## Stack
 
 - **Next.js 14** (App Router) + TypeScript
-- **Tailwind CSS 3** — dark fintech design system (`tailwind.config.ts`)
+- **Tailwind CSS 3** — premium fintech design system (`tailwind.config.ts`)
+  with dark + light themes (CSS variables, `data-theme`)
 - **Framer Motion** — scroll reveals, animated stats, accordions, carousels
 - **next/font** (Inter) — premium typography
 - Fully static-exportable pages; no backend, no database
@@ -55,9 +56,10 @@ public/
 ## Key conventions
 
 - **Logo**: the real `public/logo.png` (light background) is seated in a white
-  rounded pill on the dark UI via `components/Logo.tsx`. Never display it wider
-  than ~300px (≈2× natural size) to avoid pixelation. A dark-background logo
-  version does not exist yet — when one arrives, update `Logo.tsx` only.
+  rounded pill (pure white in both themes — `bg-paper`) via `components/Logo.tsx`.
+  Never display it wider than ~300px (≈2× natural size) to avoid pixelation.
+  A dark-background logo version does not exist yet — when one arrives,
+  update `Logo.tsx` only.
 - **Contact details are placeholders** (`src/data/site.ts`) — phone, email,
   address, WhatsApp, social links. See `CONTACT_TODO.md` for what the owner must confirm.
 - **Mobile-first is non-negotiable**: 360px baseline, ≥44px touch targets,
