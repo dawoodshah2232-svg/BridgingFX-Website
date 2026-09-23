@@ -19,6 +19,8 @@ export default function PortalDocuments() {
   const [dragOver, setDragOver] = useState(false);
   const [category, setCategory] = useState<string>(DOC_CATEGORIES[0]);
   const inputRef = useRef<HTMLInputElement>(null);
+  const replaceRef = useRef<HTMLInputElement>(null);
+  const [replaceTarget, setReplaceTarget] = useState<PortalDocument | null>(null);
 
   const refresh = useCallback(() => setDocs(listDocuments()), []);
   useEffect(refresh, [refresh]);
@@ -38,6 +40,28 @@ export default function PortalDocuments() {
     e.preventDefault();
     setDragOver(false);
     handleFiles(e.dataTransfer.files);
+  }
+
+  function startReplace(doc: PortalDocument) {
+    setReplaceTarget(doc);
+    // wait a tick so state settles before opening the picker
+    setTimeout(() => replaceRef.current?.click(), 0);
+  }
+
+  function handleReplaceFile(file: File | undefined) {
+    if (!file || !replaceTarget) {
+      setReplaceTarget(null);
+      return;
+    }
+    removeDocument(replaceTarget.id);
+    addDocument({
+      name: file.name,
+      size: file.size,
+      mime: file.type || "file",
+      category: replaceTarget.category,
+    });
+    setReplaceTarget(null);
+    refresh();
   }
 
   return (
@@ -131,6 +155,14 @@ export default function PortalDocuments() {
               <div className="flex items-center gap-2">
                 <DocChip status={d.status} />
                 <button
+                  onClick={() => startReplace(d)}
+                  aria-label={`Replace ${d.name}`}
+                  title="Replace with a new file"
+                  className="flex h-9 items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3.5 text-xs font-semibold text-slate-300 transition-colors hover:border-fx-orange/50 hover:text-fx-orange"
+                >
+                  <span aria-hidden="true">⇪</span> Replace
+                </button>
+                <button
                   onClick={() => {
                     removeDocument(d.id);
                     refresh();
@@ -145,6 +177,20 @@ export default function PortalDocuments() {
           ))}
         </div>
       </div>
+
+      {/* Hidden input for Replace */}
+      <input
+        ref={replaceRef}
+        type="file"
+        accept={ACCEPT}
+        className="hidden"
+        aria-hidden="true"
+        tabIndex={-1}
+        onChange={(e) => {
+          handleReplaceFile(e.target.files?.[0]);
+          e.target.value = "";
+        }}
+      />
     </div>
   );
 }
