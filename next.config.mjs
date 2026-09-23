@@ -2,8 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    // Real BridgingFX logo (157x51 PNG, light background) — seated in a white pill.
-    // Max display width ~160px to stay crisp (never beyond ~2x natural size).
+    // Official BridgingFX logo: public/logo-dark.jpg (157x51 JPEG, black
+    // background) — shown directly on dark theme (no pill), seated in a
+    // dark rounded container on light theme. public/logo.png (light bg)
+    // kept as fallback. Max display width ~160px to stay crisp.
     //
     // Custom loader: next/image drops the basePath prefix for unoptimized
     // images, which broke the logo on the GitHub Pages preview

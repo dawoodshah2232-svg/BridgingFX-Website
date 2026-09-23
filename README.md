@@ -50,16 +50,17 @@ src/
   components/                # Logo, Navbar, Footer, MobileCTABar, Reveal, Stat, …
   data/                      # services.ts (33), platforms.ts, packages.ts, posts.ts, faqs.ts, site.ts
 public/
-  logo.png                   # REAL BridgingFX logo (157×51, light bg) — do not overwrite
+  logo-dark.jpg              # OFFICIAL BridgingFX logo (157×51, black bg) — do not overwrite
+  logo.png                   # light-background alternate (fallback) — do not overwrite
 ```
 
 ## Key conventions
 
-- **Logo**: the real `public/logo.png` (light background) is seated in a white
-  rounded pill (pure white in both themes — `bg-paper`) via `components/Logo.tsx`.
-  Never display it wider than ~300px (≈2× natural size) to avoid pixelation.
-  A dark-background logo version does not exist yet — when one arrives,
-  update `Logo.tsx` only.
+- **Logo**: the official `public/logo-dark.jpg` (157×51 JPEG, black background)
+  is shown directly on the dark theme (no pill — blends into the dark UI) and
+  seated in a dark rounded container on the light theme, via `components/Logo.tsx`
+  (pure-CSS theme skins). Never display it wider than ~300px (≈2× natural size)
+  to avoid pixelation. `public/logo.png` (light background) is kept as fallback.
 - **Contact details are placeholders** (`src/data/site.ts`) — phone, email,
   address, WhatsApp, social links. See `CONTACT_TODO.md` for what the owner must confirm.
 - **Mobile-first is non-negotiable**: 360px baseline, ≥44px touch targets,

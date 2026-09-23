@@ -17,9 +17,9 @@ contact form, and the mobile CTA bar pick them up automatically.
 
 ## Also to decide later
 
-- **Logo pill**: the real `public/logo.png` (157×51, light background)
-  is seated in a white pill that stays pure white in both themes. If a dark/reversed logo version is
-  ever supplied, swap it in `src/components/Logo.tsx` only — one-file change.
+- **Logo pill**: the official `public/logo-dark.jpg` (157×51, black background)
+  is shown directly on the dark theme (no pill) and in a dark rounded container
+  on the light theme. `public/logo.png` (light background) is kept as fallback.
 - **Blog**: the 3 posts are substantive but marked as sample editorial content
   (`sample: true` in `src/data/posts.ts`). Confirm publishing cadence/topics or
   replace with real posts.

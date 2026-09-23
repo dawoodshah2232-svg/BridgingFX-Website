@@ -129,6 +129,20 @@ body {
     transform: translateY(-2px);
   }
 
+  /* ---- Theme-aware logo skins (pure CSS — correct before hydration) ---- */
+  .logo-dark-skin {
+    display: inline-flex;
+  }
+  .logo-light-skin {
+    display: none;
+  }
+  [data-theme="light"] .logo-dark-skin {
+    display: none;
+  }
+  [data-theme="light"] .logo-light-skin {
+    display: inline-flex;
+  }
+
   .section-pad {
     @apply py-20 sm:py-28 lg:py-32;
   }
