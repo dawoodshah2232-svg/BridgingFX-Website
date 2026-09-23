@@ -1,0 +1,65 @@
+# BridgingFX — llms.txt
+
+> BridgingFX provides white-label trading platforms, Forex CRM software, liquidity,
+> prop-firm technology, and launch-to-scale services for forex brokers, prop firms,
+> and financial institutions. Based in Dubai, UAE.
+
+## Company
+
+- [About BridgingFX](https://bridgingfx.net/about) — Who BridgingFX is and how it works with brokers, prop firms, and financial institutions.
+- [Contact](https://bridgingfx.net/contact) — Book a discovery call or send an enquiry.
+- [Blog](https://bridgingfx.net/blog) — Editorial insights: launching brokerages, white-label platforms, prop-firm technology, FX industry analysis.
+- [FAQ](https://bridgingfx.net/faq) — Answers about white-label timelines, platforms, licensing, CRM, migrations, prop firms, and packages.
+- [Sitemap](https://bridgingfx.net/sitemap.xml) — Full page list.
+
+## Core offerings
+
+- [White-Label Platforms](https://bridgingfx.net/platforms) — cTrader, Wintrado, Hybrid (cTrader + Wintrado), TM9, and MT4/MT5 white labels.
+- [Forex CRM — BridgeX](https://bridgingfx.net/crm) — Customizable Forex CRM: leads, funds, accounts, IB/affiliate systems, compliance; cloud or self-hosted.
+- [Prop-Firm Technology](https://bridgingfx.net/prop-firms) — Challenge and evaluation tech (1-step, 2-step, instant funding), risk monitoring, trader dashboards, scaling plans, payout workflows.
+- [Company Formation](https://bridgingfx.net/company-formation) — Forex company registration, jurisdiction and licensing guidance, plus launch services.
+- [Launch Packages](https://bridgingfx.net/packages) — Three tiers: Start-Up Accelerator (Entry), Growth Catalyst (Professional, recommended), Enterprise Institution (Elite); upgrades supported.
+
+## Services
+
+All services: [Services index](https://bridgingfx.net/services)
+
+- [Software Development](https://bridgingfx.net/services/software-development) — Custom-built trading technology: dashboards, back-office systems, client portals, reporting engines, integrations.
+- [Risk Management](https://bridgingfx.net/services/risk-management) — Risk systems and book management for brokerages.
+- [UI/UX Design](https://bridgingfx.net/services/ui-ux-design) — Interfaces for traders and conversion-focused design flows.
+- [Digital Marketing](https://bridgingfx.net/services/digital-marketing) — Acquisition built for regulated FX realities.
+- [Cloud Provider](https://bridgingfx.net/services/cloud-provider) — Trading-grade infrastructure with 99.99% uptime DNA.
+- [Data Analytics](https://bridgingfx.net/services/data-analytics) — Analytics tooling to turn platform data into decisions.
+- [Web Development](https://bridgingfx.net/services/web-development) — Broker websites engineered to convert — and to rank.
+- [Business Analysis](https://bridgingfx.net/services/business-analysis) — Clarity before capital; strategy before spend.
+- [Product Design](https://bridgingfx.net/services/product-design) — From idea to trader-facing product.
+- [Logo Design](https://bridgingfx.net/services/logo-design) — Brand marks for brokerages.
+- [FX Leads](https://bridgingfx.net/services/fx-leads) — Premium, verified, high-intent trading leads, sold exclusively.
+- [24/7 Tech Support](https://bridgingfx.net/services/tech-support) — Global uptime with financial-grade support around the clock.
+- [Compliance & KYC](https://bridgingfx.net/services/compliance-kyc) — Faster onboarding with regulatory adherence.
+- [Migration](https://bridgingfx.net/services/migration) — Platform, provider, or stack migrations with zero drama.
+- [Mobile App Development](https://bridgingfx.net/services/mobile-app-development) — Native-quality trading apps for iOS and Android.
+- [Platform Integrations](https://bridgingfx.net/services/platform-integrations) — Integrations across trading platforms, liquidity, PSPs, and CRM.
+- [Podcast Studio Rental](https://bridgingfx.net/services/podcast-studio) — A broadcast-grade studio for your market voice.
+- [FX Broker Management](https://bridgingfx.net/services/fx-broker-management) — Senior operators running your brokerage end to end.
+- [Trading Platform Management](https://bridgingfx.net/services/trading-platform-management) — Servers, symbols, and feeds, expertly run.
+- [Outsourcing Customer Support](https://bridgingfx.net/services/outsourcing-customer-support) — Outsourced support teams for brokerages.
+- [PropFirm Challenge & Evaluation Tech](https://bridgingfx.net/services/propfirm-tech) — The complete technology stack for modern prop firms.
+- [MT4/MT5 White Label](https://bridgingfx.net/services/mt4-mt5-white-label) — The world's most recognized platforms under your brand.
+- [Liquidity Aggregation & Price Feeds](https://bridgingfx.net/services/liquidity-aggregation) — Deep, stable liquidity with institutional-grade execution.
+- [MAM/PAMM & Copy Trading](https://bridgingfx.net/services/mam-pamm-copy-trading) — Money-management and copy-trading systems.
+- [IB & Affiliate Portals](https://bridgingfx.net/services/ib-affiliate-portals) — Partner portals for IBs and affiliates.
+- [PSP & Payment Orchestration](https://bridgingfx.net/services/psp-payment-orchestration) — Deposits that succeed; payouts that arrive.
+- [Licensing & Compliance Consultancy](https://bridgingfx.net/services/licensing-compliance) — The right license and jurisdiction, mapped to your markets and budget.
+- [KYC Automation](https://bridgingfx.net/services/kyc-automation) — Onboarding in minutes, not days — fully audit-trailed.
+- [AI Analytics & BI Dashboards](https://bridgingfx.net/services/ai-analytics-bi) — AI-driven analytics and dashboards for brokerage data.
+- [Forex VPS Hosting](https://bridgingfx.net/services/forex-vps-hosting) — Low-latency VPS hosting for trading.
+- [Broker Growth Marketing Suite](https://bridgingfx.net/services/growth-marketing) — Full-funnel growth system for brokers.
+- [Mobile Trading Apps](https://bridgingfx.net/services/mobile-trading-apps) — Your brand in every trader's pocket.
+- [Trader's Room / Client Cabinet](https://bridgingfx.net/services/traders-room) — Client portals for traders.
+
+## Contact
+
+- Phone / WhatsApp: +971 58 543 1107
+- Address: Office 111, Al Moosa Business Centre, Oud Metha, Dubai, UAE
+- Website: https://bridgingfx.net
