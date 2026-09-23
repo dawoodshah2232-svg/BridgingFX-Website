@@ -40,14 +40,21 @@ export const metadata: Metadata = {
     description:
       "White-label trading platforms, Forex CRM, liquidity, and launch-to-scale services for brokers, prop firms, and financial institutions.",
     url: SITE.url,
-    images: [{ url: "/logo.png", width: 157, height: 51, alt: "BridgingFX logo" }],
+    images: [
+      {
+        url: "/images/og/og-default.png",
+        width: 2240,
+        height: 1120,
+        alt: "BridgingFX — forex brokerage technology",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "BridgingFX — Empowering Forex Brokers, PropFirms & Financial Institutions",
     description:
       "White-label trading platforms, Forex CRM, liquidity, and launch-to-scale services.",
-    images: ["/logo.png"],
+    images: ["/images/og/og-default.png"],
   },
   robots: { index: true, follow: true },
 };

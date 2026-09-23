@@ -11,10 +11,12 @@ export const metadata: Metadata = {
   title: "FAQ — Answers About Launching Your Brokerage",
   description:
     "Real answers about white-label timelines, platforms, licensing, BridgeX CRM, migrations, prop firms, and packages — no sales fluff.",
+  alternates: { canonical: "https://bridgingfx.net/faq" },
   openGraph: {
     title: "FAQ | BridgingFX",
     description:
       "Real answers about timelines, platforms, licensing, CRM, and packages.",
+    url: "https://bridgingfx.net/faq",
   },
 };
 

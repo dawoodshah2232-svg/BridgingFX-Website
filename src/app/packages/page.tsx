@@ -3,18 +3,40 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import CTABand from "@/components/CTABand";
 import FaqAccordion from "@/components/FaqAccordion";
+import PackageQuiz from "@/components/PackageQuiz";
+import PackageCompare from "@/components/PackageCompare";
 import { FadeIn, Stagger, StaggerItem } from "@/components/Reveal";
 import { PACKAGES, UPGRADE_PATH_NOTE } from "@/data/packages";
-import { mailtoFor } from "@/data/site";
+
+function slugify(name: string): string {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
 
 export const metadata: Metadata = {
   title: "Packages — Launch Your Brokerage at Every Stage",
   description:
     "Three launch packages: Start-Up Accelerator (Entry), Growth Catalyst (Professional, recommended), and Enterprise Institution (Elite). Scale without rebuilding.",
+  alternates: { canonical: "https://bridgingfx.net/packages" },
   openGraph: {
     title: "Packages — Launch Your Brokerage | BridgingFX",
     description:
       "Start-Up Accelerator, Growth Catalyst (recommended), Enterprise Institution. Packages for every growth stage.",
+    url: "https://bridgingfx.net/packages",
+    images: [
+      {
+        url: "/images/og/og-packages.png",
+        width: 2240,
+        height: 1120,
+        alt: "BridgingFX launch packages for every growth stage",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Packages — Launch Your Brokerage | BridgingFX",
+    description:
+      "Start-Up Accelerator, Growth Catalyst (recommended), Enterprise Institution. Packages for every growth stage.",
+    images: ["/images/og/og-packages.png"],
   },
 };
 
@@ -48,8 +70,32 @@ export default function PackagesPage() {
         image={{ src: "/images/pages/packages.webp", alt: "Tiered brokerage launch packages illustration" }}
       />
 
+      {/* Find your fit — interactive quiz */}
       <section className="section-pad !pt-4">
         <div className="container-x">
+          <FadeIn className="mx-auto mb-10 max-w-2xl text-center">
+            <span className="eyebrow justify-center">Find your fit</span>
+            <h2 className="display mt-4 text-3xl leading-[1.08] sm:text-4xl">
+              Five questions. <span className="gradient-text">One recommendation.</span>
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-slate-400">
+              Tell us where your brokerage stands — we&apos;ll point you at the tier that fits.
+            </p>
+          </FadeIn>
+          <div className="mx-auto max-w-3xl">
+            <PackageQuiz />
+          </div>
+        </div>
+      </section>
+
+      <section className="hairline bg-ink-900/40 py-20 sm:py-28">
+        <div className="container-x">
+          <FadeIn className="mx-auto mb-12 max-w-2xl text-center">
+            <span className="eyebrow justify-center">The packages</span>
+            <h2 className="display mt-4 text-3xl leading-[1.08] sm:text-4xl">
+              Honest tiers, <span className="gradient-text">scoped in writing.</span>
+            </h2>
+          </FadeIn>
           <Stagger className="grid gap-6 lg:grid-cols-3">
             {PACKAGES.map((p) => (
               <StaggerItem key={p.name} className="h-full">
@@ -77,14 +123,14 @@ export default function PackagesPage() {
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href={mailtoFor(`${p.name} package enquiry`)}
+                  <Link
+                    href={`/contact?package=${slugify(p.name)}`}
                     className={`mt-8 inline-flex min-h-[52px] w-full items-center justify-center rounded-full text-sm font-semibold transition-all duration-300 ${
                       p.recommended ? "btn-primary" : "btn-ghost"
                     }`}
                   >
                     Choose {p.name}
-                  </a>
+                  </Link>
                 </div>
               </StaggerItem>
             ))}
@@ -98,6 +144,22 @@ export default function PackagesPage() {
               </p>
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* Side-by-side comparison */}
+      <section className="section-pad">
+        <div className="container-x">
+          <FadeIn className="mx-auto mb-10 max-w-2xl text-center">
+            <span className="eyebrow justify-center">Side by side</span>
+            <h2 className="display mt-4 text-3xl leading-[1.08] sm:text-4xl">
+              Compare <span className="gradient-text">every tier.</span>
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-slate-400">
+              Platform, liquidity, CRM, onboarding, support — all three packages, one view.
+            </p>
+          </FadeIn>
+          <PackageCompare />
         </div>
       </section>
 

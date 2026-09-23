@@ -105,7 +105,7 @@ export default function CompanyFormationPage() {
               { t: "Built to scale", d: "Everything is architected for growth — when volume comes, your stack upgrades instead of breaking." },
             ].map((c) => (
               <StaggerItem key={c.t}>
-                <div className="glass h-full rounded-[22px] p-6 sm:p-7">
+                <div className="glass card-hover h-full rounded-[22px] p-6 sm:p-7">
                   <h3 className="display text-lg">{c.t}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate-400">{c.d}</p>
                 </div>

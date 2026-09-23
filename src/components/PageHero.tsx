@@ -16,12 +16,14 @@ export default function PageHero({
   description,
   cta,
   image,
+  backLink,
 }: {
   eyebrow: string;
   title: React.ReactNode;
   description: string;
   cta?: { label: string; href: string };
   image?: { src: string; alt: string };
+  backLink?: { label: string; href: string };
 }) {
   return (
     <section className="relative overflow-hidden pb-14 pt-32 sm:pb-20 sm:pt-40">
@@ -36,6 +38,15 @@ export default function PageHero({
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto flex max-w-3xl flex-col items-center gap-5 text-center"
         >
+          {backLink && (
+            <Link
+              href={backLink.href}
+              className="group inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold text-slate-400 backdrop-blur transition-colors hover:border-fx-orange/40 hover:text-white"
+            >
+              <span className="transition-transform duration-300 group-hover:-translate-x-0.5" aria-hidden="true">←</span>
+              {backLink.label}
+            </Link>
+          )}
           <span className="eyebrow justify-center">
             <span className="inline-block h-px w-8 bg-fx-orange/70" aria-hidden="true" />
             {eyebrow}

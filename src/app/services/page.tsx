@@ -11,10 +11,12 @@ export const metadata: Metadata = {
   title: "Services — 33 Forex Brokerage Solutions",
   description:
     "Explore 33 services for forex brokers, prop firms, and financial institutions: white-label platforms, Forex CRM, liquidity, risk, compliance, marketing, and 24/7 support.",
+  alternates: { canonical: "https://bridgingfx.net/services" },
   openGraph: {
     title: "Services — 33 Forex Brokerage Solutions | BridgingFX",
     description:
       "White-label platforms, Forex CRM, liquidity, risk, compliance, marketing, and 24/7 support — every capability a brokerage needs.",
+    url: "https://bridgingfx.net/services",
   },
 };
 
@@ -33,6 +35,9 @@ export default function ServicesPage() {
           <div className="container-x">
             <FadeIn>
               <div className="mb-8 flex items-center gap-4 sm:mb-10">
+                <span className="gradient-text display text-sm font-bold tracking-widest">
+                  {String(gi + 1).padStart(2, "0")}
+                </span>
                 <span className="display text-xl sm:text-2xl">{group.category}</span>
                 <span className="hairline flex-1" aria-hidden="true" />
                 <span className="rounded-full bg-white/5 px-3 py-1 text-xs font-semibold text-slate-400">

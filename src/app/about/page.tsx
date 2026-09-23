@@ -49,7 +49,7 @@ export default function AboutPage() {
 
       <section className="hairline bg-ink-900/40">
         <div className="container-x grid grid-cols-2 gap-8 py-12 sm:py-14 lg:grid-cols-4">
-          <Stat value={2020} label="Founded" sub="Six years in brokerage technology" />
+          <Stat value={2020} label="Founded" sub="Six years in brokerage technology" animated={false} />
           <Stat value={30} suffix="+" label="Services" sub="The full brokerage stack, one partner" />
           <Stat value={5} label="White-label platforms" sub="cTrader, MT5, Wintrado, Hybrid, TM9" />
           <Stat value={24} suffix="/7" label="Support" sub="Financial specialists, always on" />

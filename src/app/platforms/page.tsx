@@ -132,7 +132,7 @@ export default function PlatformsPage() {
                 </thead>
                 <tbody>
                   {COMPARISON.map((row) => (
-                    <tr key={row.label} className="border-b border-white/5 last:border-0">
+                    <tr key={row.label} className="border-b border-white/5 transition-colors last:border-0 hover:bg-white/[0.03]">
                       <th className="p-4 font-medium text-slate-400 sm:p-5" scope="row">{row.label}</th>
                       {[row.ctrader, row.wintrado, row.hybrid, row.tm9, row.mt].map((c, ci) => (
                         <td key={ci} className="p-4 text-slate-300 sm:p-5">{c}</td>
@@ -162,7 +162,7 @@ export default function PlatformsPage() {
               { t: "Customized support", d: "All the support and training you need to run smoothly from launch — plus 24/7 customer support that never sleeps." },
             ].map((c) => (
               <StaggerItem key={c.t}>
-                <div className="glass h-full rounded-[22px] p-6 sm:p-7">
+                <div className="glass card-hover h-full rounded-[22px] p-6 sm:p-7">
                   <h3 className="display text-lg">{c.t}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate-400">{c.d}</p>
                 </div>

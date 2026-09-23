@@ -6,7 +6,7 @@ import PageHero from "@/components/PageHero";
 import ServiceIcon from "@/components/ServiceIcon";
 import FaqAccordion from "@/components/FaqAccordion";
 import CTABand from "@/components/CTABand";
-import JsonLd, { serviceJsonLd, faqJsonLd } from "@/components/JsonLd";
+import JsonLd, { serviceJsonLd, faqJsonLd, breadcrumbJsonLd } from "@/components/JsonLd";
 import { FadeIn, Stagger, StaggerItem } from "@/components/Reveal";
 import { SERVICES, getService } from "@/data/services";
 import { SITE, mailtoFor } from "@/data/site";
@@ -22,12 +22,29 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const s = getService(params.slug);
   if (!s) return {};
+  const url = `${SITE.url}/services/${s.slug}`;
   return {
-    title: `${s.title} — Forex Brokerage Services`,
-    description: s.tagline + " " + s.description[0].slice(0, 120) + "…",
+    title: `${s.title} | Forex Brokerage Technology`,
+    description: s.tagline,
+    alternates: { canonical: url },
     openGraph: {
-      title: `${s.title} | BridgingFX`,
+      title: `${s.title} | Forex Brokerage Technology — BridgingFX`,
       description: s.tagline,
+      url,
+      images: [
+        {
+          url: `${SITE.url}${s.image}`,
+          width: 1200,
+          height: 675,
+          alt: s.imageAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${s.title} | Forex Brokerage Technology — BridgingFX`,
+      description: s.tagline,
+      images: [`${SITE.url}${s.image}`],
     },
   };
 }
@@ -46,6 +63,13 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
     <>
       <JsonLd data={serviceJsonLd({ url, name: service.title, description: service.tagline })} />
       <JsonLd data={faqJsonLd(service.faqs)} />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", url: SITE.url },
+          { name: "Services", url: `${SITE.url}/services` },
+          { name: service.title, url },
+        ])}
+      />
 
       <PageHero
         eyebrow={`${service.category} services`}
@@ -56,6 +80,7 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
         }
         description={service.tagline}
         cta={{ label: `Enquire about ${service.title}`, href: "/contact" }}
+        backLink={{ label: "All services", href: "/services" }}
       />
 
       {/* Service visual */}
@@ -109,7 +134,8 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
             {/* What's included */}
             <FadeIn delay={0.12}>
               <div className="glass rounded-[24px] p-7 sm:p-8 lg:sticky lg:top-24">
-                <h2 className="display text-xl">What&apos;s included</h2>
+                <div className="h-1 w-12 rounded-full bg-gradient-to-r from-fx-ember via-fx-orange to-amber-400" aria-hidden="true" />
+                <h2 className="display mt-4 text-xl">What&apos;s included</h2>
                 <ul className="mt-5 space-y-3.5">
                   {service.features.map((f) => (
                     <li key={f} className="flex items-start gap-3 text-[15px] text-slate-300">
@@ -165,6 +191,10 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
                         height={338}
                         sizes="(max-width: 640px) 100vw, 33vw"
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div
+                        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/35 via-transparent to-transparent"
+                        aria-hidden="true"
                       />
                     </div>
                     <div className="flex flex-1 flex-col p-6">

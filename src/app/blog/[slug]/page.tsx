@@ -36,7 +36,11 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
   if (!post) notFound();
 
   const url = `${SITE.url}/blog/${post.slug}`;
-  const others = POSTS.filter((x) => x.slug !== post.slug).slice(0, 2);
+  const others = POSTS.filter((x) => x.slug !== post.slug);
+  const keepReading = [
+    ...others.filter((x) => x.category === post.category),
+    ...others.filter((x) => x.category !== post.category),
+  ].slice(0, 2);
 
   return (
     <>
@@ -59,16 +63,22 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         <div className="orb left-1/2 top-0 h-72 w-72 -translate-x-1/2 -translate-y-1/3 bg-fx-orange/20 sm:h-96 sm:w-96" aria-hidden="true" />
         <div className="container-x relative max-w-3xl">
           <FadeIn>
-            <Link href="/blog" className="inline-flex min-h-[44px] items-center gap-2 text-sm font-semibold text-slate-400 hover:text-white">
-              <span aria-hidden="true">←</span> All articles
-            </Link>
+            {/* breadcrumb */}
+            <nav aria-label="Breadcrumb" className="flex min-h-[44px] flex-wrap items-center gap-2 text-sm">
+              <Link href="/" className="font-semibold text-slate-400 transition-colors hover:text-white">
+                Home
+              </Link>
+              <span aria-hidden="true" className="text-slate-600">/</span>
+              <Link href="/blog" className="font-semibold text-slate-400 transition-colors hover:text-white">
+                Blog
+              </Link>
+              <span aria-hidden="true" className="text-slate-600">/</span>
+              <span aria-current="page" className="line-clamp-1 text-slate-500">
+                {post.title}
+              </span>
+            </nav>
             <div className="mt-5 flex flex-wrap items-center gap-2 text-xs">
               <span className="rounded-full bg-fx-orange/10 px-3 py-1 font-semibold text-fx-orange">{post.category}</span>
-              {post.sample && (
-                <span className="rounded-full bg-white/5 px-3 py-1 font-semibold text-slate-400">
-                  Sample editorial article
-                </span>
-              )}
               <span className="text-slate-500">{post.readTime}</span>
             </div>
             <h1 className="display mt-4 text-3xl leading-[1.1] sm:text-4xl lg:text-[2.75rem]">
@@ -110,21 +120,26 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               <h3 className="!mt-0 text-lg font-semibold text-white">The takeaway</h3>
               <p className="!mt-3">{post.takeaway}</p>
             </div>
-            {post.sample && (
-              <p className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-sm text-slate-500">
-                <span className="font-semibold text-slate-300">Editorial note:</span> this is
-                a sample article written to demonstrate the blog&apos;s voice and depth.
-                Real publishing cadence and topics will be confirmed with the BridgingFX team.
-              </p>
+            {post.tags.length > 0 && (
+              <div className="mt-8 flex flex-wrap gap-2" aria-label="Article tags">
+                {post.tags.map((t) => (
+                  <span
+                    key={t}
+                    className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs font-medium text-slate-400"
+                  >
+                    #{t}
+                  </span>
+                ))}
+              </div>
             )}
           </div>
         </FadeIn>
 
-        {others.length > 0 && (
+        {keepReading.length > 0 && (
           <FadeIn className="mt-14">
             <h2 className="display text-2xl">Keep <span className="gradient-text">reading</span></h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {others.map((o) => (
+              {keepReading.map((o) => (
                 <Link
                   key={o.slug}
                   href={`/blog/${o.slug}`}

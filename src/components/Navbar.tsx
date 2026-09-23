@@ -80,20 +80,25 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <ul className="hidden items-center gap-1 lg:flex">
-            {NAV_LINKS.map((l) => (
-              <li key={l.href}>
-                <Link
-                  href={l.href}
-                  className={`rounded-full px-3.5 py-2.5 text-[13.5px] font-medium transition-colors ${
-                    pathname === l.href || pathname.startsWith(l.href + "/")
-                      ? "text-white"
-                      : "text-slate-400 hover:text-white"
-                  }`}
-                >
-                  {l.label}
-                </Link>
-              </li>
-            ))}
+            {NAV_LINKS.map((l) => {
+              const isActive =
+                pathname === l.href || pathname.startsWith(l.href + "/");
+              return (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`rounded-full px-3.5 py-2.5 text-[13.5px] font-medium transition-all duration-200 ${
+                      isActive
+                        ? "bg-white/10 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"
+                        : "text-slate-400 hover:bg-white/5 hover:text-white"
+                    }`}
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
 
           <div className="hidden items-center gap-3 lg:flex">
@@ -124,9 +129,12 @@ export default function Navbar() {
             transition={{ duration: 0.25 }}
             className="fixed inset-0 z-40 bg-ink-950 lg:hidden"
           >
+            {/* ambient backdrop */}
+            <div className="hero-grid absolute inset-0 opacity-70" aria-hidden="true" />
+            <div className="orb left-1/2 top-[-15%] h-72 w-72 -translate-x-1/2 bg-fx-orange/15" aria-hidden="true" />
             <motion.nav
               aria-label="Mobile"
-              className="container-x flex h-full flex-col justify-center gap-1 overflow-y-auto pb-28 pt-24"
+              className="container-x relative flex h-full flex-col justify-center gap-1 overflow-y-auto pb-28 pt-24"
               initial="hidden"
               animate="show"
               exit="hidden"
@@ -135,23 +143,44 @@ export default function Navbar() {
                 show: { transition: { staggerChildren: 0.05, delayChildren: 0.08 } },
               }}
             >
-              {[{ label: "Home", href: "/" }, ...NAV_LINKS].map((l) => (
-                <motion.div
-                  key={l.href}
-                  variants={{
-                    hidden: { opacity: 0, x: -18 },
-                    show: { opacity: 1, x: 0, transition: { duration: 0.3 } },
-                  }}
-                >
-                  <Link
-                    href={l.href}
-                    className="flex min-h-[52px] items-center justify-between border-b border-white/10 py-3 text-xl font-semibold tracking-tight text-white"
+              {[{ label: "Home", href: "/" }, ...NAV_LINKS].map((l, i) => {
+                const isActive =
+                  pathname === l.href || pathname.startsWith(l.href + "/");
+                return (
+                  <motion.div
+                    key={l.href}
+                    variants={{
+                      hidden: { opacity: 0, x: -18 },
+                      show: { opacity: 1, x: 0, transition: { duration: 0.3 } },
+                    }}
                   >
-                    {l.label}
-                    <span className="text-fx-orange" aria-hidden="true">→</span>
-                  </Link>
-                </motion.div>
-              ))}
+                    <Link
+                      href={l.href}
+                      aria-current={isActive ? "page" : undefined}
+                      className="group flex min-h-[52px] items-center justify-between border-b border-white/10 py-3"
+                    >
+                      <span className="flex items-baseline gap-3.5">
+                        <span className="text-[11px] font-bold tracking-[0.18em] text-slate-500">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <span
+                          className={`text-xl font-semibold tracking-tight transition-colors ${
+                            isActive ? "text-fx-orange" : "text-white"
+                          }`}
+                        >
+                          {l.label}
+                        </span>
+                      </span>
+                      <span
+                        className="text-fx-orange transition-transform duration-300 group-hover:translate-x-1.5"
+                        aria-hidden="true"
+                      >
+                        →
+                      </span>
+                    </Link>
+                  </motion.div>
+                );
+              })}
               <motion.div
                 variants={{
                   hidden: { opacity: 0, y: 16 },

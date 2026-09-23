@@ -16,7 +16,7 @@ export const PLATFORMS: Platform[] = [
     tagline: "The trader's favorite. Institutional-grade UX, out of the box.",
     description: [
       "cTrader is the platform sophisticated traders ask for by name — depth of market, advanced charting, cAlgo automation, and an interface that feels a decade ahead. Our cTrader white label delivers it fully branded, with your liquidity, your CRM, and your client cabinet behind it.",
-      "For brokers targeting experienced, high-value traders, cTrader is the fastest way to look — and be — premium from day one.",
+      "For brokers targeting experienced, high-value traders, cTrader is a fast way to look — and be — premium from day one.",
     ],
     idealFor: "Brokers targeting experienced retail and professional traders",
     launchTime: "2 weeks",

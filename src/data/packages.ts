@@ -13,7 +13,7 @@ export const PACKAGES: Package[] = [
     tier: "Entry Level",
     audience: "For new entities & market testing",
     description:
-      "Everything a new brokerage needs to prove the model — live in weeks, not quarters, with the lowest upfront setup in the industry.",
+      "Everything a new brokerage needs to prove the model — live in weeks, not quarters, with lean upfront setup.",
     features: [
       "Standard cTrader or Wintrado white label",
       "Tier 3 / mid-level FX liquidity feed",

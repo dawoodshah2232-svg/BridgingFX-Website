@@ -16,7 +16,7 @@ export default function FaqAccordion({ faqs }: { faqs: Faq[] }) {
             <button
               onClick={() => setOpenIdx(open ? null : i)}
               aria-expanded={open}
-              className="flex min-h-[60px] w-full items-center justify-between gap-4 px-5 py-4 text-left sm:px-7"
+              className="flex min-h-[60px] w-full items-center justify-between gap-4 px-5 py-4 text-left transition-colors hover:bg-white/[0.03] focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-fx-orange sm:px-7"
             >
               <span className={`text-[15px] font-semibold tracking-tight sm:text-base ${open ? "text-white" : "text-slate-200"}`}>
                 {f.q}

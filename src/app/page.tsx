@@ -88,7 +88,7 @@ function Hero() {
               White-label platforms, ready to brand
             </p>
             <div className="relative overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_12%,black_88%,transparent)]">
-              <div className="flex w-max animate-ticker-scroll gap-3">
+              <div className="flex w-max animate-ticker-scroll gap-3 hover:[animation-play-state:paused]">
                 {[...PLATFORMS, ...PLATFORMS].map((p, i) => (
                   <span
                     key={i}
@@ -156,7 +156,7 @@ function StatsStrip() {
   return (
     <section className="hairline bg-ink-900/40">
       <div className="container-x grid grid-cols-2 gap-8 py-12 sm:py-14 lg:grid-cols-4">
-        <Stat value={2020} label="Founded" sub="Building brokerage technology since 2020" />
+        <Stat value={2020} label="Founded" sub="Building brokerage technology since 2020" animated={false} />
         <Stat value={24} suffix="/7" label="Support & monitoring" sub="Real financial specialists, always on" />
         <Stat value={2} suffix="-wk" label="White-label launch" sub="From agreement to live trading" />
         <Stat value={30} suffix="+" label="Services" sub="One partner for the entire brokerage stack" />
@@ -605,7 +605,7 @@ function WhyUs() {
           <div className="grid gap-4 sm:gap-5">
             {WHY_POINTS.map((b, i) => (
               <FadeIn key={b.label} delay={i * 0.08}>
-                <div className="glass h-full rounded-[20px] p-6 text-left">
+                <div className="glass card-hover h-full rounded-[20px] p-6 text-left">
                   <div className="h-1 w-10 rounded-full bg-gradient-to-r from-fx-ember via-fx-orange to-amber-400" />
                   <h3 className="display mt-4 text-base sm:text-lg">{b.label}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate-400">{b.text}</p>
@@ -620,7 +620,7 @@ function WhyUs() {
             { t: "Real-time oversight", d: "Direct-access management: client activity, volume, and P&L monitored live, all in one place." },
             { t: "Your brand, amplified", d: "Fully customizable front ends and 24/7 customized support with training that ensures a smooth launch." },
           ].map((c) => (
-            <div key={c.t} className="glass rounded-[20px] p-6">
+            <div key={c.t} className="glass card-hover rounded-[20px] p-6">
               <h3 className="display text-base">{c.t}</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-400">{c.d}</p>
             </div>

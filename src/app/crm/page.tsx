@@ -130,7 +130,7 @@ export default function CrmPage() {
               },
             ].map((h) => (
               <StaggerItem key={h.t}>
-                <div className="glass h-full rounded-[24px] p-7 sm:p-8">
+                <div className="glass card-hover h-full rounded-[24px] p-7 sm:p-8">
                   <h3 className="display text-xl sm:text-2xl">{h.t}</h3>
                   <p className="mt-3 text-[15px] leading-relaxed text-slate-400">{h.d}</p>
                   <ul className="mt-5 space-y-2.5">

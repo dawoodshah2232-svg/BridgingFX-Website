@@ -1,9 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import PageHero from "@/components/PageHero";
 import { FadeIn } from "@/components/Reveal";
 import { SITE } from "@/data/site";
+import { PACKAGES } from "@/data/packages";
 
 /**
  * Contact form → client-side mailto (no backend).
@@ -12,6 +14,10 @@ import { SITE } from "@/data/site";
  *
  * NOTE: phone/email/address/WhatsApp are PLACEHOLDERS — see CONTACT_TODO.md.
  */
+
+function slugify(name: string): string {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
 
 const INTERESTS = [
   "New brokerage launch",
@@ -22,10 +28,22 @@ const INTERESTS = [
   "Marketing & growth",
   "24/7 support",
   "Something else",
+  ...PACKAGES.map((p) => `Package: ${p.name}`),
 ];
 
 function ContactForm() {
-  const [form, setForm] = useState({ name: "", email: "", interest: INTERESTS[0], message: "" });
+  // Preselect when arriving from /packages?package=<slug>
+  const searchParams = useSearchParams();
+  const matchedPkg = PACKAGES.find((p) => slugify(p.name) === searchParams.get("package")) ?? null;
+
+  const [form, setForm] = useState(() => ({
+    name: "",
+    email: "",
+    interest: matchedPkg ? `Package: ${matchedPkg.name}` : INTERESTS[0],
+    message: matchedPkg
+      ? `I'm interested in the ${matchedPkg.name} package. Please send me the full scope, setup timeline, and first-year pricing.`
+      : "",
+  }));
 
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
     setForm((f) => ({ ...f, [k]: e.target.value }));
@@ -41,6 +59,16 @@ function ContactForm() {
     "w-full min-h-[52px] rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-base text-white placeholder:text-slate-500 outline-none transition-colors focus:border-fx-orange/60 focus:bg-white/[0.06]";
 
   return (
+    <>
+      {matchedPkg && (
+        <div className="mb-5 rounded-2xl border border-fx-orange/30 bg-fx-orange/10 px-5 py-4" role="status">
+          <p className="text-sm leading-relaxed text-slate-200">
+            <span className="font-semibold text-white">You&apos;re enquiring about the {matchedPkg.name}</span>
+            <span className="text-slate-400"> ({matchedPkg.tier}). </span>
+            The interest and message fields below are prefilled — adjust them before sending.
+          </p>
+        </div>
+      )}
     <form onSubmit={submit} className="glass rounded-[24px] p-6 sm:rounded-[28px] sm:p-9">
       <div className="space-y-5">
         <div>
@@ -90,6 +118,7 @@ function ContactForm() {
         </p>
       </div>
     </form>
+    </>
   );
 }
 
@@ -110,7 +139,9 @@ export default function ContactPage() {
         <div className="container-x">
           <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:gap-12">
             <FadeIn>
-              <ContactForm />
+              <Suspense fallback={<div className="glass rounded-[24px] p-6 sm:p-9" aria-hidden="true" />}>
+                <ContactForm />
+              </Suspense>
             </FadeIn>
             <FadeIn delay={0.12}>
               <div className="space-y-4">
@@ -122,8 +153,10 @@ export default function ContactPage() {
                         <span className="text-fx-orange" aria-hidden="true">✉</span> {SITE.email}
                       </a>
                     </li>
-                    <li className="flex min-h-[48px] items-center gap-3 text-slate-300">
-                      <span className="text-fx-orange" aria-hidden="true">☎</span> {SITE.phone}
+                    <li>
+                      <a href={`tel:${SITE.phone.replace(/\D/g, "")}`} className="inline-flex min-h-[48px] items-center gap-3 text-slate-300 hover:text-white">
+                        <span className="text-fx-orange" aria-hidden="true">☎</span> {SITE.phone}
+                      </a>
                     </li>
                     <li>
                       <a

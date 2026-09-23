@@ -53,3 +53,42 @@ export function serviceJsonLd(opts: {
     serviceType: "Financial technology services",
   };
 }
+
+export function breadcrumbJsonLd(items: { name: string; url: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
+export function articleJsonLd(opts: {
+  url: string;
+  headline: string;
+  description: string;
+  image: string;
+  datePublished: string;
+  authorName?: string;
+}) {
+  const org = {
+    "@type": "Organization",
+    name: opts.authorName ?? "BridgingFX",
+    url: "https://bridgingfx.net",
+  };
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: opts.headline,
+    description: opts.description,
+    url: opts.url,
+    image: opts.image,
+    datePublished: opts.datePublished,
+    author: org,
+    publisher: org,
+  };
+}
