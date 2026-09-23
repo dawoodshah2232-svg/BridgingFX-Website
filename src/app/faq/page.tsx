@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import FaqAccordion from "@/components/FaqAccordion";
 import CTABand from "@/components/CTABand";
@@ -34,9 +35,9 @@ export default function FaqPage() {
           <FadeIn className="mt-10 text-center">
             <p className="text-slate-400">
               Still have questions?{" "}
-              <a href="/contact" className="font-semibold text-fx-orange hover:underline">
+              <Link href="/contact" className="font-semibold text-fx-orange hover:underline">
                 Talk to an expert →
-              </a>
+              </Link>
             </p>
           </FadeIn>
         </div>
