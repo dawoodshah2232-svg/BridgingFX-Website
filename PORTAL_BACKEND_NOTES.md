@@ -2,9 +2,18 @@
 
 The portal at `/portal` currently runs in **demo mode**: auth is a local
 name+email session, documents store metadata in the browser, and payments are
-recorded but not processed. Everything lives behind one clean interface —
-`src/lib/portal-store.ts` — so going production is a **one-file swap**: reimplement
-that module's functions against Supabase (+ Stripe) and nothing else changes.
+recorded but not processed. All persistence lives behind one module boundary —
+`src/lib/portal-store.ts` — so production means reimplementing that module
+against Supabase (+ Stripe).
+
+> Honest note: the current store API is **synchronous** (localStorage), while
+> Supabase calls are **async**. The swap is still one module, but consumers
+> (`PortalDashboard`, `PortalDocuments`, etc.) currently call e.g.
+> `listDocuments()` synchronously — they will need `useEffect` + state or a
+> small async adapter layer when the real backend lands. Alternatively the
+> production adapter can keep sync reads over a locally-cached snapshot that
+> is refreshed after each mutation. Either way, plan for this; it is not a
+> drop-in function-for-function replacement.
 
 ## What the backend needs
 
