@@ -154,6 +154,14 @@ body {
     display: inline-flex;
   }
 
+  /* Header logo: larger on phones so it reads clearly */
+  @media (max-width: 639px) {
+    .site-logo img {
+      width: 176px;
+      height: auto;
+    }
+  }
+
   .section-pad {
     @apply py-20 sm:py-28 lg:py-32;
   }

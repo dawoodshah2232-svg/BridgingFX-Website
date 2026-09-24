@@ -75,7 +75,7 @@ export default function Navbar() {
           aria-label="Primary"
         >
           <Link href="/" aria-label="BridgingFX home" className="shrink-0">
-            <Logo width={132} />
+            <Logo width={150} className="site-logo" />
           </Link>
 
           {/* Desktop nav */}
