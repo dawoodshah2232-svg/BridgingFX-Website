@@ -15,7 +15,7 @@ export function organizationJsonLd(url: string) {
     name: "BridgingFX",
     url,
     slogan: "Empowering Forex Brokers, PropFirms, and Financial Institutions",
-    foundingDate: "2020",
+    foundingDate: "2016",
     description:
       "BridgingFX provides white-label trading platforms, Forex CRM solutions, liquidity, and launch-to-scale services for forex brokers, prop firms, and financial institutions.",
     sameAs: [] as string[],

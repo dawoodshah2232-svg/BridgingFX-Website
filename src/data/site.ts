@@ -9,7 +9,7 @@ export const SITE = {
   name: "BridgingFX",
   tagline: "Empowering Forex Brokers, PropFirms, and Financial Institutions",
   url: "https://bridgingfx.net",
-  founded: 2020,
+  founded: 2016,
   email: "info@bridgingfx.net", // TODO: confirm real inbox
   phone: "+971 58 543 1107", // confirmed by owner 2026-09-23
   whatsapp: "+971 58 543 1107", // confirmed by owner 2026-09-23

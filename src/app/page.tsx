@@ -38,7 +38,7 @@ function Hero() {
           >
             <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-300 sm:text-xs">
               <span className="h-1.5 w-1.5 animate-pulse-glow rounded-full bg-fx-orange" aria-hidden="true" />
-              Forex technology partner — since 2020
+              Forex technology partner — since 2016
             </span>
           </motion.div>
 
@@ -157,7 +157,7 @@ function StatsStrip() {
   return (
     <section className="hairline bg-ink-900/40">
       <div className="container-x grid grid-cols-2 gap-8 py-12 sm:py-14 lg:grid-cols-4">
-        <Stat value={2020} label="Founded" sub="Building brokerage technology since 2020" animated={false} />
+        <Stat value={2016} label="Founded" sub="Building brokerage technology since 2016" animated={false} />
         <Stat value={24} suffix="/7" label="Support & monitoring" sub="Real financial specialists, always on" />
         <Stat value={2} suffix="-wk" label="White-label launch" sub="From agreement to live trading" />
         <Stat value={30} suffix="+" label="Services" sub="One partner for the entire brokerage stack" />

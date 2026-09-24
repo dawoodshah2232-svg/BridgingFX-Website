@@ -10,11 +10,11 @@ import Testimonials from "@/components/Testimonials";
 export const metadata: Metadata = {
   title: "About — The Team Behind Ambitious Brokerages",
   description:
-    "BridgingFX has empowered forex brokers, prop firms, and financial institutions since 2020 with white-label platforms, Forex CRM, and launch-to-scale services.",
+    "BridgingFX has empowered forex brokers, prop firms, and financial institutions since 2016 with white-label platforms, Forex CRM, and launch-to-scale services.",
   openGraph: {
     title: "About BridgingFX",
     description:
-      "Empowering forex brokers, prop firms, and financial institutions since 2020.",
+      "Empowering forex brokers, prop firms, and financial institutions since 2016.",
   },
 };
 
@@ -43,13 +43,13 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About BridgingFX"
         title={<>The team behind <span className="gradient-text">ambitious brokerages.</span></>}
-        description="Since 2020, we've helped forex brokers, prop firms, and financial institutions launch, operate, and scale — with technology and services designed as one system."
+        description="Since 2016, we've helped forex brokers, prop firms, and financial institutions launch, operate, and scale — with technology and services designed as one system."
         image={{ src: "/images/pages/about.webp", alt: "BridgingFX team illustration — modern trading technology" }}
       />
 
       <section className="hairline bg-ink-900/40">
         <div className="container-x grid grid-cols-2 gap-8 py-12 sm:py-14 lg:grid-cols-4">
-          <Stat value={2020} label="Founded" sub="Six years in brokerage technology" animated={false} />
+          <Stat value={2016} label="Founded" sub="Ten years in brokerage technology" animated={false} />
           <Stat value={30} suffix="+" label="Services" sub="The full brokerage stack, one partner" />
           <Stat value={5} label="White-label platforms" sub="cTrader, MT5, Wintrado, Hybrid, TM9" />
           <Stat value={24} suffix="/7" label="Support" sub="Financial specialists, always on" />
@@ -68,7 +68,7 @@ export default function AboutPage() {
             <FadeIn delay={0.1}>
               <div className="prose-dark">
                 <p>
-                  BridgingFX was founded in 2020 on a simple observation: brokerages
+                  BridgingFX was founded in 2016 on a simple observation: brokerages
                   were buying technology from one vendor, liquidity from another,
                   marketing from a third — and spending their best years integrating
                   the pieces instead of growing the business.
