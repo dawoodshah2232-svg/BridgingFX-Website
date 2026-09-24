@@ -53,7 +53,7 @@ export default function PropFirmsPage() {
         title={<>The tech stack behind <span className="gradient-text">prop firms that scale.</span></>}
         description="Evaluation engines, real-time risk monitoring, trader dashboards, and payout automation — live in as little as 30 minutes. The infrastructure trust that turns challenges into a waiting list."
         cta={{ label: "Launch my prop firm in 30 minutes", href: "/contact" }}
-        image={{ src: "/images/pages/prop-firms.webp", alt: "Prop firm evaluation technology illustration" }}
+        image={{ src: "/images/pages/prop-firms.webp", alt: "Trader workstation with multiple screens closeup" }}
       />
 
       {/* 30-minute launch */}

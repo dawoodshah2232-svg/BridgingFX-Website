@@ -28,7 +28,7 @@ export default function FaqPage() {
         eyebrow="FAQ"
         title={<>Questions? <span className="gradient-text">Answered.</span></>}
         description="Real answers about timelines, platforms, licensing, and what it actually takes to launch — written by the team that does the work."
-        image={{ src: "/images/pages/faq.webp", alt: "Frequently asked questions illustration" }}
+        image={{ src: "/images/pages/faq.webp", alt: "Business colleagues discussing questions in a meeting" }}
       />
       <section className="section-pad !pt-4">
         <div className="container-x max-w-4xl">

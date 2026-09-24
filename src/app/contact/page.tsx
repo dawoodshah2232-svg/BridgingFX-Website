@@ -132,7 +132,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title={<>Let&apos;s talk about <span className="gradient-text">what&apos;s next.</span></>}
         description="New launch, migration, or scale-up — tell us where you're headed and we'll map the fastest honest path, in writing."
-        image={{ src: "/images/pages/contact.webp", alt: "Contact BridgingFX illustration" }}
+        image={{ src: "/images/pages/contact.webp", alt: "Customer support representative with headset smiling in an office" }}
       />
 
       <section className="section-pad !pt-4">

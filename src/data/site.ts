@@ -26,6 +26,7 @@ export const SITE = {
 
 export const NAV_LINKS = [
   { label: "Services", href: "/services" },
+  { label: "Leads", href: "/leads" },
   { label: "Platforms", href: "/platforms" },
   { label: "Forex CRM", href: "/crm" },
   { label: "Prop Firms", href: "/prop-firms" },
@@ -37,6 +38,7 @@ export const NAV_LINKS = [
 ] as const;
 
 export const FOOTER_SERVICES = [
+  { label: "Leads & Growth Stack", href: "/leads" },
   { label: "White-Label Platforms", href: "/platforms" },
   { label: "Forex CRM Solution", href: "/crm" },
   { label: "PropFirm Technology", href: "/services/propfirm-tech" },

@@ -17,7 +17,7 @@ export const POSTS: Post[] = [
   {
     slug: "mt4-vs-mt5-deep-dive",
     cover: "/images/blog/mt4-vs-mt5-deep-dive.webp",
-    coverAlt: "Two glowing trading terminal panels facing off, representing MT4 versus MT5",
+    coverAlt: "Analyzing trading charts on a monitor",
     title: "MT4 vs MT5: The Deep Dive Most Comparisons Skip",
     excerpt:
       "Netting versus hedging, 32-bit versus 64-bit, MQL4 versus MQL5 — the technical differences that actually change how your brokerage runs day to day.",
@@ -70,7 +70,7 @@ export const POSTS: Post[] = [
   {
     slug: "launch-forex-brokerage-2026-checklist",
     cover: "/images/blog/launch-forex-brokerage-2026-checklist.webp",
-    coverAlt: "Rocket launching with a glowing checklist trail, symbolizing a brokerage launch plan",
+    coverAlt: "Startup team in a launch meeting in an office",
     title: "How to Launch a Forex Brokerage in 2026: The Complete Technology Checklist",
     excerpt:
       "Company formation, platforms, liquidity, CRM, PSPs, KYC — the exact sequence experienced operators follow to go from idea to live trading in weeks.",
@@ -137,7 +137,7 @@ export const POSTS: Post[] = [
   {
     slug: "brokerage-unit-economics-101",
     cover: "/images/blog/brokerage-unit-economics-101.webp",
-    coverAlt: "Glowing profit bars, coins and an upward equity curve illustrating brokerage unit economics",
+    coverAlt: "Financial calculator and budget planning on a desk",
     title: "Brokerage Unit Economics 101: Know Your Numbers Before You Scale",
     excerpt:
       "CAC, ARPU, payback, LTV — the four numbers that decide whether your marketing is building a business or burning one.",
@@ -191,7 +191,7 @@ export const POSTS: Post[] = [
   {
     slug: "liquidity-provider-selection-guide",
     cover: "/images/blog/liquidity-provider-selection-guide.webp",
-    coverAlt: "Glowing orange liquid streams flowing through a network of nodes into a bright pool of light",
+    coverAlt: "Modern bank buildings in a financial district",
     title: "Choosing a Liquidity Provider: The Evaluation Guide Brokers Actually Need",
     excerpt:
       "Spreads are the least of it. Depth, fill behavior, failover, and commercial terms — how to evaluate an LP like an operator, not a shopper.",
@@ -245,7 +245,7 @@ export const POSTS: Post[] = [
   {
     slug: "ctrader-vs-mt5-vs-wintrado-white-label",
     cover: "/images/blog/ctrader-vs-mt5-vs-wintrado-white-label.webp",
-    coverAlt: "Abstract illustration comparing three trading platforms with glowing connections",
+    coverAlt: "Two monitors with trading charts side by side comparison",
     title: "cTrader vs MT5 vs Wintrado: Choosing the Right White-Label Platform",
     excerpt:
       "An honest, vendor-neutral comparison of the three platforms brokers ask us about most — who each one is for, and the trade-offs nobody puts in the brochure.",
@@ -303,7 +303,7 @@ export const POSTS: Post[] = [
   {
     slug: "abook-bbook-hybrid-execution",
     cover: "/images/blog/abook-bbook-hybrid-execution.webp",
-    coverAlt: "A glowing order-flow stream splitting at a fork into two paths, one to the market and one into a dark vault",
+    coverAlt: "Fast forex trade execution on trading screens",
     title: "A-Book, B-Book, or Hybrid: How Brokers Really Handle Execution",
     excerpt:
       "Straight-through processing, internalization, and the hybrid model in between — the honest economics and ethics of each execution model.",
@@ -357,7 +357,7 @@ export const POSTS: Post[] = [
   {
     slug: "why-prop-firms-winning-2026-tech-stack",
     cover: "/images/blog/why-prop-firms-winning-2026-tech-stack.webp",
-    coverAlt: "Glowing prop firm technology stack with holographic charts and network connections",
+    coverAlt: "Modern fintech office with technology",
     title: "Why Prop Firms Are Winning 2026: The Tech Stack Behind the Boom",
     excerpt:
       "Evaluation engines, risk monitoring, and payout workflows — the infrastructure decisions separating prop firms that scale from those that stall.",
@@ -419,7 +419,7 @@ export const POSTS: Post[] = [
   {
     slug: "prop-firm-risk-management-framework",
     cover: "/images/blog/prop-firm-risk-management-framework.webp",
-    coverAlt: "A glowing holographic shield with a radar sweep protecting trading chart shards",
+    coverAlt: "Financial risk assessment documents and charts",
     title: "Prop Firm Risk Management: A Framework That Survives a Payout Run",
     excerpt:
       "Drawdown engines, breach detection, copy-trading rings, and payout reserves — the risk framework that keeps a prop firm solvent when traders win.",
@@ -472,7 +472,7 @@ export const POSTS: Post[] = [
   {
     slug: "forex-crm-buyers-guide",
     cover: "/images/blog/forex-crm-buyers-guide.webp",
-    coverAlt: "Glowing glass CRM dashboard panels and client profile cards connected by light threads",
+    coverAlt: "CRM software dashboard on a laptop",
     title: "Forex CRM Buyer's Guide: What to Evaluate Before You Commit",
     excerpt:
       "Your CRM is your back office, your compliance desk, and your marketing engine. Here's how to evaluate one before it becomes the system you can't leave.",
@@ -525,7 +525,7 @@ export const POSTS: Post[] = [
   {
     slug: "forex-license-jurisdictions-overview",
     cover: "/images/blog/forex-license-jurisdictions-overview.webp",
-    coverAlt: "A glowing amber globe with regulatory seal rings orbiting it and light arcs connecting regions",
+    coverAlt: "World map with a globe for international business",
     title: "Broker License Jurisdictions: An Honest Overview",
     excerpt:
       "Offshore, mid-tier, and top-tier — what each licensing tier actually buys you, what it costs, and the questions to ask before you commit. Not legal advice.",
@@ -578,7 +578,7 @@ export const POSTS: Post[] = [
   {
     slug: "kyc-automation-for-brokers",
     cover: "/images/blog/kyc-automation-for-brokers.webp",
-    coverAlt: "A glowing holographic identity card and fingerprint pattern with a luminous verification seal",
+    coverAlt: "Digital identity verification on a smartphone",
     title: "KYC Automation for Brokers: From Days to Minutes",
     excerpt:
       "Document verification, liveness, sanctions screening, ongoing monitoring — how leading brokers turned onboarding from a bottleneck into a conversion engine.",
@@ -626,7 +626,7 @@ export const POSTS: Post[] = [
   {
     slug: "building-ib-affiliate-program",
     cover: "/images/blog/building-ib-affiliate-program.webp",
-    coverAlt: "A central glowing node radiating a branching network of connected partner nodes like a referral tree",
+    coverAlt: "Business partnership meeting with a handshake",
     title: "Building an IB and Affiliate Program That Actually Produces",
     excerpt:
       "Commission structures, partner tiers, attribution, and the support IBs really need — how top brokers turn partnerships into their best acquisition channel.",
@@ -674,7 +674,7 @@ export const POSTS: Post[] = [
   {
     slug: "psp-selection-for-brokers",
     cover: "/images/blog/psp-selection-for-brokers.webp",
-    coverAlt: "Glowing payment cards and luminous transaction streams flowing across an abstract dark map",
+    coverAlt: "Payment methods and credit cards for e-commerce",
     title: "PSP Selection for Brokers: Getting Deposits Right Across Every Geo",
     excerpt:
       "Approval rates, settlement times, rolling reserves, and redundancy — the payment stack decisions that decide whether marketing spend becomes revenue.",
@@ -727,7 +727,7 @@ export const POSTS: Post[] = [
   {
     slug: "mam-pamm-setup-guide",
     cover: "/images/blog/mam-pamm-setup-guide.webp",
-    coverAlt: "A glowing master account core with branching light threads to smaller sub-account orbs",
+    coverAlt: "Investment portfolio growth charts on a screen",
     title: "MAM and PAMM Setup Guide: Money Management Without the Headaches",
     excerpt:
       "Allocation methods, fee structures, risk controls, and the operational pitfalls — everything a broker needs to run money management properly.",
@@ -775,7 +775,7 @@ export const POSTS: Post[] = [
   {
     slug: "ctrader-deep-dive",
     cover: "/images/blog/ctrader-deep-dive.webp",
-    coverAlt: "A sleek modern trading terminal with a glowing depth-of-market ladder and floating glass panels",
+    coverAlt: "Professional trading platform with charts on a screen",
     title: "cTrader Deep Dive: Why Sophisticated Traders Keep Choosing It",
     excerpt:
       "Depth of market, cAlgo, the FIX API, and the experience premium — an honest technical tour of the platform that punches above its market share.",
@@ -829,7 +829,7 @@ export const POSTS: Post[] = [
   {
     slug: "trading-platform-migration-playbook",
     cover: "/images/blog/trading-platform-migration-playbook.webp",
-    coverAlt: "A glowing light bridge arching between two trading platform monoliths with data streams crossing",
+    coverAlt: "Data migration engineer working with servers",
     title: "Trading Platform Migration Playbook: Switch Platforms, Keep Traders",
     excerpt:
       "Data mapping, parallel runs, trader communication, and the rollback plan — how to migrate platforms without migrating your clients to a competitor.",

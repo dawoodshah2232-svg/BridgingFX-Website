@@ -67,7 +67,7 @@ export default function PackagesPage() {
         title={<>Launch packages <span className="gradient-text">for every growth stage.</span></>}
         description="Honest tiers with everything scoped in writing. Start lean, scale without rebuilding — your technology grows with your client base."
         cta={{ label: "Get a tailored quote", href: "/contact" }}
-        image={{ src: "/images/pages/packages.webp", alt: "Tiered brokerage launch packages illustration" }}
+        image={{ src: "/images/pages/packages.webp", alt: "Business team reviewing pricing documents at a table" }}
       />
 
       {/* Find your fit — interactive quiz */}

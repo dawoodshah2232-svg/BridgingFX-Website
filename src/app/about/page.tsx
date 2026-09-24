@@ -44,7 +44,7 @@ export default function AboutPage() {
         eyebrow="About BridgingFX"
         title={<>The team behind <span className="gradient-text">ambitious brokerages.</span></>}
         description="Since 2016, we've helped forex brokers, prop firms, and financial institutions launch, operate, and scale — with technology and services designed as one system."
-        image={{ src: "/images/pages/about.webp", alt: "BridgingFX team illustration — modern trading technology" }}
+        image={{ src: "/images/pages/about.webp", alt: "Diverse business team in a meeting in a modern office" }}
       />
 
       <section className="hairline bg-ink-900/40">

@@ -38,7 +38,7 @@ export const PRODUCTS: Product[] = [
       "The operating system of your brokerage — every client, account, transaction, and partner in one command center.",
     category: "Brokerage Platforms",
     image: "/images/pages/crm.webp",
-    imageAlt: "Trading CRM command center illustration",
+    imageAlt: "Person using a laptop with a CRM dashboard in an office",
     description: [
       "A brokerage without a real CRM runs on spreadsheets, chat threads, and memory — and it shows in slow onboarding, missed deposits, and IBs who leave over opaque commissions. Our Trading CRM replaces all of that with one system your entire team works from: sales, support, finance, compliance, and management, each with their own view of the same truth.",
       "Clients onboard through branded flows with KYC built in. Trading accounts across MT4, MT5, and cTrader are created and managed without touching an admin terminal. Deposits and withdrawals move through approval workflows. IBs and affiliates track earnings in real time. Marketing runs segmented campaigns on live trading data — not exported CSVs.",
@@ -88,7 +88,7 @@ export const PRODUCTS: Product[] = [
       "MT4, MT5, and cTrader provisioned, configured, and managed — your team operates in plain English, we handle the terminals.",
     category: "Brokerage Platforms",
     image: "/images/services/mt4-mt5-white-label.webp",
-    imageAlt: "Trading platform setup and management illustration",
+    imageAlt: "Forex trading charts on a computer screen closeup",
     description: [
       "Trading platforms were built for engineers, not for the managers who actually run brokerages. We close that gap: your servers are provisioned and configured by our team, and your staff operate them through a plain-English management layer — request spreads, leverage, symbols, and groups without touching an admin terminal.",
       "We cover MT4, MT5, and cTrader estates, including multi-platform operations. Brokerage automations handle the repetitive operational work — scheduled maintenance, monitoring, routine configuration — while change control logs every action for audit.",
@@ -137,7 +137,7 @@ export const PRODUCTS: Product[] = [
       "A complete brokerage under your brand — platforms, CRM, liquidity, payments, and website, launched as one program.",
     category: "Brokerage Platforms",
     image: "/images/services/trading-platform-management.webp",
-    imageAlt: "White label brokerage solution illustration",
+    imageAlt: "Operations team monitoring screens in a control room",
     description: [
       "A white label should be a business, not a logo on someone else's terminal. Our White Label Solutions deliver the full stack under your brand: trading platforms, CRM, liquidity bridge, payment rails, client portal, website, and mobile apps — configured together, launched together, managed together.",
       "You choose the market positioning; we engineer everything underneath it. Spreads, leverage, symbols, and account types are set to your commercial model. Your clients never see a third-party brand — every touchpoint, from the trading terminal to the withdrawal email, is yours.",
@@ -186,7 +186,7 @@ export const PRODUCTS: Product[] = [
       "Institutional-grade execution control — route flow across liquidity providers with precision and full transparency.",
     category: "Trading Operations",
     image: "/images/services/liquidity-aggregation.webp",
-    imageAlt: "Liquidity bridge illustration",
+    imageAlt: "Stock market trading floor with screens",
     description: [
       "The bridge between your platform and your liquidity providers is the most consequential plumbing in your brokerage. Our Liquidity Bridge is an institutional control plane for that flow: multi-provider aggregation, smart routing rules, markup management, and execution analytics — visible in real time, explainable to auditors.",
       "Configure routing per symbol group, client segment, or flow profile. Monitor fill quality, slippage, and provider performance from one dashboard, and adjust with confidence because every routing decision is logged with the data behind it.",
@@ -235,7 +235,7 @@ export const PRODUCTS: Product[] = [
       "Real-time exposure control, abuse detection, and dealing-desk tooling — protect the book before it needs protecting.",
     category: "Trading Operations",
     image: "/images/services/risk-management.webp",
-    imageAlt: "Risk management system illustration",
+    imageAlt: "Risk analyst studying financial charts on a screen",
     description: [
       "Your book is your business. Our Risk Management gives your dealing desk real-time exposure visibility across every symbol, client, and liquidity venue — with configurable limits, alerts, and automated responses when thresholds are breached.",
       "A native detection engine watches for prohibited trading patterns — latency arbitrage, toxic flow markers, and other abuse signatures — flagging for review or enforcing automatically per your policy. Your risk team defines the rules in plain terms; the system executes them in milliseconds.",
@@ -284,7 +284,7 @@ export const PRODUCTS: Product[] = [
       "Turn performance into product — social copy trading, pooled PAMM accounts, and multi-account MAM management.",
     category: "Trading Operations",
     image: "/images/services/mam-pamm-copy-trading.webp",
-    imageAlt: "Copy trading, PAMM and MAM illustration",
+    imageAlt: "Investor monitoring trading performance on a screen",
     description: [
       "Some of your best clients are also your best product — if you give them the rails. Our managed-trading suite covers all three models: social copy trading where followers subscribe to verified strategies, PAMM pooled accounts with transparent unit accounting, and MAM multi-account management for professional money managers.",
       "Copy traders get discovery, verified track records, and one-click subscribe; followers get risk controls — drawdown guards, allocation limits, instant unsubscribe. PAMM investors get branded statements and high-water-mark fee integrity. MAM managers trade one master while allocations replicate across unlimited sub-accounts.",
@@ -333,7 +333,7 @@ export const PRODUCTS: Product[] = [
       "Challenge infrastructure that sells in 30 minutes — evaluations, risk, payouts, and trader dashboards as one system.",
     category: "Prop Firms",
     image: "/images/services/propfirm-tech.webp",
-    imageAlt: "Prop firm solutions illustration",
+    imageAlt: "Trader at a multi-screen workstation during an evaluation",
     description: [
       "Prop firms don't sell trading — they sell challenges, and challenges need purpose-built technology. Our Prop Firm Solutions cover the full stack: challenge configuration (1-step, 2-step, instant funding), real-time evaluation tracking, risk monitoring tuned for challenge economics, trader dashboards, and payout workflows.",
       "Traders see transparent progress they can trust — profit targets, drawdown, and consistency rules always current. Your team sees revenue, risk, and operations at a glance. Payout scheduling runs with approval workflows and full audit trails, so your reputation for paying on time is protected by process, not memory.",
@@ -382,7 +382,7 @@ export const PRODUCTS: Product[] = [
       "Recruit, track, and pay partners with multi-tier structures and commission transparency that retains top IBs.",
     category: "Growth",
     image: "/images/services/ib-affiliate-portals.webp",
-    imageAlt: "IB and partner management illustration",
+    imageAlt: "Business partners shaking hands closing a deal",
     description: [
       "IBs are the growth engine of most brokerages — and the fastest way to lose them is opaque commissions and late payouts. Our IB & Partner Management gives every partner a branded portal with real-time earnings, referred-client activity, and marketing materials, while your team controls tiers, rebate plans, and payout schedules.",
       "Multi-level structures are fully supported: sub-IBs, regional masters, custom rebate schemes per partner. Commission runs execute on schedule with finance approval gates, and every calculation traces down to the individual trade.",
@@ -431,7 +431,7 @@ export const PRODUCTS: Product[] = [
       "Acquisition to retention — lead pipelines, campaigns, loyalty, referrals, and the website tooling that feeds them.",
     category: "Growth",
     image: "/images/services/growth-marketing.webp",
-    imageAlt: "Marketing and growth suite illustration",
+    imageAlt: "Business growth chart presented in a team meeting",
     description: [
       "Registrations are not revenue — funded, active traders are. The Marketing & Growth Suite covers the whole journey: a lead and sales pipeline with automated nurturing, email and SMS campaigns on live trading data, promotions and loyalty programs that keep traders active, and referral programs that turn clients into recruiters.",
       "Your marketing team also gets the website tooling to feed the funnel: a landing page builder for campaign pages, SEO tooling to compound organic growth, and event management for webinars and expos — every registration flowing into the pipeline with source attribution intact.",
@@ -480,7 +480,7 @@ export const PRODUCTS: Product[] = [
       "A branded learning platform — courses, live classes, and certificates that turn beginners into loyal traders.",
     category: "Growth",
     image: "/images/services/podcast-studio.webp",
-    imageAlt: "Trading academy illustration",
+    imageAlt: "Podcast recording studio with microphones",
     description: [
       "Educated traders deposit more, trade longer, and churn less. The Trading Academy is a full learning platform under your brand: structured courses, quizzes, live classes with streaming, and certificates clients can share.",
       "AI-assisted course generation accelerates production — outline a topic, get a structured draft your team refines. Instructor tools handle scheduling, attendance, and cohorts; marketing gets a new acquisition funnel in free education.",
@@ -529,7 +529,7 @@ export const PRODUCTS: Product[] = [
       "Deposits that convert — multi-provider cashier, client wallets, and finance workflows without the spreadsheet.",
     category: "Client Experience",
     image: "/images/services/psp-payment-orchestration.webp",
-    imageAlt: "Payment solutions illustration",
+    imageAlt: "Online payment with credit card on a laptop",
     description: [
       "The deposit screen is the moment of truth in every client relationship — and the moment most brokerages make hardest. Our Payment Solutions connect cards, e-wallets, crypto rails, and bank transfers into one cashier experience, backed by a client wallet that unifies balances across products.",
       "Finance gets proper tooling: invoicing, subscription billing, multi-level withdrawal approvals with maker-checker controls, and reconciliation that actually reconciles. Every transaction lands in the CRM with full audit trails.",
@@ -578,7 +578,7 @@ export const PRODUCTS: Product[] = [
       "Your brokerage in your clients' pockets — iOS and Android apps for traders, IBs, and your team.",
     category: "Client Experience",
     image: "/images/services/mobile-trading-apps.webp",
-    imageAlt: "Branded mobile apps illustration",
+    imageAlt: "Person trading stocks on a smartphone closeup of hand",
     description: [
       "For most of your clients, your brand is a phone screen. Our Branded Mobile Apps put the full client experience on iOS and Android under your name and icon: account management, deposits and withdrawals, document upload, trading views, and support — all reading from the same CRM as everything else.",
       "Role-specific apps extend the ecosystem: IBs track earnings on the go, sales and relationship managers work their pipeline from the field, admins get operational visibility anywhere. One codebase strategy keeps iOS and Android in lockstep.",
@@ -627,7 +627,7 @@ export const PRODUCTS: Product[] = [
       "Trading-grade VPS, dedicated servers, and managed hosting — infrastructure your clients can feel.",
     category: "Infrastructure",
     image: "/images/services/forex-vps-hosting.webp",
-    imageAlt: "Infrastructure and hosting illustration",
+    imageAlt: "Server room racks with blue light",
     description: [
       "Execution quality starts with infrastructure. Our Infrastructure & Hosting provides latency-optimized VPS colocated near major trading venues, dedicated servers for platform workloads, and managed hosting for your websites, portals, and CRM — all under one support roof and one security standard.",
       "Offer VPS as a client perk or a revenue line: traders running automated strategies get the uptime and ping times they need, and you get the stickiness that comes with hosting their strategies. A security operations layer keeps the estate patched, monitored, and hardened.",

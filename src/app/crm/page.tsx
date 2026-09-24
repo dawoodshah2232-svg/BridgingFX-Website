@@ -84,7 +84,7 @@ export default function CrmPage() {
         title={<>One command center. <span className="gradient-text">Your entire brokerage.</span></>}
         description="BridgeX CRM — fully customized to your operation, cloud-hosted or self-hosted. If you already have a company, you're up and running in as little as 15 minutes: no programmers, no developers, no extra cost — we do everything for you, in minutes."
         cta={{ label: "Get my CRM in 15 minutes", href: "/contact" }}
-        image={{ src: "/images/pages/crm.webp", alt: "BridgeX Forex CRM command center illustration" }}
+        image={{ src: "/images/pages/crm.webp", alt: "Person using a laptop with a CRM dashboard in an office" }}
       />
 
       {/* 15-minute setup */}

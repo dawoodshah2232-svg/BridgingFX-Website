@@ -121,7 +121,7 @@ function Hero() {
             <div className="relative overflow-hidden rounded-[28px] shadow-card">
               <Image
                 src="/images/home/hero-trading-command.webp"
-                alt="Abstract visualization of the BridgingFX trading technology platform"
+                alt="Professional stock trading desk with multiple monitors in a dark modern office"
                 width={1600}
                 height={900}
                 priority
@@ -244,7 +244,7 @@ function PlatformsShowcase() {
           <div className="relative overflow-hidden rounded-[24px] shadow-card sm:rounded-[28px]">
             <Image
               src="/images/home/section-platforms.webp"
-              alt="White-label trading platforms visualization — BridgingFX"
+              alt="Trader monitors displaying financial charts in a dark room"
               width={1200}
               height={675}
               sizes="(max-width: 640px) 100vw, (max-width: 1100px) 92vw, 1152px"
@@ -364,7 +364,7 @@ function CrmSection() {
             <div className="relative overflow-hidden rounded-[24px] shadow-card sm:rounded-[28px]">
               <Image
                 src="/images/home/section-crm.webp"
-                alt="BridgeX Forex CRM command center visualization"
+                alt="Customer service team working on laptops in a modern office"
                 width={1200}
                 height={675}
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -443,7 +443,7 @@ function PropBand() {
             <div className="relative overflow-hidden rounded-[24px] shadow-card sm:rounded-[28px]">
               <Image
                 src="/images/home/section-prop.webp"
-                alt="Prop firm challenge and evaluation technology illustration"
+                alt="Focused young trader looking at a computer screen in a dark office"
                 width={1200}
                 height={675}
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -530,7 +530,7 @@ function CompanySteps() {
           <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[24px] shadow-card sm:rounded-[28px]">
             <Image
               src="/images/home/section-company.webp"
-              alt="Forex company formation journey illustration"
+              alt="Modern corporate office interior with glass walls"
               width={1200}
               height={675}
               sizes="(max-width: 640px) 100vw, (max-width: 1100px) 92vw, 896px"
@@ -605,7 +605,7 @@ function WhyUs() {
             <div className="relative overflow-hidden rounded-[24px] shadow-card sm:rounded-[28px]">
               <Image
                 src="/images/home/section-why.webp"
-                alt="Why brokerages choose BridgingFX — partnership illustration"
+                alt="Business professionals shaking hands in a modern office"
                 width={1200}
                 height={675}
                 sizes="(max-width: 1024px) 100vw, 50vw"

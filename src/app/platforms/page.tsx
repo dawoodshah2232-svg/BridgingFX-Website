@@ -50,7 +50,7 @@ export default function PlatformsPage() {
         title={<>Enter the most liquid market <span className="gradient-text">within 2 weeks.</span></>}
         description="Five platform solutions — designed, branded, and launched for brokers and white labels to own their identity in the online forex industry. Low startup cost, full customization, 24/7 support."
         cta={{ label: "Launch your platform", href: "/contact" }}
-        image={{ src: "/images/pages/platforms.webp", alt: "White-label trading platforms illustration" }}
+        image={{ src: "/images/pages/platforms.webp", alt: "Wall of financial trading screens in a dark office" }}
       />
 
       {/* Platform cards */}

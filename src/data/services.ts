@@ -23,7 +23,7 @@ export type Service = {
   title: string;
   image: string;
   imageAlt: string;
-  category: "Technology" | "Growth" | "Operations" | "Compliance" | "Creative";
+  category: "Leads" | "Technology" | "Growth" | "Operations" | "Compliance" | "Creative";
   tagline: string;
   description: string[];
   features: string[];
@@ -35,7 +35,7 @@ export const SERVICES: Service[] = [
   {
     slug: "software-development",
     image: "/images/services/software-development.webp",
-    imageAlt: "Software Development — BridgingFX service illustration",
+    imageAlt: "Software developers pair programming in an office",
     title: "Software Development",
     category: "Technology",
     tagline: "Custom-built trading technology, engineered for the FX industry.",
@@ -70,7 +70,7 @@ export const SERVICES: Service[] = [
   {
     slug: "risk-management",
     image: "/images/services/risk-management.webp",
-    imageAlt: "Risk Management — BridgingFX service illustration",
+    imageAlt: "Risk analyst studying financial charts on a screen",
     title: "Risk Management",
     category: "Operations",
     tagline: "Protect your book. Price with confidence. Sleep at night.",
@@ -105,7 +105,7 @@ export const SERVICES: Service[] = [
   {
     slug: "ui-ux-design",
     image: "/images/services/ui-ux-design.webp",
-    imageAlt: "UI/UX Design — BridgingFX service illustration",
+    imageAlt: "UI designer working on interface design on a screen",
     title: "UI/UX Design",
     category: "Creative",
     tagline: "Interfaces traders love. Conversion flows that pay for themselves.",
@@ -140,7 +140,7 @@ export const SERVICES: Service[] = [
   {
     slug: "digital-marketing",
     image: "/images/services/digital-marketing.webp",
-    imageAlt: "Digital Marketing — BridgingFX service illustration",
+    imageAlt: "Marketing team working on laptops in a creative office",
     title: "Digital Marketing",
     category: "Growth",
     tagline: "Acquisition engines built for regulated FX realities.",
@@ -175,7 +175,7 @@ export const SERVICES: Service[] = [
   {
     slug: "cloud-provider",
     image: "/images/services/cloud-provider.webp",
-    imageAlt: "Cloud Provider — BridgingFX service illustration",
+    imageAlt: "Data center server racks in a corridor",
     title: "Cloud Provider",
     category: "Technology",
     tagline: "Trading-grade infrastructure with 99.99% uptime DNA.",
@@ -210,7 +210,7 @@ export const SERVICES: Service[] = [
   {
     slug: "data-analytics",
     image: "/images/services/data-analytics.webp",
-    imageAlt: "Data Analytics — BridgingFX service illustration",
+    imageAlt: "Financial data charts on a monitor closeup",
     title: "Data Analytics",
     category: "Technology",
     tagline: "Turn platform exhaust into decisions.",
@@ -245,7 +245,7 @@ export const SERVICES: Service[] = [
   {
     slug: "web-development",
     image: "/images/services/web-development.webp",
-    imageAlt: "Web Development — BridgingFX service illustration",
+    imageAlt: "Web developer code on a screen closeup",
     title: "Web Development",
     category: "Technology",
     tagline: "Broker websites engineered to convert — and to rank.",
@@ -280,7 +280,7 @@ export const SERVICES: Service[] = [
   {
     slug: "business-analysis",
     image: "/images/services/business-analysis.webp",
-    imageAlt: "Business Analysis — BridgingFX service illustration",
+    imageAlt: "Business analysts reviewing charts in a meeting",
     title: "Business Analysis",
     category: "Operations",
     tagline: "Clarity before capital. Strategy before spend.",
@@ -315,7 +315,7 @@ export const SERVICES: Service[] = [
   {
     slug: "product-design",
     image: "/images/services/product-design.webp",
-    imageAlt: "Product Design — BridgingFX service illustration",
+    imageAlt: "Product designer sketching wireframes at a desk",
     title: "Product Design",
     category: "Creative",
     tagline: "From idea to a product traders can't put down.",
@@ -350,7 +350,7 @@ export const SERVICES: Service[] = [
   {
     slug: "logo-design",
     image: "/images/services/logo-design.webp",
-    imageAlt: "Logo Design — BridgingFX service illustration",
+    imageAlt: "Graphic designer sketching logo ideas in a branding studio",
     title: "Logo Design",
     category: "Creative",
     tagline: "A mark worthy of the brokerage you're building.",
@@ -385,9 +385,9 @@ export const SERVICES: Service[] = [
   {
     slug: "fx-leads",
     image: "/images/services/fx-leads.webp",
-    imageAlt: "FX Leads — BridgingFX service illustration",
+    imageAlt: "Sales team making phone calls in an office",
     title: "FX Leads",
-    category: "Growth",
+    category: "Leads",
     tagline: "Premium, verified, high-intent trading leads.",
     description: [
       "Keep your sales pipeline full with fresh, qualified leads sourced specifically for the FX and brokerage industry. BridgingFX specializes in proprietary, high-intent trader and investor data from prime global markets — each lead rigorously verified and scored for maximum conversion potential.",
@@ -421,12 +421,246 @@ export const SERVICES: Service[] = [
     ],
     icon: "users",
   },
+  {
+    slug: "lead-management-crm",
+    image: "/images/services/lead-management-crm.webp",
+    imageAlt: "Salesperson managing trading leads on a laptop in a modern office",
+    title: "Lead Management CRM",
+    category: "Leads",
+    tagline: "Every lead captured, scored, and routed — none left behind.",
+    description: [
+      "Your leads come from everywhere: landing pages, ad campaigns, webinars, IB referrals, imported lists. Lead Management CRM pulls them all into one pipeline the second they arrive — deduplicated, enriched, and scored by real buying intent.",
+      "From there, smart routing assigns each prospect to the right salesperson by language, region, or round-robin, with instant follow-up reminders. Managers see the whole funnel live: where every lead stands, who worked it last, and what's stuck.",
+    ],
+    features: [
+      "Multi-channel capture — web forms, landing pages, ads & imports",
+      "Automatic deduplication and data enrichment",
+      "Intent-based lead scoring tuned for FX",
+      "Smart routing by language, region, or round-robin",
+      "Follow-up reminders so no lead ever goes cold",
+      "Full activity timeline on every prospect record",
+    ],
+    faqs: [
+      {
+        q: "Can it capture leads from our existing landing pages?",
+        a: "Yes — connect any web form, landing page, or ad platform in minutes. Leads flow in automatically with their source tagged, so you always know which channel produced them.",
+      },
+      {
+        q: "How does lead scoring work?",
+        a: "Each lead is scored on engagement signals and profile fit — demo opened, documents started, deposit page visited — so your sales team always calls the hottest prospects first.",
+      },
+      {
+        q: "Does it handle duplicate leads?",
+        a: "Automatically. The system matches on email, phone, and device fingerprints, merging duplicates into a single record with the complete history preserved.",
+      },
+      {
+        q: "Can managers see team performance?",
+        a: "Yes — live dashboards show follow-up speed, contact rates, and conversion per salesperson, so coaching is based on data, not guesswork.",
+      },
+    ],
+    icon: "users",
+  },
+  {
+    slug: "sales-pipeline-crm",
+    image: "/images/services/sales-pipeline-crm.webp",
+    imageAlt: "Business team reviewing a sales pipeline on charts in a meeting",
+    title: "Sales Pipeline CRM",
+    category: "Leads",
+    tagline: "A pipeline your closers will actually use.",
+    description: [
+      "Sales Pipeline CRM gives your sales floor a visual deal board built for how brokerages really sell: new lead, contacted, demo, documents, first deposit, funded. Drag, drop, done — every deal's stage, value, and next action visible at a glance.",
+      "Calls, emails, and WhatsApp conversations log against the deal automatically. Managers forecast revenue from live pipeline data instead of end-of-month spreadsheets, and automation nudges deals forward when they stall.",
+    ],
+    features: [
+      "Visual drag-and-drop deal pipeline with FX sales stages",
+      "Automatic logging of calls, emails & WhatsApp",
+      "Stall detection with automatic re-engagement nudges",
+      "Revenue forecasting from live pipeline data",
+      "Per-closer leaderboards and conversion analytics",
+      "Task queues so every rep knows their next move",
+    ],
+    faqs: [
+      {
+        q: "Is it different from the Lead Management CRM?",
+        a: "They work as a pair: Lead Management captures and routes prospects; Sales Pipeline takes over once a rep is working the deal through to first deposit and beyond.",
+      },
+      {
+        q: "Can we customize the pipeline stages?",
+        a: "Fully — rename stages, add steps, set required actions per stage, and build separate pipelines for retail, IB, and institutional desks.",
+      },
+      {
+        q: "Does it track first-time deposits?",
+        a: "Yes — deposit events sync from your trading platform and CRM, so funded accounts are attributed to the right closer automatically.",
+      },
+      {
+        q: "How do managers forecast with it?",
+        a: "Weighted pipeline values by stage probability give you a live revenue forecast that updates as deals move — no more spreadsheet guessing.",
+      },
+    ],
+    icon: "chart",
+  },
+  {
+    slug: "lead-nurturing",
+    image: "/images/services/lead-nurturing.webp",
+    imageAlt: "Customer support specialist with headset following up with leads in an office",
+    title: "Lead Nurturing Automation",
+    category: "Leads",
+    tagline: "Turn registrations into funded accounts on autopilot.",
+    description: [
+      "Most brokerages lose the majority of their registrations to silence: no follow-up after signup, no reminder after an abandoned deposit, no reactivation when a trader goes quiet. Lead Nurturing Automation fixes that with behavior-triggered journeys across email, SMS, and WhatsApp.",
+      "Registration follow-ups, KYC reminders, no-deposit nudges, dormant-account win-back — every sequence is pre-built for FX, personalized with the trader's name and stage, and stops the moment they convert so messaging never feels spammy.",
+    ],
+    features: [
+      "Pre-built FX journeys: registration, KYC, no-deposit, reactivation",
+      "Behavior triggers across email, SMS & WhatsApp",
+      "Personalized messaging with trader name and funnel stage",
+      "Smart stop rules — sequences end on conversion",
+      "A/B testing on subject lines, timing & channels",
+      "Nurture-to-deposit attribution reporting",
+    ],
+    faqs: [
+      {
+        q: "What is a no-deposit reminder sequence?",
+        a: "An automated series of messages to registered users who haven't funded yet — timed reminders with the right incentive at each step, proven to recover a large share of abandoned registrations.",
+      },
+      {
+        q: "Will this annoy our leads?",
+        a: "No — frequency caps, smart stop rules, and easy opt-outs keep messaging respectful. Sequences pause automatically when a lead engages or converts.",
+      },
+      {
+        q: "Can we write our own sequences?",
+        a: "Absolutely — start from our FX templates and customize every message, delay, and trigger, or build journeys from scratch in the visual editor.",
+      },
+      {
+        q: "Does it work with our CRM?",
+        a: "Yes — it reads and writes lead stages in real time, so nurturing always reflects the latest status and sales sees every touchpoint.",
+      },
+    ],
+    icon: "refresh",
+  },
+  {
+    slug: "campaign-manager",
+    image: "/images/services/campaign-manager.webp",
+    imageAlt: "Marketing team planning a campaign around a table in a creative office",
+    title: "Campaign Manager",
+    category: "Leads",
+    tagline: "Plan, launch, and measure every campaign from one desk.",
+    description: [
+      "Campaign Manager is mission control for your marketing: plan campaigns across email, SMS, push, and social, segment audiences by deposit behavior, geography, or platform, and launch coordinated blasts in a few clicks.",
+      "Every send is tracked end to end — delivered, opened, clicked, registered, funded — so you know exactly which campaign, creative, and channel produced revenue, not just clicks.",
+    ],
+    features: [
+      "Multi-channel campaigns: email, SMS, push & social",
+      "Audience segmentation by behavior, geo & platform",
+      "Visual campaign calendar and scheduling",
+      "UTM and source attribution built in",
+      "Revenue-level reporting — registrations to deposits",
+      "Reusable templates for promos, bonuses & events",
+    ],
+    faqs: [
+      {
+        q: "Can we segment by trader behavior?",
+        a: "Yes — build audiences from live data: active traders, dormant accounts, demo-only users, high-value depositors, and any custom segment you define.",
+      },
+      {
+        q: "Does it handle bonus and promo campaigns?",
+        a: "It's built for them — promo templates with bonus codes, expiry handling, and eligibility rules tied to your CRM data.",
+      },
+      {
+        q: "How is attribution tracked?",
+        a: "Every link carries UTM and source tags through to registration and first deposit, so each campaign reports true cost-per-funded-account.",
+      },
+      {
+        q: "Can agencies run campaigns for us in it?",
+        a: "Yes — role-based access lets agencies build and schedule campaigns while you keep approval control before anything sends.",
+      },
+    ],
+    icon: "megaphone",
+  },
+  {
+    slug: "email-sms-marketing",
+    image: "/images/services/email-sms-marketing.webp",
+    imageAlt: "Marketer composing an email campaign on a laptop with a smartphone nearby",
+    title: "Email & SMS Marketing",
+    category: "Leads",
+    tagline: "Bulk messaging your compliance team will approve.",
+    description: [
+      "High-volume email and SMS built for financial marketing: dedicated sending infrastructure for deliverability, one-click personalization, and compliance guardrails — consent tracking, opt-outs, and quiet-hour rules — baked into every send.",
+      "Design once with the drag-and-drop editor, personalize with CRM fields, schedule by timezone, and watch delivery, open, and conversion rates in real time.",
+    ],
+    features: [
+      "Dedicated sending infrastructure for inbox placement",
+      "Drag-and-drop email editor with FX templates",
+      "Personalization with any CRM field",
+      "Consent, opt-out & complaint handling built in",
+      "Quiet hours and regional compliance rules",
+      "Real-time delivery and engagement analytics",
+    ],
+    faqs: [
+      {
+        q: "How do you handle email deliverability?",
+        a: "Dedicated IPs, authenticated domains (SPF/DKIM/DMARC), list hygiene, and send-reputation monitoring keep your campaigns in the inbox, not spam.",
+      },
+      {
+        q: "Is SMS compliant for financial marketing?",
+        a: "Yes — consent is captured and stored per contact, opt-outs are honored instantly, and quiet-hour rules respect regional regulations.",
+      },
+      {
+        q: "Can we personalize at scale?",
+        a: "Every message can merge any CRM field — name, account type, last deposit, platform — so a million sends still feel one-to-one.",
+      },
+      {
+        q: "What templates are included?",
+        a: "FX-ready templates for welcome series, deposit bonuses, market updates, webinar invites, IB recruitment, and reactivation.",
+      },
+    ],
+    icon: "mobile",
+  },
+  {
+    slug: "landing-page-builder",
+    image: "/images/services/landing-page-builder.webp",
+    imageAlt: "Designer building a landing page layout on a large screen",
+    title: "Landing Page Builder",
+    category: "Leads",
+    tagline: "High-converting pages without a developer.",
+    description: [
+      "Launch campaign pages in hours, not sprints: a drag-and-drop builder with broker-specific templates — deposit bonus offers, demo signups, IB recruitment, webinar registrations — all wired straight into your CRM.",
+      "Every page is mobile-first, loads fast, and A/B tests headlines, forms, and offers automatically, so your cost per lead keeps dropping while volume grows.",
+    ],
+    features: [
+      "Drag-and-drop builder — no code required",
+      "Broker templates: bonuses, demos, IB & webinars",
+      "Forms wired directly into your CRM",
+      "Built-in A/B testing for headlines & offers",
+      "Mobile-first, fast-loading pages",
+      "Custom domains and full brand styling",
+    ],
+    faqs: [
+      {
+        q: "Do we need a developer to publish pages?",
+        a: "No — marketers build, preview, and publish on their own. Custom domains and brand styling are configured once, then it's all drag-and-drop.",
+      },
+      {
+        q: "Where do form submissions go?",
+        a: "Straight into your Lead Management CRM with source tags, triggering scoring, routing, and nurture sequences instantly.",
+      },
+      {
+        q: "Can we A/B test our offers?",
+        a: "Yes — test headlines, hero images, form lengths, and bonus offers. The builder automatically shifts traffic to the winning variant.",
+      },
+      {
+        q: "Are pages optimized for mobile?",
+        a: "Every template is mobile-first and performance-tuned, since most FX traffic arrives on phones.",
+      },
+    ],
+    icon: "rocket",
+  },
 ];
 SERVICES.push(
   {
     slug: "tech-support",
     image: "/images/services/tech-support.webp",
-    imageAlt: "24/7 Tech Support — BridgingFX service illustration",
+    imageAlt: "IT support technician helping a colleague at a desk",
     title: "24/7 Tech Support",
     category: "Operations",
     tagline: "Global uptime. Financial-grade support, around the clock.",
@@ -465,7 +699,7 @@ SERVICES.push(
   {
     slug: "compliance-kyc",
     image: "/images/services/compliance-kyc.webp",
-    imageAlt: "Compliance & KYC — BridgingFX service illustration",
+    imageAlt: "Compliance officer reviewing documents in an office",
     title: "Compliance & KYC",
     category: "Compliance",
     tagline: "Faster onboarding. Regulatory adherence, guaranteed.",
@@ -504,7 +738,7 @@ SERVICES.push(
   {
     slug: "migration",
     image: "/images/services/migration.webp",
-    imageAlt: "Migration — BridgingFX service illustration",
+    imageAlt: "IT engineer working in a server room",
     title: "Migration",
     category: "Operations",
     tagline: "Move platforms, providers, or stacks — with zero drama.",
@@ -539,7 +773,7 @@ SERVICES.push(
   {
     slug: "mobile-app-development",
     image: "/images/services/mobile-app-development.webp",
-    imageAlt: "Mobile App Development — BridgingFX service illustration",
+    imageAlt: "Developer testing a mobile app on a smartphone",
     title: "Mobile App Development",
     category: "Technology",
     tagline: "Native-quality trading apps for iOS and Android.",
@@ -574,7 +808,7 @@ SERVICES.push(
   {
     slug: "platform-integrations",
     image: "/images/services/platform-integrations.webp",
-    imageAlt: "Platform Integrations — BridgingFX service illustration",
+    imageAlt: "Software developer working with multiple screens of code",
     title: "Platform Integrations",
     category: "Technology",
     tagline: "Every system you run, speaking the same language.",
@@ -609,7 +843,7 @@ SERVICES.push(
   {
     slug: "podcast-studio",
     image: "/images/services/podcast-studio.webp",
-    imageAlt: "Podcast Studio Rental — BridgingFX service illustration",
+    imageAlt: "Podcast recording studio with microphones",
     title: "Podcast Studio Rental",
     category: "Growth",
     tagline: "A broadcast-grade studio for your market voice.",
@@ -644,7 +878,7 @@ SERVICES.push(
   {
     slug: "fx-broker-management",
     image: "/images/services/fx-broker-management.webp",
-    imageAlt: "FX Broker Management — BridgingFX service illustration",
+    imageAlt: "Brokerage managers in a meeting in a trading office",
     title: "FX Broker Management",
     category: "Operations",
     tagline: "Senior operators running your brokerage, end to end.",
@@ -679,7 +913,7 @@ SERVICES.push(
   {
     slug: "trading-platform-management",
     image: "/images/services/trading-platform-management.webp",
-    imageAlt: "Trading Platform Management — BridgingFX service illustration",
+    imageAlt: "Operations team monitoring screens in a control room",
     title: "Trading Platform Management",
     category: "Operations",
     tagline: "Your servers, symbols, and feeds — expertly run.",
@@ -714,7 +948,7 @@ SERVICES.push(
   {
     slug: "outsourcing-customer-support",
     image: "/images/services/outsourcing-customer-support.webp",
-    imageAlt: "Outsourcing Customer Support — BridgingFX service illustration",
+    imageAlt: "Call center agents with headsets in an office",
     title: "Outsourcing Customer Support",
     category: "Operations",
     tagline: "A support team your traders will actually thank you for.",
@@ -749,7 +983,7 @@ SERVICES.push(
   {
     slug: "propfirm-tech",
     image: "/images/services/propfirm-tech.webp",
-    imageAlt: "PropFirm Challenge & Evaluation Tech — BridgingFX service illustration",
+    imageAlt: "Trader at a multi-screen workstation during an evaluation",
     title: "PropFirm Challenge & Evaluation Tech",
     category: "Technology",
     tagline: "The complete technology stack for modern prop firms.",
@@ -784,7 +1018,7 @@ SERVICES.push(
   {
     slug: "mt4-mt5-white-label",
     image: "/images/services/mt4-mt5-white-label.webp",
-    imageAlt: "MT4/MT5 White Label — BridgingFX service illustration",
+    imageAlt: "Forex trading charts on a computer screen closeup",
     title: "MT4/MT5 White Label",
     category: "Technology",
     tagline: "The world's most recognized platforms, under your brand.",
@@ -821,7 +1055,7 @@ SERVICES.push(
   {
     slug: "liquidity-aggregation",
     image: "/images/services/liquidity-aggregation.webp",
-    imageAlt: "Liquidity Aggregation & Price Feeds — BridgingFX service illustration",
+    imageAlt: "Stock market trading floor with screens",
     title: "Liquidity Aggregation & Price Feeds",
     category: "Technology",
     tagline: "Deep, stable liquidity with institutional-grade execution.",
@@ -856,7 +1090,7 @@ SERVICES.push(
   {
     slug: "mam-pamm-copy-trading",
     image: "/images/services/mam-pamm-copy-trading.webp",
-    imageAlt: "MAM/PAMM & Copy Trading — BridgingFX service illustration",
+    imageAlt: "Investor monitoring trading performance on a screen",
     title: "MAM/PAMM & Copy Trading",
     category: "Technology",
     tagline: "Let your best traders become your best acquisition channel.",
@@ -891,7 +1125,7 @@ SERVICES.push(
   {
     slug: "ib-affiliate-portals",
     image: "/images/services/ib-affiliate-portals.webp",
-    imageAlt: "IB & Affiliate Portals — BridgingFX service illustration",
+    imageAlt: "Business partners shaking hands closing a deal",
     title: "IB & Affiliate Portals",
     category: "Growth",
     tagline: "Give your partners a reason to send you everyone.",
@@ -926,7 +1160,7 @@ SERVICES.push(
   {
     slug: "psp-payment-orchestration",
     image: "/images/services/psp-payment-orchestration.webp",
-    imageAlt: "PSP & Payment Orchestration — BridgingFX service illustration",
+    imageAlt: "Online payment with credit card on a laptop",
     title: "PSP & Payment Orchestration",
     category: "Operations",
     tagline: "Deposits that succeed. Payouts that arrive. Everywhere.",
@@ -961,7 +1195,7 @@ SERVICES.push(
   {
     slug: "licensing-compliance",
     image: "/images/services/licensing-compliance.webp",
-    imageAlt: "Licensing & Compliance Consultancy — BridgingFX service illustration",
+    imageAlt: "Signing legal documents with a fountain pen closeup",
     title: "Licensing & Compliance Consultancy",
     category: "Compliance",
     tagline: "The right license, the right jurisdiction — no expensive detours.",
@@ -996,7 +1230,7 @@ SERVICES.push(
   {
     slug: "kyc-automation",
     image: "/images/services/kyc-automation.webp",
-    imageAlt: "KYC Automation — BridgingFX service illustration",
+    imageAlt: "Passport and identity document verification closeup",
     title: "KYC Automation",
     category: "Compliance",
     tagline: "Onboarding in minutes, not days — fully audit-trailed.",
@@ -1031,7 +1265,7 @@ SERVICES.push(
   {
     slug: "ai-analytics-bi",
     image: "/images/services/ai-analytics-bi.webp",
-    imageAlt: "AI Analytics & BI Dashboards — BridgingFX service illustration",
+    imageAlt: "Data analyst studying a dashboard on large screens",
     title: "AI Analytics & BI Dashboards",
     category: "Technology",
     tagline: "Your brokerage's data, thinking ahead of you.",
@@ -1066,7 +1300,7 @@ SERVICES.push(
   {
     slug: "forex-vps-hosting",
     image: "/images/services/forex-vps-hosting.webp",
-    imageAlt: "Forex VPS Hosting — BridgingFX service illustration",
+    imageAlt: "Server room racks with blue light",
     title: "Forex VPS Hosting",
     category: "Technology",
     tagline: "Milliseconds matter. Host where they count.",
@@ -1101,7 +1335,7 @@ SERVICES.push(
   {
     slug: "growth-marketing",
     image: "/images/services/growth-marketing.webp",
-    imageAlt: "Broker Growth Marketing Suite — BridgingFX service illustration",
+    imageAlt: "Business growth chart presented in a team meeting",
     title: "Broker Growth Marketing Suite",
     category: "Growth",
     tagline: "A full-funnel growth system, not random acts of marketing.",
@@ -1136,7 +1370,7 @@ SERVICES.push(
   {
     slug: "mobile-trading-apps",
     image: "/images/services/mobile-trading-apps.webp",
-    imageAlt: "Mobile Trading Apps — BridgingFX service illustration",
+    imageAlt: "Person trading stocks on a smartphone closeup of hand",
     title: "Mobile Trading Apps",
     category: "Technology",
     tagline: "Your brand in every trader's pocket.",
@@ -1171,7 +1405,7 @@ SERVICES.push(
   {
     slug: "traders-room",
     image: "/images/services/traders-room.webp",
-    imageAlt: "Trader's Room / Client Cabinet — BridgingFX service illustration",
+    imageAlt: "Trading room with desks and monitors finance",
     title: "Trader's Room / Client Cabinet",
     category: "Technology",
     tagline: "The client portal your traders deserve.",
@@ -1209,7 +1443,7 @@ export const getService = (slug: string): Service | undefined =>
   SERVICES.find((s) => s.slug === slug);
 
 export const SERVICES_BY_CATEGORY = (
-  ["Technology", "Growth", "Operations", "Compliance", "Creative"] as const
+  ["Leads", "Technology", "Growth", "Operations", "Compliance", "Creative"] as const
 ).map((category) => ({
   category,
   services: SERVICES.filter((s) => s.category === category),
