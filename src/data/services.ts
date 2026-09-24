@@ -521,7 +521,7 @@ export const SERVICES: Service[] = [
     faqs: [
       {
         q: "What is a no-deposit reminder sequence?",
-        a: "An automated series of messages to registered users who haven't funded yet — timed reminders with the right incentive at each step, proven to recover a large share of abandoned registrations.",
+        a: "An automated series of messages to registered users who haven't funded yet — timed reminders with the right incentive at each step, designed to win back more of your abandoned registrations.",
       },
       {
         q: "Will this annoy our leads?",
@@ -607,7 +607,7 @@ export const SERVICES: Service[] = [
       },
       {
         q: "Can we personalize at scale?",
-        a: "Every message can merge any CRM field — name, account type, last deposit, platform — so a million sends still feel one-to-one.",
+        a: "Every message can merge any CRM field — name, account type, last deposit, platform — so even large campaigns feel one-to-one.",
       },
       {
         q: "What templates are included?",
@@ -646,7 +646,7 @@ export const SERVICES: Service[] = [
       },
       {
         q: "Can we A/B test our offers?",
-        a: "Yes — test headlines, hero images, form lengths, and bonus offers. The builder automatically shifts traffic to the winning variant.",
+        a: "Yes — test headlines, hero images, form lengths, and bonus offers. The builder can route traffic toward the winning variant.",
       },
       {
         q: "Are pages optimized for mobile?",
