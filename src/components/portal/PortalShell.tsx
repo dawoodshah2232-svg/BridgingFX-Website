@@ -22,7 +22,10 @@ export default function PortalShell({ children }: { children: React.ReactNode })
   const [user, setUser] = useState<PortalUser | null>(null);
   const [ready, setReady] = useState(false);
 
-  const isLogin = pathname === "/portal";
+  // Normalize: strip trailing slashes and tolerate a basePath prefix,
+  // so "/portal", "/portal/", "/BridgingFX-Website/portal/" all match.
+  const cleanPath = (pathname || "").replace(/\/+$/, "");
+  const isLogin = cleanPath === "/portal" || cleanPath.endsWith("/portal");
 
   useEffect(() => {
     setUser(getSession());
