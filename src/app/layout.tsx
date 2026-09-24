@@ -4,6 +4,8 @@ import { MotionConfig } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MobileCTABar from "@/components/MobileCTABar";
+import Preloader from "@/components/Preloader";
+import BackToTop from "@/components/BackToTop";
 import JsonLd, { organizationJsonLd } from "@/components/JsonLd";
 import { SITE } from "@/data/site";
 import "./globals.css";
@@ -79,12 +81,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
       </head>
       <body className="font-sans">
+        <noscript>
+          <style>{".preloader{display:none!important}"}</style>
+        </noscript>
         <JsonLd data={organizationJsonLd(SITE.url)} />
         <MotionConfig reducedMotion="user">
+          <Preloader />
           <Navbar />
           <main className="min-h-screen">{children}</main>
           <Footer />
           <MobileCTABar />
+          <BackToTop />
         </MotionConfig>
       </body>
     </html>

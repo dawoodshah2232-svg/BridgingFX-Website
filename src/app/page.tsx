@@ -17,7 +17,23 @@ import { PACKAGES, UPGRADE_PATH_NOTE } from "@/data/packages";
 import { FAQS } from "@/data/faqs";
 import { mailtoFor } from "@/data/site";
 
+import Marquee from "@/components/Marquee";
+
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
+/* Capabilities ticker — expo-style marquee divider under the hero. */
+const CAPABILITIES = [
+  "White-Label Platforms",
+  "Forex CRM",
+  "Liquidity Bridge",
+  "Prop Firm Technology",
+  "Risk Management",
+  "Copy Trading & MAM",
+  "IB & Affiliate Systems",
+  "Payment Solutions",
+  "Company Formation",
+  "Launch in Weeks",
+];
 
 /* ---------------- HERO ---------------- */
 function Hero() {
@@ -740,6 +756,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <Marquee items={CAPABILITIES} />
       <StatsStrip />
       <Strengths />
       <PlatformsShowcase />
