@@ -31,17 +31,6 @@ function Hero() {
 
       <div className="container-x relative">
         <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: EASE }}
-          >
-            <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-300 sm:text-xs">
-              <span className="h-1.5 w-1.5 animate-pulse-glow rounded-full bg-fx-orange" aria-hidden="true" />
-              Forex technology partner — since 2016
-            </span>
-          </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
