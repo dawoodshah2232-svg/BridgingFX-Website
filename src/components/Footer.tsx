@@ -22,7 +22,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="flex flex-col items-start gap-5">
           <Link href="/" aria-label="BridgingFX home">
-            <Logo width={150} />
+            <Logo width={105} className="site-logo" />
           </Link>
           <p className="max-w-xs text-sm leading-relaxed text-slate-400">
             {SITE.tagline}. White-label platforms, Forex CRM, liquidity, and

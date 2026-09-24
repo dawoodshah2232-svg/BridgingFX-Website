@@ -154,10 +154,10 @@ body {
     display: inline-flex;
   }
 
-  /* Header logo: larger on phones so it reads clearly */
+  /* Header/footer logo: larger on phones so it reads clearly */
   @media (max-width: 639px) {
     .site-logo img {
-      width: 176px;
+      width: 123px;
       height: auto;
     }
   }
