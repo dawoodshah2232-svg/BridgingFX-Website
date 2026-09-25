@@ -939,4 +939,156 @@ export const POSTS: Post[] = [
     takeaway:
       "In 2026, broker lead generation is won on four fronts: compliant paid media in licensed geos, a well-run IB and affiliate program as the variable-cost engine, owned communities that activate cold traffic, and decision-stage content visible to both search engines and AI assistants. Underneath all of it, the funnel from signup to deposit decides what your leads are actually worth. Measure cost per funded account per channel — and let the numbers, not habit, set your mix.",
   },
+  {
+    slug: "uae-forex-regulation-explained",
+    cover: "/images/blog/uae-forex-regulation-explained.webp",
+    coverAlt: "Dubai skyline representing UAE financial regulation",
+    title: "UAE Forex Regulation Explained: SCA, DFSA, ADGM — and What 'Licensed' Actually Means",
+    excerpt:
+      "Three regulators, three rulebooks, one market. How forex licensing actually works across mainland UAE, DIFC, and ADGM — and the questions that separate a genuinely licensed broker from a logo on a website.",
+    category: "Brokerage Launch",
+    tags: ["UAE", "Regulation", "SCA", "DFSA", "Licensing"],
+    readTime: "8 min read",
+    date: "2026-09-25",
+    intro:
+      "Every forex broker targeting the UAE claims to take regulation seriously, and nearly every trader has seen the word 'licensed' on a website that deserved a second look. The UAE is unusual: it doesn't have one forex regulator, it has three — each covering different territory, with different rules, different capital requirements, and different enforcement teeth. If you're launching a brokerage here, or choosing one to trade with, understanding which regulator does what isn't compliance trivia. It's the difference between operating legally and operating on borrowed time.",
+    sections: [
+      {
+        heading: "Three regulators, three territories",
+        body: [
+          "The Securities and Commodities Authority (SCA) regulates financial activity across the UAE mainland — the federal jurisdiction covering Dubai, Abu Dhabi, Sharjah, and the other emirates outside the financial free zones. If your brokerage onboards UAE residents from a mainland presence, the SCA is the regulator that matters. Its licensing categories cover brokerage, dealing, and related activities, with capital, reporting, and conduct requirements that have tightened steadily over the past decade.",
+          "Then there are the two financial free zones, each with its own independent regulator. The Dubai Financial Services Authority (DFSA) regulates firms operating from the Dubai International Financial Centre (DIFC), and the Financial Services Regulatory Authority (FSRA) does the same for Abu Dhabi Global Market (ADGM). Both run common-law frameworks modelled on international standards, and both are respected regulators — but a DFSA or FSRA licence authorises activity within that centre's jurisdiction and under its rulebook, not a blanket UAE-wide permission. The distinction matters enormously for marketing, client onboarding, and where your office actually sits.",
+        ],
+      },
+      {
+        heading: "What a licence does and doesn't prove",
+        body: [
+          "A genuine licence proves that a regulator has vetted the firm's owners, capital, systems, and compliance framework — and continues to supervise it. That's meaningful. What it doesn't prove is that every entity in a broker's corporate group is licensed, that the specific entity you're contracting with holds the licence, or that the licence covers the products being offered to you. Brokers commonly operate multiple entities: a licensed one in a strict jurisdiction and others elsewhere. The question is never 'is this brand regulated somewhere' — it's 'which legal entity holds my funds, and which regulator supervises that entity.'",
+          "Verification is straightforward and every trader should do it: regulators publish registers of licensed firms. The SCA, DFSA, and FSRA each maintain searchable public lists. If a broker claims a licence, find the firm on the register yourself, confirm the licence covers the activity in question, and check that the website domain you're using matches the licensed entity's disclosed details. Five minutes of checking beats months of dispute resolution.",
+        ],
+      },
+      {
+        heading: "The offshore shadow over the region",
+        body: [
+          "The UAE's wealth and trading appetite make it a prime target for offshore-licensed brokers marketing aggressively to residents. An offshore licence — from a jurisdiction with light supervision — is not nothing, but it offers nothing like the client-money protections, reporting obligations, and enforcement powers of the UAE's own regulators. Marketing that leans on an offshore licence while implying UAE regulatory standing is one of the oldest tricks in the book.",
+          "For brokers launching in the region, the temptation runs the other way: operate from offshore while targeting UAE clients to avoid licensing cost and time. Regulators have grown steadily less tolerant of this, and the SCA in particular has sharpened its stance on unlicensed promotion of financial services to UAE residents. The compliant path is slower and more expensive. It's also the only one that survives contact with enforcement.",
+        ],
+      },
+      {
+        heading: "What launching brokers should budget for",
+        body: [
+          "Licensing in the UAE is a project measured in months and serious capital — application fees, minimum capital requirements that vary by activity and jurisdiction, legal structuring, compliance staffing, and the operational systems (reporting, client-money handling, audit trails) that supervision actually inspects. Firms routinely underestimate the timeline: regulator questions come in rounds, and each round costs weeks.",
+          "The practical advice from operators who've done it: pick your jurisdiction before you pick your office, because the regulator follows the entity, not the aspiration. Decide whether your target clients and activities fit mainland SCA licensing or a free-zone framework, structure the group accordingly, and don't sign a lease or launch marketing until the licensing path is mapped with counsel who has done it before. Regulation isn't the boring part of launching a UAE brokerage — it's the part everything else stands on.",
+        ],
+      },
+    ],
+    takeaway:
+      "The UAE has three forex regulators — SCA for the mainland, DFSA for DIFC, FSRA for ADGM — each with its own territory and rulebook. A licence is only meaningful if you verify which entity holds it and what it covers, on the regulator's own public register. For brokers, licensing is the foundation of the business, not a badge to bolt on later: choose the jurisdiction first, budget in months and real capital, and treat offshore shortcuts as the liability they are.",
+  },
+  {
+    slug: "spreads-commissions-markup-explained",
+    cover: "/images/blog/spreads-commissions-markup-explained.webp",
+    coverAlt: "Trading terminal showing bid and ask prices",
+    title: "Spreads, Commissions and Markup: How Broker Pricing Actually Works",
+    excerpt:
+      "Every broker makes money on your trades — the honest question is how, and how much. A plain-English tour of spreads, commissions, markup, and swaps, and how to compare pricing across brokers without being fooled.",
+    category: "Risk & Execution",
+    tags: ["Spreads", "Commissions", "Pricing", "Execution"],
+    readTime: "7 min read",
+    date: "2026-09-25",
+    intro:
+      "Broker pricing pages are written to be compared and almost impossible to compare. One broker advertises '0.0 pip spreads', another 'zero commission', a third 'no hidden fees' — and all three can be telling the truth while charging you meaningfully different amounts for the same trade. Pricing confusion isn't an accident; it's the product of a business with several distinct revenue streams that interact in ways most traders never fully unpack. Here's the honest mechanics of how brokers actually get paid.",
+    sections: [
+      {
+        heading: "The spread: the price of admission",
+        body: [
+          "The spread — the gap between bid and ask — is the most visible cost in trading and the one brokers advertise most. On a liquid pair like EUR/USD, a retail broker might quote a 1-pip spread: you buy at 1.0851 and can instantly sell at 1.0850, so every round trip starts one pip underwater. Multiply by your position size and trade frequency and the spread becomes the dominant cost for most retail strategies, especially scalping and intraday trading.",
+          "What the headline spread doesn't tell you: whether it's typical or best-case, how it behaves during news and illiquid hours, and where it comes from. Spreads widen when liquidity thins — market opens, news releases, holidays. A broker advertising 0.1-pip spreads on majors is usually quoting the tightest moment of the day on its raw feed. Ask for typical spreads across sessions, not the marketing number.",
+        ],
+      },
+      {
+        heading: "Commission: the visible alternative",
+        body: [
+          "ECN and raw-spread accounts replace (or supplement) spread markup with a per-trade commission — typically quoted per lot per side, something like $3–$7 per lot round turn depending on the broker and account tier. The appeal is transparency: you see the raw market spread plus a fixed fee, which makes costs predictable and comparable.",
+          "The honest comparison between a spread-only account and a commission account is all-in cost per trade: typical spread plus commission, converted to the same units. For high-volume traders the commission model usually wins; for small, infrequent traders the difference is often noise. Brokers know this, which is why account tiers exist — the pricing menu is itself a segmentation tool, sorting traders by volume into the model that's most profitable for the broker at each tier.",
+        ],
+      },
+      {
+        heading: "Markup: the quiet one",
+        body: [
+          "Markup is where pricing gets opaque. A broker receiving liquidity at a raw spread of 0.1 pips can add its own markup — quoting you 0.6 or 1.0 pips — and pocket the difference. There's nothing inherently wrong with this; it's how most retail market-making works and it's disclosed in the business model if not the number. The problem is comparability: two brokers quoting '1 pip spread' can have very different underlying costs and very different execution quality behind the quote.",
+          "This is also where the A-book/B-book distinction touches pricing. A broker internalising your flow (B-book) doesn't pay away spread to a liquidity provider on your trade, so its pricing economics differ entirely from an agency broker passing flow through. Neither model is automatically better for the trader — what matters is the all-in cost you pay and the quality of fills you get, not the plumbing behind them.",
+        ],
+      },
+      {
+        heading: "Swaps: the cost of holding",
+        body: [
+          "Overnight financing — swaps or rollover — is the cost traders forget until it isn't. Holding a position past the daily rollover incurs a charge (or occasionally a credit) derived from interest-rate differentials plus the broker's own markup on the financing rate. On leveraged positions held for weeks, swaps can quietly exceed the spread cost of entering the trade.",
+          "Swap-free (Islamic) accounts, widely offered in the MENA region, remove the overnight interest element — but brokers don't offer them as charity. The economics are typically recovered elsewhere: wider spreads on those accounts, administrative fees after a holding period, or both. If you're comparing a swap-free account against a standard one, compare total holding cost over your actual average holding period, not the headline 'no swaps' claim.",
+        ],
+      },
+      {
+        heading: "How to actually compare brokers on price",
+        body: [
+          "Forget the marketing. The comparison that matters is all-in cost for your trading pattern: take your typical instrument, your average trade size and frequency, and your average holding time, then compute spread cost plus commission plus expected swaps on each broker's real numbers — typical spreads, not minimums; actual commission tiers you'd qualify for; published swap rates. Two brokers can rank in opposite orders for a scalper versus a swing trader.",
+          "And price is only half the equation. A slightly wider spread with reliable execution during news, no requotes, and fast withdrawals beats a razor-thin quote from a broker whose platform freezes when volatility spikes. The cheapest broker is the one with the lowest total cost of trading well — fills, slippage, and downtime included. Anything less is just the cheapest advertisement.",
+        ],
+      },
+    ],
+    takeaway:
+      "Brokers earn through spreads, commissions, markup, and swaps — four streams that interact and are advertised selectively. Compare all-in cost for your own trading pattern using typical (not minimum) numbers, and weigh execution quality alongside price. The broker with the loudest '0.0 pips' banner is rarely the cheapest once every stream is counted.",
+  },
+  {
+    slug: "broker-risk-management-fundamentals",
+    cover: "/images/blog/broker-risk-management-fundamentals.webp",
+    coverAlt: "Risk dashboard with exposure charts on a dealing desk monitor",
+    title: "Broker Risk Management Fundamentals: Exposure, Hedging and the Dealing Desk",
+    excerpt:
+      "Every trade your clients place lands on your book. How brokerages measure exposure, decide what to hedge, and build a dealing desk that survives the news spikes that break weak risk systems.",
+    category: "Risk & Execution",
+    tags: ["Risk Management", "Dealing Desk", "Hedging", "B-Book"],
+    readTime: "8 min read",
+    date: "2026-09-25",
+    intro:
+      "Ask a new brokerage founder about their plans and you'll hear about platforms, liquidity, and marketing. Ask what happens when a hundred clients go long gold into a Fed announcement and you'll often get silence. Risk management is the least glamorous part of running a brokerage and the one that decides whether the business survives its first volatility shock. This is the foundational tour: how exposure works, what hedging actually means in practice, and how a dealing desk is supposed to function.",
+    sections: [
+      {
+        heading: "Your book is the business",
+        body: [
+          "Every client trade creates a position on the broker's book. If clients are collectively long 500 lots of EUR/USD and the broker hasn't offset that exposure, the broker is short 500 lots — it profits when clients lose and loses when clients win. This net exposure, aggregated across every symbol and client, is the single number the dealing desk watches. Everything in broker risk management is about measuring that number accurately and deciding what to do about it.",
+          "The key subtlety: gross exposure and net exposure tell different stories. A book with 1,000 lots long and 950 lots short has 1,950 lots of gross flow but only 50 lots of net exposure. Client flows naturally offset each other — this 'internalisation' is free risk reduction, and it's why brokers with large, diverse client bases can run leaner hedging operations than small ones. Scale doesn't just cut unit costs; it literally reduces risk.",
+        ],
+      },
+      {
+        heading: "A-book, B-book, and the honest hybrid",
+        body: [
+          "The industry shorthand: A-book means passing client flow to liquidity providers (the broker earns spread/commission, takes no market risk); B-book means internalising it (the broker takes the other side). The caricature — A-book good, B-book evil — misses how the business actually works. Almost every brokerage runs a hybrid: toxic or large flow gets hedged (A-booked), while small, diversified retail flow is internalised, because hedging every micro-lot would cost more in spread than the risk is worth.",
+          "The real risk-management question isn't which book you're on — it's whether your hedging decisions are systematic or hopeful. A disciplined hybrid books flow by rule: client profitability profiles, position sizes, concentration limits, and market conditions decide what gets hedged, automatically. An undisciplined one B-books everything and prays. The first is a business; the second is a casino that doesn't know the odds.",
+        ],
+      },
+      {
+        heading: "Hedging in practice: timing and cost",
+        body: [
+          "Hedging means taking an offsetting position with a liquidity provider — if clients are net long gold, the broker buys gold from its LP so a price spike doesn't create a loss. But hedging isn't free: every hedge crosses the LP's spread, and hedging too eagerly bleeds the dealing profit that internalisation earned. The desk's job is optimisation under uncertainty: hedge enough to survive the tail events, internalise enough to stay profitable, and never let a single symbol's exposure exceed the limits the risk policy sets.",
+          "News events are the stress test. Exposure that looks manageable in calm markets can become lethal in seconds when price gaps — hedges placed after the move are hedges placed too late. Serious desks run pre-news procedures: reduced leverage, widened internal alerts, and exposure caps tightened ahead of known events. The brokers that blow up on news day are almost never surprised by the news; they're surprised by their own book.",
+        ],
+      },
+      {
+        heading: "The dealing desk as an organ, not a room",
+        body: [
+          "A dealing desk isn't necessarily people shouting at screens — for most modern brokerages it's a function: monitoring systems, limit frameworks, and escalation procedures, with humans overseeing the exceptions. The components that matter: real-time exposure aggregation across all platforms and symbols, automated alerts at exposure thresholds, STP/hedging execution connectivity that works when markets are moving fastest, and a written risk policy that says who can override what.",
+          "Technology choices compound here. A bridge that adds 300 milliseconds to hedge execution is a minor annoyance in calm markets and a serious liability during a spike. Reporting that reconciles hourly instead of in real time means the desk is always managing the last hour's risk, not this minute's. When evaluating bridge and risk-system vendors, the question isn't the feature list — it's behaviour under the load profile of your worst day.",
+        ],
+      },
+      {
+        heading: "What kills brokerages",
+        body: [
+          "The post-mortems rhyme. A broker grows fast on marketing, internalises everything because hedging 'costs margin', concentrates exposure in a trending symbol, and then a gap move — a central bank surprise, a weekend event — turns the book into a loss the capital base can't absorb. Client profits are the broker's losses, and they're owed in full. Undercapitalised B-books don't survive their first real shock; that's the entire history of retail broker failures in one paragraph.",
+          "The founders who survive build risk management before they need it: capital buffers sized for gap scenarios, systematic hedging rules, exposure limits enforced by systems rather than intentions, and a risk function with genuine authority to say no to the sales team. None of this appears in a launch checklist's marketing section. All of it determines whether there's a second year.",
+        ],
+      },
+    ],
+    takeaway:
+      "Broker risk management is the discipline of measuring net exposure and hedging it systematically — not the choice between A-book and B-book, but the rules that govern the hybrid every real brokerage runs. Internalisation profits from diversified flow; hedging protects against concentration and gaps. The brokers that fail treat risk as overhead. The ones that last treat it as the business itself.",
+  },
 ];
