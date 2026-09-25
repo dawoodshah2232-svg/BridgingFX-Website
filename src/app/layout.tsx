@@ -35,6 +35,11 @@ export const metadata: Metadata = {
     "forex company formation",
   ],
   authors: [{ name: "BridgingFX" }],
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     type: "website",
     siteName: "BridgingFX",

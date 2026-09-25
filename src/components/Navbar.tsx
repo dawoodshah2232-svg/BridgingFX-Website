@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "./Logo";
 import ThemeToggle from "./ThemeToggle";
@@ -42,6 +42,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -61,6 +62,20 @@ export default function Navbar() {
   // Close menu on route change
   useEffect(() => setOpen(false), [pathname]);
 
+  // Warm important routes early so menu clicks feel instant after hydration.
+  useEffect(() => {
+    const routes = new Set(["/", "/contact", ...NAV_LINKS.map((l) => l.href)]);
+    const warmRoutes = () => routes.forEach((href) => router.prefetch(href));
+
+    if ("requestIdleCallback" in window) {
+      const id = window.requestIdleCallback(warmRoutes, { timeout: 1800 });
+      return () => window.cancelIdleCallback(id);
+    }
+
+    const id = setTimeout(warmRoutes, 600);
+    return () => clearTimeout(id);
+  }, [router]);
+
   return (
     <>
       <header
@@ -71,15 +86,15 @@ export default function Navbar() {
         }`}
       >
         <nav
-          className="container-x flex h-[72px] items-center justify-between gap-3"
+          className="container-x flex h-[82px] items-center justify-between gap-3"
           aria-label="Primary"
         >
           <Link href="/" aria-label="BridgingFX home" className="shrink-0">
-            <Logo width={105} className="site-logo" />
+            <Logo width={165} className="site-logo" />
           </Link>
 
           {/* Desktop nav */}
-          <ul className="hidden items-center gap-1 lg:flex">
+          <ul className="hidden items-center gap-0.5 lg:flex">
             {NAV_LINKS.map((l) => {
               const isActive =
                 pathname === l.href || pathname.startsWith(l.href + "/");
@@ -87,8 +102,9 @@ export default function Navbar() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
+                    prefetch
                     aria-current={isActive ? "page" : undefined}
-                    className={`whitespace-nowrap rounded-full px-3 py-2.5 text-[13px] font-medium transition-all duration-200 ${
+                    className={`whitespace-nowrap rounded-full px-2.5 py-2.5 text-[13px] font-medium transition-all duration-200 xl:px-3 ${
                       isActive
                         ? "bg-white/10 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"
                         : "text-slate-400 hover:bg-white/5 hover:text-white"
@@ -101,11 +117,12 @@ export default function Navbar() {
             })}
           </ul>
 
-          <div className="hidden items-center gap-3 lg:flex">
+          <div className="hidden items-center gap-2.5 lg:flex">
             <ThemeToggle />
             <Link
               href="/contact"
-              className="btn-primary !px-6 !py-2.5 !text-[13.5px]"
+              prefetch
+              className="btn-primary min-w-[118px] whitespace-nowrap !px-5 !py-2.5 !text-[13.5px] leading-none"
             >
               Get a Quote
             </Link>
@@ -156,6 +173,7 @@ export default function Navbar() {
                   >
                     <Link
                       href={l.href}
+                      prefetch
                       aria-current={isActive ? "page" : undefined}
                       className="group flex min-h-[52px] items-center justify-between border-b border-white/10 py-3"
                     >
@@ -190,7 +208,8 @@ export default function Navbar() {
               >
                 <Link
                   href="/contact"
-                  className="btn-primary w-full !py-4 !text-base"
+                  prefetch
+                  className="btn-primary w-full whitespace-nowrap !py-4 !text-base"
                 >
                   Get a Quote
                 </Link>

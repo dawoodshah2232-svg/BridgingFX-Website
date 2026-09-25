@@ -1,12 +1,11 @@
+const isProductionBuild = process.env.NODE_ENV === "production";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  ...(isProductionBuild ? { output: "export" } : {}),
+  trailingSlash: true,
   images: {
-    // Official BridgingFX logo: public/logo-dark.jpg (157x51 JPEG, black
-    // background) — shown directly on dark theme (no pill), seated in a
-    // dark rounded container on light theme. public/logo.png (light bg)
-    // kept as fallback. Max display width ~160px to stay crisp.
-    //
     // Custom loader: next/image drops the basePath prefix for unoptimized
     // images, which broke the logo on the GitHub Pages preview
     // ("/logo.png" 404'd → giant blank white blob). The loader in

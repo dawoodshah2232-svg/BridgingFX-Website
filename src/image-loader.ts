@@ -17,7 +17,10 @@ import type { ImageLoaderProps } from "next/image";
  */
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-export default function imageLoader({ src }: ImageLoaderProps): string {
+export default function imageLoader({ src, width, quality }: ImageLoaderProps): string {
   if (src.startsWith("http://") || src.startsWith("https://")) return src;
-  return `${basePath}${src}`;
+  const params = new URLSearchParams();
+  params.set("w", String(width));
+  if (quality) params.set("q", String(quality));
+  return `${basePath}${src}?${params.toString()}`;
 }

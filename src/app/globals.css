@@ -124,6 +124,7 @@ body {
 
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 rounded-full bg-fx-orange px-7 py-3.5 text-sm font-semibold text-paper transition-all duration-300;
+    text-wrap: nowrap;
     box-shadow: 0 12px 40px -10px rgba(249, 115, 22, 0.7);
   }
   .btn-primary:hover {
@@ -140,24 +141,15 @@ body {
     transform: translateY(-2px);
   }
 
-  /* ---- Theme-aware logo skins (pure CSS — correct before hydration) ---- */
-  .logo-dark-skin {
-    display: inline-flex;
-  }
-  .logo-light-skin {
-    display: none;
-  }
-  [data-theme="light"] .logo-dark-skin {
-    display: none;
-  }
-  [data-theme="light"] .logo-light-skin {
-    display: inline-flex;
+  /* Header/footer logo: larger on phones so it reads clearly */
+  .site-logo img {
+    max-width: min(210px, 42vw);
   }
 
-  /* Header/footer logo: larger on phones so it reads clearly */
   @media (max-width: 639px) {
     .site-logo img {
-      width: 123px;
+      width: 176px !important;
+      max-width: 52vw;
       height: auto;
     }
   }

@@ -1,0 +1,52 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
+        run: npm run build
+
+      - name: Prepare SSH
+        env:
+          CPANEL_HOST: ${{ secrets.CPANEL_HOST }}
+          CPANEL_PORT: ${{ secrets.CPANEL_PORT || '22' }}
+          CPANEL_SSH_KEY: ${{ secrets.CPANEL_SSH_KEY }}
+        run: |
+          test -n "$CPANEL_HOST"
+          test -n "$CPANEL_SSH_KEY"
+          mkdir -p ~/.ssh
+          printf '%s\n' "$CPANEL_SSH_KEY" > ~/.ssh/cpanel_key
+          chmod 600 ~/.ssh/cpanel_key
+          ssh-keyscan -p "$CPANEL_PORT" "$CPANEL_HOST" >> ~/.ssh/known_hosts
+
+      - name: Upload to cPanel
+        env:
+          CPANEL_HOST: ${{ secrets.CPANEL_HOST }}
+          CPANEL_PORT: ${{ secrets.CPANEL_PORT || '22' }}
+          CPANEL_USER: ${{ secrets.CPANEL_USER }}
+          CPANEL_TARGET: ${{ secrets.CPANEL_TARGET }}
+        run: |
+          test -n "$CPANEL_USER"
+          test -n "$CPANEL_TARGET"
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/cpanel_key -p $CPANEL_PORT" \
+            out/ "$CPANEL_USER@$CPANEL_HOST:$CPANEL_TARGET/"

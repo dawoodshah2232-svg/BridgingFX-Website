@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Logo from "./Logo";
+import Image from "next/image";
 
 /**
- * Branded preloader — BridgingFX logo, live % counter and a gradient
+ * Branded preloader: favicon mark, live % counter and a gradient
  * progress bar. Slides up once the page is ready (window load), with a
  * minimum display time and a hard fallback so it can never trap the page.
  * Respects prefers-reduced-motion: dismisses instantly.
@@ -21,14 +21,20 @@ export default function Preloader() {
       return;
     }
 
+    if (window.sessionStorage.getItem("bfx-preloader-seen") === "1") {
+      setGone(true);
+      return;
+    }
+
     document.body.style.overflow = "hidden";
     const startedAt = Date.now();
 
     const finish = () => {
       if (doneRef.current) return;
       doneRef.current = true;
-      // Guarantee a minimum on-screen moment so the brand reads.
-      const wait = Math.max(0, 1000 - (Date.now() - startedAt));
+      window.sessionStorage.setItem("bfx-preloader-seen", "1");
+      // Keep the brand moment brief so navigation never feels blocked.
+      const wait = Math.max(0, 350 - (Date.now() - startedAt));
       setTimeout(() => {
         setProgress(100);
         setTimeout(() => {
@@ -36,8 +42,8 @@ export default function Preloader() {
           setTimeout(() => {
             setGone(true);
             document.body.style.overflow = "";
-          }, 750);
-        }, 320);
+          }, 450);
+        }, 120);
       }, wait);
     };
 
@@ -49,7 +55,7 @@ export default function Preloader() {
     if (document.readyState === "complete") finish();
     else window.addEventListener("load", finish, { once: true });
     // Hard fallback: never trap the page.
-    const fallback = window.setTimeout(finish, 4000);
+    const fallback = window.setTimeout(finish, 1600);
 
     return () => {
       window.clearInterval(tick);
@@ -70,7 +76,14 @@ export default function Preloader() {
     >
       <div className="orb left-1/2 top-1/3 h-72 w-72 -translate-x-1/2 bg-fx-orange/15" />
       <div className="relative flex flex-col items-center px-6">
-        <Logo width={132} />
+        <Image
+          src="/favicon.png"
+          alt=""
+          width={104}
+          height={104}
+          className="h-[104px] w-[104px]"
+          priority
+        />
         <div className="display mt-8 text-5xl font-bold tabular-nums text-white">
           {Math.round(progress)}
           <span className="text-2xl text-slate-500">%</span>
