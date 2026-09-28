@@ -47,6 +47,8 @@ jobs:
         run: |
           test -n "$CPANEL_USER"
           test -n "$CPANEL_TARGET"
+          # brixchat/ is deployed by the brix-chat repo; never delete it from here.
           rsync -az --delete \
+            --exclude '/brixchat/' \
             -e "ssh -i ~/.ssh/cpanel_key -p $CPANEL_PORT" \
             out/ "$CPANEL_USER@$CPANEL_HOST:$CPANEL_TARGET/"
