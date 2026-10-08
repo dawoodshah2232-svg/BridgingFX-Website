@@ -22,8 +22,23 @@ Sequenced from repo state (git log + files). Small, checkable steps.
   email provider is chosen (no fake signup). — needs owner
 - [ ] **T7.** Brochure: old site offered a PDF; add the real PDF to
   `public/` and link it when available. — needs owner
-- [ ] **T8.** Run the 20-point SEO sweep (owner 2026-10-08) as a baseline
-  audit on the live site; fix, verify, commit, push. — TODO
+- [x] **T8.** Run the 20-point SEO sweep (owner 2026-10-08) as a baseline
+  audit on the live site; fix, verify, commit, push. — DONE 2026-10-08
+  (commit `seo: apply 20-fix sweep`): all 94 pages verified — unique
+  titles ≤60, descriptions ≤160, canonicals, OG complete, 1 H1/page,
+  breadcrumbs schema added, /privacy + /terms restored, robots
+  disallows /portal, sitemap 87 URLs.
+- [ ] **T10.** Google Search Console: replace the placeholder
+  `google-site-verification` meta value in `src/app/layout.tsx` with the
+  real token from search.google.com/search-console, then request
+  indexing + submit `https://bridgingfx.net/sitemap.xml`. — needs owner
+  (UI action, cannot be done repo-side)
+- [ ] **T11.** Backlink strategy (earn via content only — never buy or
+  spam links): publish the 20 in-depth blog articles as linkable assets;
+  pitch guest posts to FX-industry publications; list BridgingFX in
+  reputable fintech/broker-tech directories; PR around expo presence
+  (Trading Expo India/Africa, ProFX events). No link schemes, no paid
+  links, no comment spam. — ongoing
 - [ ] **T9.** Verify `/portal` robots metadata and demo-mode notices
   stay correct while portal is a demo. — TODO
 

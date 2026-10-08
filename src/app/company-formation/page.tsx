@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
@@ -6,16 +8,12 @@ import CTABand from "@/components/CTABand";
 import { FadeIn, Stagger, StaggerItem } from "@/components/Reveal";
 import { mailtoFor } from "@/data/site";
 
-export const metadata: Metadata = {
-  title: "Company Formation — Launch Your Forex Brokerage in 4 Steps",
+export const metadata: Metadata = pageMeta({
+  title: "Company Formation — Launch in 4 Steps",
   description:
     "Forex company registration, modern website development, PSP integration, and BridgingFX software — the complete 4-step journey from idea to live brokerage.",
-  openGraph: {
-    title: "Company Formation — 4 Steps to Your Brokerage | BridgingFX",
-    description:
-      "Registration, website, PSP integration, and platform software — the complete company-creation journey.",
-  },
-};
+  path: "/company-formation",
+});
 
 const STEPS = [
   {

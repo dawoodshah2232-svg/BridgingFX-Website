@@ -19,11 +19,15 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "BridgingFX — Empowering Forex Brokers, PropFirms & Financial Institutions",
+    // Homepage renders the default as-is (no template): keep <= 60 chars.
+    default: "BridgingFX — Forex Brokerage Technology",
     template: "%s | BridgingFX",
   },
   description:
-    "BridgingFX builds the technology behind ambitious brokerages: white-label trading platforms (cTrader, MT5, Wintrado, TM9), Forex CRM, liquidity, prop-firm tech, and launch-to-scale services. Live in weeks.",
+    "BridgingFX builds the technology behind ambitious brokerages: white-label platforms, Forex CRM, liquidity, prop-firm tech, and launch-to-scale services.",
+  // TODO (owner): paste the real Google Search Console verification token
+  // from https://search.google.com/search-console and replace the value below.
+  verification: { google: "TODO-paste-real-GSC-verification-token" },
   keywords: [
     "forex white label",
     "forex CRM",
@@ -43,9 +47,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "BridgingFX",
-    title: "BridgingFX — Empowering Forex Brokers, PropFirms & Financial Institutions",
+    title: "BridgingFX — Forex Brokerage Technology",
     description:
-      "White-label trading platforms, Forex CRM, liquidity, and launch-to-scale services for brokers, prop firms, and financial institutions.",
+      "White-label trading platforms, Forex CRM, liquidity, prop-firm tech, and launch-to-scale services for brokers and financial institutions.",
     url: SITE.url,
     images: [
       {
@@ -58,7 +62,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BridgingFX — Empowering Forex Brokers, PropFirms & Financial Institutions",
+    title: "BridgingFX — Forex Brokerage Technology",
     description:
       "White-label trading platforms, Forex CRM, liquidity, and launch-to-scale services.",
     images: ["/images/og/og-default.png"],

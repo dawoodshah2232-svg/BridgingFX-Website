@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
@@ -8,16 +10,12 @@ import { FadeIn, Stagger, StaggerItem } from "@/components/Reveal";
 import { PLATFORMS } from "@/data/platforms";
 import { SITE, mailtoFor } from "@/data/site";
 
-export const metadata: Metadata = {
-  title: "White-Label Trading Platforms — cTrader, MT5, Wintrado, TM9",
+export const metadata: Metadata = pageMeta({
+  title: "White-Label Platforms — cTrader, MT5 & More",
   description:
-    "Launch your brokerage in 2 weeks with a white-label trading platform: cTrader, Wintrado, Hybrid, TM9, or MT4/MT5 — fully branded, liquidity-connected, CRM-integrated.",
-  openGraph: {
-    title: "White-Label Trading Platforms | BridgingFX",
-    description:
-      "cTrader, Wintrado, Hybrid, TM9, MT4/MT5 — fully branded white-label platforms. Launch in 2 weeks.",
-  },
-};
+    "Launch your brokerage in 2 weeks with a white-label platform: cTrader, Wintrado, Hybrid, TM9 or MT4/MT5 — fully branded, liquidity-connected, CRM-integrated.",
+  path: "/platforms",
+});
 
 const COMPARISON = [
   { label: "Best for", ctrader: "Sophisticated traders", wintrado: "Brand differentiation", hybrid: "Maximum acquisition", tm9: "Institutional flow", mt: "Affiliate & EA scale" },

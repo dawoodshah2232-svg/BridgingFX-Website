@@ -23,12 +23,14 @@ export async function generateMetadata({
   const s = getService(params.slug);
   if (!s) return {};
   const url = `${SITE.url}/services/${s.slug}`;
+  // Rendered title = `${s.title} | BridgingFX` via the layout template.
+  // Longest service title is 36 chars -> 49 rendered. <=60.
   return {
-    title: `${s.title} | Forex Brokerage Technology`,
+    title: s.title,
     description: s.tagline,
     alternates: { canonical: url },
     openGraph: {
-      title: `${s.title} | Forex Brokerage Technology — BridgingFX`,
+      title: `${s.title} | BridgingFX`,
       description: s.tagline,
       url,
       images: [
@@ -42,7 +44,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${s.title} | Forex Brokerage Technology — BridgingFX`,
+      title: `${s.title} | BridgingFX`,
       description: s.tagline,
       images: [`${SITE.url}${s.image}`],
     },

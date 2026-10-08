@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import FaqAccordion from "@/components/FaqAccordion";
@@ -7,18 +9,12 @@ import JsonLd, { faqJsonLd } from "@/components/JsonLd";
 import { FadeIn } from "@/components/Reveal";
 import { FAQS } from "@/data/faqs";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "FAQ — Answers About Launching Your Brokerage",
   description:
     "Real answers about white-label timelines, platforms, licensing, BridgeX CRM, migrations, prop firms, and packages — no sales fluff.",
-  alternates: { canonical: "https://bridgingfx.net/faq" },
-  openGraph: {
-    title: "FAQ | BridgingFX",
-    description:
-      "Real answers about timelines, platforms, licensing, CRM, and packages.",
-    url: "https://bridgingfx.net/faq",
-  },
-};
+  path: "/faq",
+});
 
 export default function FaqPage() {
   return (

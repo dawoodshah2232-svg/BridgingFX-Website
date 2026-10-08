@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
@@ -8,18 +10,12 @@ import { FadeIn, Stagger, StaggerItem } from "@/components/Reveal";
 import { PRODUCTS, PRODUCT_CATEGORIES, productsByCategory } from "@/data/products";
 import { SITE } from "@/data/site";
 
-export const metadata: Metadata = {
-  title: "Products | Forex Brokerage Technology",
+export const metadata: Metadata = pageMeta({
+  title: "Products — Forex Brokerage Technology",
   description:
-    "13 brokerage technology products from BridgingFX — CRM, platforms, copy trading, risk, liquidity, payments, mobile apps, and more. Deployed, migrated, and managed for you.",
-  alternates: { canonical: `${SITE.url}/products` },
-  openGraph: {
-    title: "Products — BridgingFX",
-    description:
-      "13 brokerage technology products: trading CRM, platforms, copy trading, risk, liquidity bridge, payments, mobile apps, and more.",
-    url: `${SITE.url}/products`,
-  },
-};
+    "13 brokerage technology products from BridgingFX — CRM, platforms, copy trading, risk, liquidity, payments, mobile apps, and more. Deployed and managed for you.",
+  path: "/products",
+});
 
 export default function ProductsIndex() {
   return (

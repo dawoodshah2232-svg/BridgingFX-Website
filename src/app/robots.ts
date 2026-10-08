@@ -7,6 +7,8 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        // Client portal is a demo with page-level noindex — keep crawlers out too.
+        disallow: "/portal/",
       },
     ],
     sitemap: `${SITE.url}/sitemap.xml`,

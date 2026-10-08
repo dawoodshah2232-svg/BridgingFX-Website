@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMeta, OG_PACKAGES } from "@/lib/seo";
+
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import CTABand from "@/components/CTABand";
@@ -12,33 +14,13 @@ function slugify(name: string): string {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Packages — Launch Your Brokerage at Every Stage",
   description:
     "Three launch packages: Start-Up Accelerator (Entry), Growth Catalyst (Professional, recommended), and Enterprise Institution (Elite). Scale without rebuilding.",
-  alternates: { canonical: "https://bridgingfx.net/packages" },
-  openGraph: {
-    title: "Packages — Launch Your Brokerage | BridgingFX",
-    description:
-      "Start-Up Accelerator, Growth Catalyst (recommended), Enterprise Institution. Packages for every growth stage.",
-    url: "https://bridgingfx.net/packages",
-    images: [
-      {
-        url: "/images/og/og-packages.png",
-        width: 2240,
-        height: 1120,
-        alt: "BridgingFX launch packages for every growth stage",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Packages — Launch Your Brokerage | BridgingFX",
-    description:
-      "Start-Up Accelerator, Growth Catalyst (recommended), Enterprise Institution. Packages for every growth stage.",
-    images: ["/images/og/og-packages.png"],
-  },
-};
+  path: "/packages",
+  image: OG_PACKAGES
+});
 
 const PKG_FAQS = [
   {

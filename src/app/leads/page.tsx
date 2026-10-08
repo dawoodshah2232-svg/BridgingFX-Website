@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
@@ -8,16 +10,12 @@ import JsonLd, { serviceJsonLd, faqJsonLd } from "@/components/JsonLd";
 import { FadeIn, Stagger, StaggerItem } from "@/components/Reveal";
 import { SITE, mailtoFor } from "@/data/site";
 
-export const metadata: Metadata = {
-  title: "Leads — FX Lead Generation, Nurturing & Sales Stack | BridgingFX",
+export const metadata: Metadata = pageMeta({
+  title: "Leads — FX Lead Generation & Sales Stack",
   description:
-    "The complete leads engine for brokerages: verified FX leads data, lead management CRM, sales pipeline CRM, nurturing automation, campaign manager, email & SMS marketing, and landing page builder.",
-  openGraph: {
-    title: "Leads — FX Lead Generation, Nurturing & Sales Stack | BridgingFX",
-    description:
-      "Verified FX leads, lead CRM, sales pipeline, nurturing automation, campaigns, email & SMS, landing pages — one growth stack.",
-  },
-};
+    "The complete leads engine for brokerages: verified FX leads data, lead management CRM, nurturing automation, campaign manager, and email & SMS marketing.",
+  path: "/leads",
+});
 
 const STACK = [
   {

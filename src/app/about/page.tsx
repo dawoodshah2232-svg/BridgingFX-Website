@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
@@ -7,16 +9,12 @@ import Stat from "@/components/Stat";
 import { FadeIn, Stagger, StaggerItem } from "@/components/Reveal";
 import Testimonials from "@/components/Testimonials";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "About — The Team Behind Ambitious Brokerages",
   description:
     "BridgingFX has empowered forex brokers, prop firms, and financial institutions since 2016 with white-label platforms, Forex CRM, and launch-to-scale services.",
-  openGraph: {
-    title: "About BridgingFX",
-    description:
-      "Empowering forex brokers, prop firms, and financial institutions since 2016.",
-  },
-};
+  path: "/about",
+});
 
 const VALUES = [
   {

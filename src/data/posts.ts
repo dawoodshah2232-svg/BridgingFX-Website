@@ -1,5 +1,6 @@
 export type Post = {
   slug: string;
+  seoTitle: string; // <=47 chars: <title> (brand suffix appended by template)
   title: string;
   cover: string;
   coverAlt: string;
@@ -19,6 +20,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/mt4-vs-mt5-deep-dive.webp",
     coverAlt: "Analyzing trading charts on a monitor",
     title: "MT4 vs MT5: The Deep Dive Most Comparisons Skip",
+    seoTitle: "MT4 vs MT5: The Deep Dive",
     excerpt:
       "Netting versus hedging, 32-bit versus 64-bit, MQL4 versus MQL5 — the technical differences that actually change how your brokerage runs day to day.",
     category: "Platforms",
@@ -72,6 +74,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/launch-forex-brokerage-2026-checklist.webp",
     coverAlt: "Startup team in a launch meeting in an office",
     title: "How to Launch a Forex Brokerage in 2026: The Complete Technology Checklist",
+    seoTitle: "Launch a Forex Brokerage in 2026",
     excerpt:
       "Company formation, platforms, liquidity, CRM, PSPs, KYC — the exact sequence experienced operators follow to go from idea to live trading in weeks.",
     category: "Brokerage Launch",
@@ -139,6 +142,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/brokerage-unit-economics-101.webp",
     coverAlt: "Financial calculator and budget planning on a desk",
     title: "Brokerage Unit Economics 101: Know Your Numbers Before You Scale",
+    seoTitle: "Brokerage Unit Economics 101",
     excerpt:
       "CAC, ARPU, payback, LTV — the four numbers that decide whether your marketing is building a business or burning one.",
     category: "Brokerage Launch",
@@ -193,6 +197,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/liquidity-provider-selection-guide.webp",
     coverAlt: "Modern bank buildings in a financial district",
     title: "Choosing a Liquidity Provider: The Evaluation Guide Brokers Actually Need",
+    seoTitle: "Choosing a Liquidity Provider",
     excerpt:
       "Spreads are the least of it. Depth, fill behavior, failover, and commercial terms — how to evaluate an LP like an operator, not a shopper.",
     category: "Liquidity",
@@ -247,6 +252,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/ctrader-vs-mt5-vs-wintrado-white-label.webp",
     coverAlt: "Two monitors with trading charts side by side comparison",
     title: "cTrader vs MT5 vs Wintrado: Choosing the Right White-Label Platform",
+    seoTitle: "cTrader vs MT5 vs Wintrado",
     excerpt:
       "An honest, vendor-neutral comparison of the three platforms brokers ask us about most — who each one is for, and the trade-offs nobody puts in the brochure.",
     category: "Platforms",
@@ -305,6 +311,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/abook-bbook-hybrid-execution.webp",
     coverAlt: "Fast forex trade execution on trading screens",
     title: "A-Book, B-Book, or Hybrid: How Brokers Really Handle Execution",
+    seoTitle: "A-Book, B-Book & Hybrid Execution",
     excerpt:
       "Straight-through processing, internalization, and the hybrid model in between — the honest economics and ethics of each execution model.",
     category: "Risk & Execution",
@@ -359,6 +366,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/why-prop-firms-winning-2026-tech-stack.webp",
     coverAlt: "Modern fintech office with technology",
     title: "Why Prop Firms Are Winning 2026: The Tech Stack Behind the Boom",
+    seoTitle: "Why Prop Firms Are Winning in 2026",
     excerpt:
       "Evaluation engines, risk monitoring, and payout workflows — the infrastructure decisions separating prop firms that scale from those that stall.",
     category: "Prop Firms",
@@ -421,6 +429,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/prop-firm-risk-management-framework.webp",
     coverAlt: "Financial risk assessment documents and charts",
     title: "Prop Firm Risk Management: A Framework That Survives a Payout Run",
+    seoTitle: "Prop Firm Risk Management",
     excerpt:
       "Drawdown engines, breach detection, copy-trading rings, and payout reserves — the risk framework that keeps a prop firm solvent when traders win.",
     category: "Prop Firms",
@@ -474,6 +483,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/forex-crm-buyers-guide.webp",
     coverAlt: "CRM software dashboard on a laptop",
     title: "Forex CRM Buyer's Guide: What to Evaluate Before You Commit",
+    seoTitle: "Forex CRM Buyer's Guide",
     excerpt:
       "Your CRM is your back office, your compliance desk, and your marketing engine. Here's how to evaluate one before it becomes the system you can't leave.",
     category: "Operations",
@@ -527,6 +537,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/forex-license-jurisdictions-overview.webp",
     coverAlt: "World map with a globe for international business",
     title: "Broker License Jurisdictions: An Honest Overview",
+    seoTitle: "Broker License Jurisdictions",
     excerpt:
       "Offshore, mid-tier, and top-tier — what each licensing tier actually buys you, what it costs, and the questions to ask before you commit. Not legal advice.",
     category: "Brokerage Launch",
@@ -580,6 +591,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/kyc-automation-for-brokers.webp",
     coverAlt: "Digital identity verification on a smartphone",
     title: "KYC Automation for Brokers: From Days to Minutes",
+    seoTitle: "KYC Automation for Brokers",
     excerpt:
       "Document verification, liveness, sanctions screening, ongoing monitoring — how leading brokers turned onboarding from a bottleneck into a conversion engine.",
     category: "Operations",
@@ -628,6 +640,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/building-ib-affiliate-program.webp",
     coverAlt: "Business partnership meeting with a handshake",
     title: "Building an IB and Affiliate Program That Actually Produces",
+    seoTitle: "Building an IB & Affiliate Program",
     excerpt:
       "Commission structures, partner tiers, attribution, and the support IBs really need — how top brokers turn partnerships into their best acquisition channel.",
     category: "Growth",
@@ -676,6 +689,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/psp-selection-for-brokers.webp",
     coverAlt: "Payment methods and credit cards for e-commerce",
     title: "PSP Selection for Brokers: Getting Deposits Right Across Every Geo",
+    seoTitle: "PSP Selection for Brokers",
     excerpt:
       "Approval rates, settlement times, rolling reserves, and redundancy — the payment stack decisions that decide whether marketing spend becomes revenue.",
     category: "Payments",
@@ -729,6 +743,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/mam-pamm-setup-guide.webp",
     coverAlt: "Investment portfolio growth charts on a screen",
     title: "MAM and PAMM Setup Guide: Money Management Without the Headaches",
+    seoTitle: "MAM & PAMM Setup Guide",
     excerpt:
       "Allocation methods, fee structures, risk controls, and the operational pitfalls — everything a broker needs to run money management properly.",
     category: "Platforms",
@@ -777,6 +792,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/ctrader-deep-dive.webp",
     coverAlt: "Professional trading platform with charts on a screen",
     title: "cTrader Deep Dive: Why Sophisticated Traders Keep Choosing It",
+    seoTitle: "cTrader Deep Dive",
     excerpt:
       "Depth of market, cAlgo, the FIX API, and the experience premium — an honest technical tour of the platform that punches above its market share.",
     category: "Platforms",
@@ -831,6 +847,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/trading-platform-migration-playbook.webp",
     coverAlt: "Data migration engineer working with servers",
     title: "Trading Platform Migration Playbook: Switch Platforms, Keep Traders",
+    seoTitle: "Trading Platform Migration Playbook",
     excerpt:
       "Data mapping, parallel runs, trader communication, and the rollback plan — how to migrate platforms without migrating your clients to a competitor.",
     category: "Platforms",
@@ -884,6 +901,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/forex-broker-lead-generation-2026.webp",
     coverAlt: "Trading desks with candlestick charts in a modern office at dusk",
     title: "Broker Lead Generation in 2026: Where Depositing Traders Actually Come From",
+    seoTitle: "Broker Lead Generation in 2026",
     excerpt:
       "Ad platforms tightened compliance in 2026, communities became the new top of funnel, and the signup-to-deposit gap keeps eating leads. Here's how brokers actually acquire funded traders now.",
     category: "Growth",
@@ -944,6 +962,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/uae-forex-regulation-explained.webp",
     coverAlt: "Dubai skyline representing UAE financial regulation",
     title: "UAE Forex Regulation Explained: SCA, DFSA, ADGM — and What 'Licensed' Actually Means",
+    seoTitle: "UAE Forex Regulation: SCA, DFSA, ADGM",
     excerpt:
       "Three regulators, three rulebooks, one market. How forex licensing actually works across mainland UAE, DIFC, and ADGM — and the questions that separate a genuinely licensed broker from a logo on a website.",
     category: "Brokerage Launch",
@@ -990,6 +1009,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/spreads-commissions-markup-explained.webp",
     coverAlt: "Trading terminal showing bid and ask prices",
     title: "Spreads, Commissions and Markup: How Broker Pricing Actually Works",
+    seoTitle: "Spreads, Commissions & Markup Explained",
     excerpt:
       "Every broker makes money on your trades — the honest question is how, and how much. A plain-English tour of spreads, commissions, markup, and swaps, and how to compare pricing across brokers without being fooled.",
     category: "Risk & Execution",
@@ -1043,6 +1063,7 @@ export const POSTS: Post[] = [
     cover: "/images/blog/broker-risk-management-fundamentals.webp",
     coverAlt: "Risk dashboard with exposure charts on a dealing desk monitor",
     title: "Broker Risk Management Fundamentals: Exposure, Hedging and the Dealing Desk",
+    seoTitle: "Broker Risk Management Fundamentals",
     excerpt:
       "Every trade your clients place lands on your book. How brokerages measure exposure, decide what to hedge, and build a dealing desk that survives the news spikes that break weak risk systems.",
     category: "Risk & Execution",

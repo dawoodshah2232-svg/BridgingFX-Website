@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
@@ -6,16 +8,12 @@ import CTABand from "@/components/CTABand";
 import { FadeIn, Stagger, StaggerItem } from "@/components/Reveal";
 import { mailtoFor } from "@/data/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Prop Firm Technology — Launch in 30 Minutes",
   description:
-    "Complete technology for prop firms, live in as little as 30 minutes: challenge & evaluation engines, real-time risk monitoring, trader dashboards, scaling plans, and automated payouts.",
-  openGraph: {
-    title: "Prop Firm Technology — Live in 30 Minutes | BridgingFX",
-    description:
-      "Challenge engines, real-time risk monitoring, trader dashboards, and payout automation for modern prop firms — deployed in 30 minutes.",
-  },
-};
+    "Prop firm technology, live in 30 minutes: challenge & evaluation engines, real-time risk monitoring, trader dashboards, scaling plans, and automated payouts.",
+  path: "/prop-firms",
+});
 
 const STACK = [
   {

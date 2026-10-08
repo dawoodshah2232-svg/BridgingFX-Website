@@ -3,7 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import CTABand from "@/components/CTABand";
-import JsonLd from "@/components/JsonLd";
+import JsonLd, { breadcrumbJsonLd } from "@/components/JsonLd";
+import { metaDescription } from "@/lib/seo";
 import { FadeIn } from "@/components/Reveal";
 import { POSTS } from "@/data/posts";
 import { SITE } from "@/data/site";
@@ -19,14 +20,33 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const p = POSTS.find((x) => x.slug === params.slug);
   if (!p) return {};
+  const url = `${SITE.url}/blog/${p.slug}`;
+  const description = metaDescription(p.excerpt);
+  // Rendered title = `${p.seoTitle} | BridgingFX` via the layout template.
   return {
-    title: p.title,
-    description: p.excerpt,
+    title: p.seoTitle,
+    description,
+    alternates: { canonical: url },
     openGraph: {
-      title: `${p.title} | BridgingFX Blog`,
-      description: p.excerpt,
+      title: `${p.seoTitle} | BridgingFX`,
+      description,
       type: "article",
       publishedTime: p.date,
+      url,
+      images: [
+        {
+          url: `${SITE.url}${p.cover}`,
+          width: 1200,
+          height: 675,
+          alt: p.coverAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${p.seoTitle} | BridgingFX`,
+      description,
+      images: [`${SITE.url}${p.cover}`],
     },
   };
 }
@@ -56,6 +76,13 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           author: { "@type": "Organization", name: "BridgingFX", url: SITE.url },
           publisher: { "@type": "Organization", name: "BridgingFX", url: SITE.url },
         }}
+      />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", url: SITE.url },
+          { name: "Blog", url: `${SITE.url}/blog` },
+          { name: post.title, url },
+        ])}
       />
 
       <article className="relative overflow-hidden pb-10 pt-32 sm:pt-40">

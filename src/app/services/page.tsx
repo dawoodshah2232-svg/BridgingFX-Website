@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
@@ -6,23 +8,25 @@ import SectionHeading from "@/components/SectionHeading";
 import CTABand from "@/components/CTABand";
 import { Stagger, StaggerItem, FadeIn } from "@/components/Reveal";
 import { SERVICES, SERVICES_BY_CATEGORY } from "@/data/services";
+import JsonLd, { breadcrumbJsonLd } from "@/components/JsonLd";
+import { SITE } from "@/data/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Services — 33 Forex Brokerage Solutions",
   description:
-    "Explore 33 services for forex brokers, prop firms, and financial institutions: white-label platforms, Forex CRM, liquidity, risk, compliance, marketing, and 24/7 support.",
-  alternates: { canonical: "https://bridgingfx.net/services" },
-  openGraph: {
-    title: "Services — 33 Forex Brokerage Solutions | BridgingFX",
-    description:
-      "White-label platforms, Forex CRM, liquidity, risk, compliance, marketing, and 24/7 support — every capability a brokerage needs.",
-    url: "https://bridgingfx.net/services",
-  },
-};
+    "Explore 33 services for forex brokers, prop firms and institutions: white-label platforms, Forex CRM, liquidity, risk, compliance, marketing, 24/7 support.",
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", url: SITE.url },
+          { name: "Services", url: `${SITE.url}/services` },
+        ])}
+      />
       <PageHero
         eyebrow="Our services"
         title={<>Every capability a brokerage needs. <span className="gradient-text">One partner.</span></>}

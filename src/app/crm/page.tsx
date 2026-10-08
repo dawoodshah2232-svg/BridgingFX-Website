@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
@@ -8,16 +10,12 @@ import JsonLd, { serviceJsonLd, faqJsonLd } from "@/components/JsonLd";
 import { FadeIn, Stagger, StaggerItem } from "@/components/Reveal";
 import { SITE, mailtoFor } from "@/data/site";
 
-export const metadata: Metadata = {
-  title: "Forex CRM Solution — Live in 15 Minutes | BridgeX CRM",
+export const metadata: Metadata = pageMeta({
+  title: "Forex CRM — Live in 15 Minutes",
   description:
-    "BridgeX CRM: a fully customized Forex CRM — live in as little as 15 minutes if you already have a company. No developers needed, no extra fees. Lead, fund & account management, IB/affiliate system, documents & compliance.",
-  openGraph: {
-    title: "Forex CRM Solution — Live in 15 Minutes | BridgingFX",
-    description:
-      "Fully customized Forex CRM, live in 15 minutes. No developers, no extra fees. Lead, fund & account management, IB/affiliate system, compliance.",
-  },
-};
+    "BridgeX CRM: a fully customized Forex CRM — live in as little as 15 minutes. Lead, fund & account management, IB/affiliate system, documents & compliance.",
+  path: "/crm",
+});
 
 const MODULES = [
   {

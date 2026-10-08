@@ -22,19 +22,22 @@ export async function generateMetadata({
   const p = getProduct(params.slug);
   if (!p) return {};
   const url = `${SITE.url}/products/${p.slug}`;
+  // Disambiguate the product that shares its name with a service page
+  // (/services/risk-management) so titles stay unique.
+  const title = p.slug === "risk-management" ? "Risk Management Software" : p.name;
   return {
-    title: `${p.name} | Forex Brokerage Technology`,
+    title,
     description: p.tagline,
     alternates: { canonical: url },
     openGraph: {
-      title: `${p.name} — BridgingFX`,
+      title: `${title} | BridgingFX`,
       description: p.tagline,
       url,
       images: [{ url: `${SITE.url}${p.image}`, width: 1200, height: 675, alt: p.imageAlt }],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${p.name} — BridgingFX`,
+      title: `${title} | BridgingFX`,
       description: p.tagline,
       images: [`${SITE.url}${p.image}`],
     },

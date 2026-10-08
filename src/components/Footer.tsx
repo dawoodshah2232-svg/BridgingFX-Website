@@ -157,7 +157,14 @@ export default function Footer() {
         {/* pb leaves room for the sticky mobile CTA bar */}
         <div className="container-x flex flex-col items-center justify-between gap-3 py-6 pb-24 text-xs text-slate-500 sm:flex-row md:pb-6">
           <p>© {new Date().getFullYear()} BridgingFX. All rights reserved.</p>
-          <p>Empowering Forex Brokers, PropFirms & Financial Institutions.</p>
+          <nav aria-label="Legal" className="flex items-center gap-5">
+            <Link href="/privacy" className="transition-colors hover:text-white">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="transition-colors hover:text-white">
+              Terms &amp; Conditions
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>

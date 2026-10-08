@@ -19,24 +19,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog",
     "/faq",
     "/contact",
+    "/privacy",
+    "/terms",
   ];
 
   return [
     ...staticRoutes.map((r) => ({
       url: `${SITE.url}${r}`,
-      lastModified: new Date("2026-09-23"),
+      lastModified: new Date("2026-10-08"),
       changeFrequency: "weekly" as const,
       priority: r === "" ? 1 : 0.8,
     })),
     ...SERVICES.map((s) => ({
       url: `${SITE.url}/services/${s.slug}`,
-      lastModified: new Date("2026-09-23"),
+      lastModified: new Date("2026-10-08"),
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
     ...PRODUCTS.map((p) => ({
       url: `${SITE.url}/products/${p.slug}`,
-      lastModified: new Date("2026-09-23"),
+      lastModified: new Date("2026-10-08"),
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),

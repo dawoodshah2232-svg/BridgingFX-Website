@@ -1,23 +1,30 @@
 import type { Metadata } from "next";
+import { pageMeta, OG_BLOG } from "@/lib/seo";
+
 import PageHero from "@/components/PageHero";
 import CTABand from "@/components/CTABand";
 import BlogFilter from "./BlogFilter";
 import { POSTS } from "@/data/posts";
+import JsonLd, { breadcrumbJsonLd } from "@/components/JsonLd";
+import { SITE } from "@/data/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Blog — Brokerage Insights & Industry Analysis",
   description:
     "Editorial insights from the BridgingFX team: launching brokerages, choosing white-label platforms, prop firm technology, and FX industry analysis.",
-  openGraph: {
-    title: "Blog — Brokerage Insights | BridgingFX",
-    description:
-      "Launching brokerages, white-label platforms, prop firm tech — editorial insights from BridgingFX.",
-  },
-};
+  path: "/blog",
+  image: OG_BLOG
+});
 
 export default function BlogPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", url: SITE.url },
+          { name: "Blog", url: `${SITE.url}/blog` },
+        ])}
+      />
       <PageHero
         eyebrow="Blog"
         title={<>Insights from the <span className="gradient-text">front lines.</span></>}
