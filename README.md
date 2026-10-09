@@ -27,9 +27,15 @@ npm run build    # must pass with zero errors
 npm start        # serve the production build locally
 ```
 
-## Deploy (Vercel)
+## Deploy (cPanel)
 
-No special config needed — import the repo, Vercel auto-detects Next.js.
+Deploys are automatic: `.github/workflows/deploy-cpanel.yml` runs on every
+push to `main` (manual dispatch also available). It installs dependencies
+(Node 20), runs `npm run build` — a static export into `out/` — then rsyncs
+`out/` to the cPanel server over SSH using the `CPANEL_HOST`,
+`CPANEL_PORT`, `CPANEL_SSH_KEY`, `CPANEL_USER`, and `CPANEL_TARGET`
+repository secrets. The `/brixchat/` directory is excluded — it is deployed
+by the brix-chat repo. There is no Vercel deployment.
 `SITE.url` in `src/data/site.ts` is the canonical URL used for sitemap/OG/JSON-LD.
 
 ## Project structure
